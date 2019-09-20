@@ -1,13 +1,17 @@
 body {
     font-family: Georgia, Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right,
+        rgba(255,255,255,1) 45%,
+        rgba(255,255,255,0) 67%), 
+        url("./img/mountains2.jpg");
 }
 
 h1, h2, h3 {
-    color: #00aaaa;
+    color: #0884a3;
 }
 
 .wrapper {
-    margin: auto;
+    margin: 3%;
     width: 800px;
     
 }
@@ -18,13 +22,8 @@ h1, h2, h3 {
     padding-bottom: 5px;
     border-radius: 5px;
     margin: 25px;
-    background-color: #ddd;
 }
 
-header {
-    text-align: center;
-}
-
-#req h3{
-    text-align: center;
+div>h2 {
+    text-decoration: underline;
 }
