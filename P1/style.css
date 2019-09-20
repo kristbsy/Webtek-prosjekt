@@ -1,19 +1,23 @@
 body {
     font-family: Georgia, Arial, Helvetica, sans-serif;
     background-image: linear-gradient(to right,
-        rgba(255,255,255,1) 45%,
-        rgba(255,255,255,0) 67%), 
-        url("./img/mountains2.jpg");
+            rgba(255, 255, 255, 1) 45%,
+            rgba(255, 255, 255, 0) 67%),
+        url("./img/mountains.jpg");
+    background-attachment: fixed;
+    line-height: 1.5;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: #0884a3;
 }
 
 .wrapper {
     margin: 3%;
-    width: 800px;
-    
+    width: 42%;
+
 }
 
 .wrapper>div {
@@ -26,4 +30,8 @@ h1, h2, h3 {
 
 div>h2 {
     text-decoration: underline;
+}
+
+#kunde {
+    text-emphasis:
 }
