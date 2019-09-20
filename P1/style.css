@@ -2,16 +2,29 @@ body {
     font-family: Georgia, Arial, Helvetica, sans-serif;
 }
 
-h1, h2 {
+h1, h2, h3 {
     color: #00aaaa;
 }
 
 .wrapper {
     margin: auto;
     width: 800px;
+    
+}
+
+.wrapper>div {
     padding: 20px;
     padding-top: 5px;
     padding-bottom: 5px;
     border-radius: 5px;
+    margin: 25px;
     background-color: #ddd;
+}
+
+header {
+    text-align: center;
+}
+
+#req h3{
+    text-align: center;
 }
