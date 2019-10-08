@@ -10,9 +10,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="171.88322mm"
-   height="173.27299mm"
-   viewBox="0 0 171.88322 173.27299"
+   width="174mm"
+   height="174mm"
+   viewBox="0 0 173.99999 173.99999"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
@@ -43,7 +43,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="395.35134"
+     inkscape:cx="163.20848"
      inkscape:cy="300.05188"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -52,15 +52,21 @@
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:snap-text-baseline="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1017"
-     inkscape:window-x="3832"
-     inkscape:window-y="1072"
+     inkscape:window-width="1366"
+     inkscape:window-height="715"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
-     fit-margin-bottom="0" />
+     fit-margin-bottom="0">
+    <sodipodi:guide
+       position="184.0744,78.619043"
+       orientation="0,1"
+       id="guide4568"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -77,67 +83,71 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-6.6655613,-5.0523487)">
-    <circle
-       id="path3713"
-       style="fill:none;stroke:none;stroke-width:0.26499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       cy="-79.969315"
-       cx="-102.95668"
-       r="72.949409"
-       transform="rotate(-173.1)" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.75555611px;line-height:1.25;font-family:'Berlin Sans FB';-inkscape-font-specification:'Berlin Sans FB, Normal';font-variant-ligatures:normal;font-variant-caps:all-small-caps;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:9.52499962px;word-spacing:-6.73629189px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       id="text7395"><textPath
-         xlink:href="#path3713"
-         id="textPath7411"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.75555611px;font-family:'Berlin Sans FB';-inkscape-font-specification:'Berlin Sans FB, Normal';font-variant-ligatures:normal;font-variant-caps:all-small-caps;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:9.52499962px;word-spacing:-6.73629189px;writing-mode:lr-tb;text-anchor:start"
-         startOffset="0%"
-         dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6.4255967">TURISTLAGET ● I OPPDAL ●</textPath></text>
-    <flowRoot
-       xml:space="preserve"
-       id="flowRoot7424"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       transform="scale(0.26458333)"><flowRegion
-         id="flowRegion7426"><rect
-           id="rect7428"
-           width="92.85714"
-           height="84.285355"
-           x="715.71429"
-           y="528.23431" /></flowRegion><flowPara
-         id="flowPara7430"></flowPara></flowRoot>    <flowRoot
-       xml:space="preserve"
-       id="flowRoot7436"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       transform="scale(0.26458333)"><flowRegion
-         id="flowRegion7438"><rect
-           id="rect7440"
-           width="287.14285"
-           height="125.71429"
-           x="551.42859"
-           y="566.80542" /></flowRegion><flowPara
-         id="flowPara7442"></flowPara></flowRoot>    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:17.87160492px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffa987;fill-opacity:1;stroke:none;stroke-width:0.44679013"
-       x="45.136021"
-       y="152.28125"
-       id="text7446"
-       transform="scale(1.0176818,0.98262542)"><tspan
-         sodipodi:role="line"
-         id="tspan7444"
-         x="45.136021"
-         y="152.28125"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:148.93003845px;font-family:'Arial Rounded MT Bold';-inkscape-font-specification:'Arial Rounded MT Bold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffa987;fill-opacity:1;stroke-width:0.44679013">T</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:16.96604538px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffa987;fill-opacity:1;stroke:none;stroke-width:0.42415109"
-       x="108.1805"
-       y="133.90527"
-       id="text7450"><tspan
-         sodipodi:role="line"
-         id="tspan7448"
-         x="108.1805"
-         y="133.90527"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.71850586px;font-family:'Arial Rounded MT Bold';-inkscape-font-specification:'Arial Rounded MT Bold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffa987;fill-opacity:1;stroke-width:0.42415109">iO</tspan></text>
+     transform="translate(-6.6655613,-4.325344)">
+    <g
+       id="g4591"
+       transform="translate(-0.07554279,-0.01568202)">
+      <circle
+         transform="rotate(-173.1)"
+         r="72.949409"
+         cx="-104.03699"
+         cy="-79.457855"
+         style="fill:none;stroke:none;stroke-width:0.26499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="path3713" />
+      <text
+         id="text7395"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.75555611px;line-height:1.25;font-family:'Berlin Sans FB';-inkscape-font-specification:'Berlin Sans FB, Normal';font-variant-ligatures:normal;font-variant-caps:all-small-caps;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:9.52499962px;word-spacing:-8.67833328px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><textPath
+           dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6.4255967"
+           startOffset="0%"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.75555611px;font-family:'Berlin Sans FB';-inkscape-font-specification:'Berlin Sans FB, Normal';font-variant-ligatures:normal;font-variant-caps:all-small-caps;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:9.52499962px;word-spacing:-8.67833328px;writing-mode:lr-tb;text-anchor:start"
+           id="textPath7411"
+           xlink:href="#path3713">TURISTLAGET ● I OPPDAL ●</textPath></text>
+      <flowRoot
+         transform="matrix(0.26458333,0,0,0.26458333,1.1339286,-0.37797619)"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         id="flowRoot7424"
+         xml:space="preserve"><flowRegion
+           id="flowRegion7426"><rect
+             y="528.23431"
+             x="715.71429"
+             height="84.285355"
+             width="92.85714"
+             id="rect7428" /></flowRegion><flowPara
+           id="flowPara7430" /></flowRoot>      <flowRoot
+         transform="matrix(0.26458333,0,0,0.26458333,1.1339286,-0.37797619)"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         id="flowRoot7436"
+         xml:space="preserve"><flowRegion
+           id="flowRegion7438"><rect
+             y="566.80542"
+             x="551.42859"
+             height="125.71429"
+             width="287.14285"
+             id="rect7440" /></flowRegion><flowPara
+           id="flowPara7442" /></flowRoot>      <text
+         transform="scale(1.0176818,0.98262542)"
+         id="text7446"
+         y="151.89659"
+         x="46.250248"
+         style="font-style:normal;font-weight:normal;font-size:17.87160492px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#64a842;fill-opacity:1;stroke:none;stroke-width:0.44679013"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:148.93003845px;font-family:'Arial Rounded MT Bold';-inkscape-font-specification:'Arial Rounded MT Bold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#64a842;fill-opacity:1;stroke-width:0.44679013"
+           y="151.89659"
+           x="46.250248"
+           id="tspan7444"
+           sodipodi:role="line">T</tspan></text>
+      <text
+         id="text7450"
+         y="133.5273"
+         x="109.31442"
+         style="font-style:normal;font-weight:normal;font-size:16.96604538px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#64a842;fill-opacity:1;stroke:none;stroke-width:0.42415109"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.71850586px;font-family:'Arial Rounded MT Bold';-inkscape-font-specification:'Arial Rounded MT Bold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#64a842;fill-opacity:1;stroke-width:0.42415109"
+           y="133.5273"
+           x="109.31442"
+           id="tspan7448"
+           sodipodi:role="line">iO</tspan></text>
+    </g>
   </g>
 </svg>
