@@ -10,6 +10,11 @@ body {
 #struc{
     width: 550px;
 }
+
+.blokk>img{
+    width: 550px;
+}
+
 h1,
 h2,
 h3 {
