@@ -7,7 +7,9 @@ body {
     background-attachment: fixed;
     line-height: 1.5;
 }
-
+#struc{
+    width: 550px;
+}
 h1,
 h2,
 h3 {
