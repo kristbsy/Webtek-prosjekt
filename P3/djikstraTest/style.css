@@ -3,4 +3,22 @@
     height: 50px;
     background-color: red;
     border-radius: 50%;
+    position: absolute;
+}
+
+.node:hover div{
+    display: block;
+}
+
+.node>div{
+    position: relative;
+    left: 60px;
+    top: 5px;
+    z-index: 300;
+}
+
+.line {
+    border: 5px dashed red;
+    height: 0px;
+    position: absolute;
 }
