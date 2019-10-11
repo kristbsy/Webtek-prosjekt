@@ -35,7 +35,6 @@ class Grid {
             let id2y = this.grid[id2].y;
 
             let dist = Math.sqrt(Math.pow((id1x - id2x), 2) + Math.pow((id1y - id2y), 2));
-            console.log(dist)
             this.grid[id1].addAttachment(id2, dist);
             this.grid[id2].addAttachment(id1, dist);
             return true;
@@ -58,7 +57,6 @@ class DGrid {
         let root = document.querySelector("#container");
         root.innerHTML = "";
         for (let i = 0; i < this.dGrid.length; i++) {
-            console.log("test");
             let elem = document.createElement("div");
             elem.className = "node";
             let elemInner = document.createElement("div");
@@ -76,6 +74,8 @@ class DGrid {
 
     renderAttachments() {
         let root = document.querySelector("#container");
+
+
         let getSmallest = function (a, b) {
             if (a < b) {
                 return a;
@@ -191,7 +191,6 @@ class DGrid {
     }
 
     visit(originId, targetId, dist) {
-        console.log("hello");
         let total = this.dGrid[originId].distanceFromOrigin + dist;
         if (this.dGrid[targetId].distanceFromOrigin > total) {
             this.dGrid[targetId].setDistance(total);
