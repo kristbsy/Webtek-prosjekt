@@ -73,22 +73,20 @@ class DGrid {
 
     attach(id1, id2, dist) {
         //Sjekker om tilknytningen allerede finnes
-        console.log(id1, id2);
-        console.log(this.dGrid[id1]);
         for (let i = 0; i < this.dGrid[id1].attachments.length; i++) {
-            console.log(this.dGrid[id1].attachments[i].nodeId == id2)
-            if (this.dGrid[id1].attachments[i].nodeId == id2) {
+            if (this.dGrid[id1].attachments[i].id == id2) {
                 console.log("duplisert funnet")
                 return false;
             }
         }
 
         for (let i = 0; i < this.dGrid[id2].attachments.length; i++) {
-            if (this.dGrid[id2].attachments[i].nodeId == id2) {
+            if (this.dGrid[id2].attachments[i].id == id2) {
                 console.log("duplisert funnet")
                 return false;
             }
         }
+
 
         if (typeof (dist) == "undefined") {
             //beregner distansen
