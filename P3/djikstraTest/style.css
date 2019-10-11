@@ -1,3 +1,8 @@
+#container {
+    width:100%;
+    height: 100%;
+}
+
 .node{
     width: 50px;
     height: 50px;
@@ -18,7 +23,7 @@
 }
 
 .line {
-    border: 5px dashed red;
+    border-top: 5px dashed red;
     height: 0px;
     position: absolute;
 }
