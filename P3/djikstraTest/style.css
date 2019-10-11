@@ -15,11 +15,12 @@
     display: block;
 }
 
-.node>div{
+.node div{
     position: relative;
     left: 60px;
     top: 5px;
     z-index: 300;
+    display: none;
 }
 
 .line {

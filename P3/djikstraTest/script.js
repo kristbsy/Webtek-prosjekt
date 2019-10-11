@@ -51,6 +51,7 @@ class DGrid {
         this.initialGrid = grid.grid;
         this.dGrid = [];
         this.copy();
+        this.render();
     }
 
     render() {
@@ -96,32 +97,25 @@ class DGrid {
                 let cx = getSmallest(currentNode.x, destNodeX) + Math.abs(dx) / 2 - length / 2;
                 let cy = getSmallest(currentNode.y, destNodeY) + Math.abs(dy) / 2;
 
-                console.log(this.dGrid[currentNode.attachments[j].id].x);
-
                 elem.style.width = length + "px";
                 elem.id = "path-" + i + "-" + currentNode.attachments[j].id;
                 elem.setAttribute("dx", dx);
                 elem.setAttribute("dy", dy);
                 let rotation = -Math.acos(dx / length);
-                //rotation = Math.PI / 2;
-                // elem.style.transform = "rotate(" + rotation + "deg)";
-
 
                 elem.style.left = cx + 25 + "px";
                 elem.style.top = cy + 25 + "px";
 
-                /*
-                if (Math.abs(rotation) < Math.PI / 2) {
-                    console.log("hei");
-                    elem.style.transform = "rotate(" + rotation + "rad)";
-                    //elem.style.transform = "rotate(" + 180 + rotation + "rad)";
-                } else {
-                    console.log("yet");
-                    let newAngle = Math.PI - rotation;
-                    elem.style.transform = "rotate(" + newAngle + "rad)";
-                }
-                */
+                let innerEl = document.createElement("div");
+                innerEl.innerHTML = "Distance: " + Math.round(length);
 
+                innerEl.style.left = getSmallest(currentNode.x, destNodeX) + Math.abs(dx) / 2 + "px";
+                innerEl.style.top = cy + "px";
+
+
+                innerEl.style.position = "absolute";
+
+                root.appendChild(innerEl);
 
                 elem.className = "line";
                 if ((dx < 0 && dy < 0) || (dx >= 0 && dy <= 0)) {
@@ -129,7 +123,6 @@ class DGrid {
                     root.appendChild(elem);
                 }
 
-                console.log("Origin:", i, "Tilknytning:", currentNode.attachments[j], "element:", elem);
             }
         }
     }
@@ -182,13 +175,13 @@ class DGrid {
 
     setOrigin(id) {
         this.dGrid[id].distanceFromOrigin = 0;
-        this.dGrid[id].shortestOrigin = id;
+        this.dGrid[id].shortestOrigin = "origin";
         this.check(id, id);
         this.render();
     }
 
-    check(origin, nodeId) {
-        let currentNode = this.dGrid[nodeId];
+    check(origin) {
+        let currentNode = this.dGrid[origin];
         for (let i = 0; i < currentNode.attachments.length; i++) {
             if (!(currentNode.attachments[i].visited)) {
                 this.visit(origin, currentNode.attachments[i].id, currentNode.attachments[i].distance);
@@ -198,10 +191,12 @@ class DGrid {
     }
 
     visit(originId, targetId, dist) {
+        console.log("hello");
         let total = this.dGrid[originId].distanceFromOrigin + dist;
         if (this.dGrid[targetId].distanceFromOrigin > total) {
             this.dGrid[targetId].setDistance(total);
             this.dGrid[targetId].shortestOrigin = originId;
+            this.check(targetId);
         }
     }
 
@@ -243,30 +238,29 @@ class DAttachment {
 
 var grid = new Grid;
 
-grid.attach(grid.addNode(200, 500), grid.addNode(100, 100));
-grid.attach(0, grid.addNode(300, 100));
-grid.attach(0, grid.addNode(100, 300));
-grid.attach(0, grid.addNode(300, 300));
-grid.attach(1, 2);
-grid.attach(1, 3);
-grid.attach(3, 4);
-grid.attach(2, 4);
+
+
+
+
+function createRandomNode() {
+    let x = Math.round(Math.random() * 1400);
+    let y = Math.round(Math.random() * 700);
+    return grid.addNode(x, y);
+}
+
+const max = 8;
+
+for (let i = 0; i < max; i++) {
+    if (i == 0) {
+        createRandomNode()
+    }
+    grid.attach(i, createRandomNode());
+}
+
+for (let i = 0; i < max; i++) {
+    grid.attach(Math.round(Math.random() * max), Math.round(Math.random() * max));
+}
 
 var djGrid = new DGrid(grid);
-djGrid.setOrigin(0);
 
-var spin = document.querySelector("#spin");
-var x = document.querySelector("#x");
-var y = document.querySelector("#y");
-
-const testBro = document.querySelector("#path-0-1")
-
-spin.addEventListener("change", refresh);
-x.addEventListener("change", refresh);
-y.addEventListener("change", refresh);
-
-function refresh() {
-    testBro.style.left = x.value + "px";
-    testBro.style.top = y.value + "px";
-    testBro.style.transform = "rotate(" + spin.value + "deg)";
-}
+//djGrid.setOrigin(0);
