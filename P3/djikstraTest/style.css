@@ -9,10 +9,15 @@
     background-color: red;
     border-radius: 50%;
     position: absolute;
+    z-index: 200;
 }
 
 .node:hover div{
     display: block;
+}
+
+.node:hover{
+    cursor: pointer;
 }
 
 .node div{

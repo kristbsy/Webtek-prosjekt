@@ -66,6 +66,12 @@ class DGrid {
             elemInner.innerHTML += "<br>";
             elemInner.innerHTML += "od: " + this.dGrid[i].distanceFromOrigin;
             elemInner.innerHTML += "<br>x: " + this.dGrid[i].x + ", y: " + this.dGrid[i].y;
+
+            elem.id = "number" + i;
+            elem.setAttribute('number', i);
+
+            elem.addEventListener("click", getPath);
+
             elem.appendChild(elemInner);
             root.appendChild(elem);
         }
@@ -235,6 +241,39 @@ class DAttachment {
     }
 }
 
+function getPath(e) {
+    console.log(e.target.getAttribute('number'));
+    let currentId = Number(e.target.getAttribute('number'));
+    let path = [];
+    console.log(djGrid.dGrid[currentId].shortestOrigin);
+    while (djGrid.dGrid[currentId].shortestOrigin != "origin") {
+        path.push(currentId);
+        currentId = djGrid.dGrid[currentId].shortestOrigin;
+    }
+    path.push(currentId);
+    let corrected = path.reverse();
+    console.log(corrected);
+
+    let lines = document.querySelectorAll(".line");
+    for (let i = 0; i < lines.length; i++) {
+        lines[i].style.backgroundColor = "";
+    }
+
+    for (let i = 0; i < corrected.length - 1; i++) {
+        let first = corrected[i];
+        let second = corrected[i + 1];
+        try {
+            document.querySelector("#path-" + first + "-" + second).style.backgroundColor = "blue";
+            console.log("success", "#path-" + first + "-" + second);
+        } catch (error) {
+            document.querySelector("#path-" + second + "-" + first).style.backgroundColor = "blue";
+            console.log("success", "#path-" + second + "-" + first);
+        }
+
+    }
+
+}
+
 var grid = new Grid;
 
 
@@ -247,7 +286,7 @@ function createRandomNode() {
     return grid.addNode(x, y);
 }
 
-const max = 8;
+const max = 16;
 
 for (let i = 0; i < max; i++) {
     if (i == 0) {
@@ -261,5 +300,5 @@ for (let i = 0; i < max; i++) {
 }
 
 var djGrid = new DGrid(grid);
-
+djGrid.setOrigin(0);
 //djGrid.setOrigin(0);
