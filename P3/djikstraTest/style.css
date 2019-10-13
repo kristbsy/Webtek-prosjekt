@@ -29,7 +29,7 @@
 }
 
 .line {
-    border-top: 5px dashed red;
+    border-top: 2px solid red;
     height: 0px;
     position: absolute;
 }

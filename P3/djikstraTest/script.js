@@ -256,17 +256,20 @@ function getPath(e) {
 
     let lines = document.querySelectorAll(".line");
     for (let i = 0; i < lines.length; i++) {
-        lines[i].style.backgroundColor = "";
+        lines[i].style.border = "2px solid red";
+        lines[i].style.zIndex = "0";
     }
 
     for (let i = 0; i < corrected.length - 1; i++) {
         let first = corrected[i];
         let second = corrected[i + 1];
         try {
-            document.querySelector("#path-" + first + "-" + second).style.backgroundColor = "blue";
+            document.querySelector("#path-" + first + "-" + second).style.border = "2px solid blue";
+            //document.querySelector("#path-" + first + "-" + second).style.zIndex = "200";
             console.log("success", "#path-" + first + "-" + second);
         } catch (error) {
-            document.querySelector("#path-" + second + "-" + first).style.backgroundColor = "blue";
+            document.querySelector("#path-" + second + "-" + first).style.border = "2px solid blue";
+            //document.querySelector("#path-" + first + "-" + second).style.zIndex = "200";
             console.log("success", "#path-" + second + "-" + first);
         }
 
@@ -286,7 +289,7 @@ function createRandomNode() {
     return grid.addNode(x, y);
 }
 
-const max = 16;
+const max = 5;
 
 for (let i = 0; i < max; i++) {
     if (i == 0) {
