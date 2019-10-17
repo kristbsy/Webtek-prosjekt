@@ -54,6 +54,7 @@ class DGrid {
     }
 
     render() {
+        //TODO: flytt den til Grid, istedenfor DGrid
         let root = document.querySelector("#container");
         root.innerHTML = "";
         for (let i = 0; i < this.dGrid.length; i++) {
@@ -79,6 +80,7 @@ class DGrid {
     }
 
     renderAttachments() {
+        //TODO: endre funksjonen til å bruke canvas istedenfor
         let root = document.querySelector("#container");
 
 
@@ -235,6 +237,7 @@ class DNode {
 
 class DAttachment {
     constructor(id, distance, visited) {
+        //TODO: Fjern visited fra alle steder i koden
         this.id = id;
         this.distance = distance;
         this.visited = visited;
@@ -242,6 +245,7 @@ class DAttachment {
 }
 
 function getPath(e) {
+    //TODO: sett inn i enten Grid eller DGrid
     console.log(e.target.getAttribute('number'));
     let currentId = Number(e.target.getAttribute('number'));
     let path = [];
