@@ -8,7 +8,7 @@ nav{
 }
 
 #hovedlogo {
-  width: calc(100%/8);
+  width: calc(100%/8.5);
   float: left;
   position: absolute;
   bottom: 0px;
@@ -57,4 +57,5 @@ nav>ul>li>a:hover{
 #container{
   width: 70%;
   margin: auto;
+  height: 500px;
 }
