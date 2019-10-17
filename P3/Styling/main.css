@@ -1,22 +1,53 @@
+h1{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+nav{
+  position: relative;
+  top: 150px;
+}
+
+#hovedlogo {
+  width: calc(100%/8);
+  float: left;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+ul{
+  display: inline;
+}
+
 nav>ul{
   list-style-type: none;
   margin: 0;
   padding: 0;
   background: #64A842;
+  display: flex;
+  width: calc(100%/8*7);
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
 }
 
 nav>ul>li>a{
   display: block;
   padding: 20px;
+  margin:0;
   text-align: center;
   text-decoration: none;
   color: black;
   border: 1px solid black;
+  transition: background 0.5s;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 25px;
 }
 
 nav>ul>li{
+  margin:0;
   display: inline-block;
-  width: 150px;
+  width: calc(100%/5);
 }
 
 nav>ul>li>a:hover{
