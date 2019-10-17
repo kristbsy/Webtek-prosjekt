@@ -50,7 +50,7 @@ class DGrid {
         this.initialGrid = grid.grid;
         this.dGrid = [];
         this.copy();
-        this.render();
+        //this.render();
     }
 
     render() {
@@ -293,7 +293,7 @@ function createRandomNode() {
     return grid.addNode(x, y);
 }
 
-const max = 5;
+const max = 15;
 
 for (let i = 0; i < max; i++) {
     if (i == 0) {
