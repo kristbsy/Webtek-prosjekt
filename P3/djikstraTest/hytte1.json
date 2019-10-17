@@ -1,4 +1,7 @@
 {
+  "id": "0",
   "name": "test",
-  "id": "1"
+  "price": "2000",
+  "info": "En kul hytte for kule folk. 100% rad",
+  "frontImage": "./hytte1.jpg"
 }
