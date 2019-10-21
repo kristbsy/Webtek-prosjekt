@@ -59,3 +59,9 @@ nav>ul>li>a:hover{
   margin: auto;
   height: 500px;
 }
+
+#kontaktOss{
+  align-self: center;
+  margin: auto;
+  width: 70%;
+}
