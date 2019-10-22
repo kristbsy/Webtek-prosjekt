@@ -5,7 +5,7 @@ const artikkel = [{
     },
                 {
     artikkelTitel: 'Absultaket',
-    artikkelTekst: 'bfbfbfbfbf',
+    artikkelTekst: '<b>bfbfbfbfbf</b> onafoinafion <h3>hello</h3>',
     artikkelBilde: 'img'
     },
                 {
@@ -16,7 +16,7 @@ const artikkel = [{
                 {
     artikkelTitel: 'Absultaket',
     artikkelTekst: 'dfdfdfdfdfdf',
-    artikkelBilde: 'img'
+    artikkelBilde: '../img/slide1_hytte.jpeg'
     }
 ];
 
