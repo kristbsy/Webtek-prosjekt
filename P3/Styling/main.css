@@ -19,6 +19,13 @@ ul{
   display: inline;
 }
 
+#listeArtikkler >ul > li, #hytter > li{
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+  width: 0;
+}
+
 nav>ul{
   list-style-type: none;
   margin: 0;
