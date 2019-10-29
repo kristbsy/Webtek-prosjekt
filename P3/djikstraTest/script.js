@@ -6,9 +6,10 @@ class Attachment {
 }
 
 class Node {
-    constructor(x, y) {
+    constructor(x, y, info) {
         this.x = x;
         this.y = y;
+        this.info = info;
         this.attachments = [];
     }
 
@@ -18,12 +19,17 @@ class Node {
 }
 
 class Grid {
-    constructor() {
+    constructor(nodeContainerEl, canvas, info, recap) {
+        this.nodeContainerEl = nodeContainerEl;
+        this.canvas = canvas;
+        this.info = info;
+        this.recap = recap;
         this.grid = [];
     }
 
-    addNode(x, y) {
-        this.grid.push(new Node(x, y));
+    addNode(x, y, info) {
+        this.grid.push(new Node(x, y, info));
+        this.render()
         return this.grid.length - 1;
     }
 
@@ -39,9 +45,46 @@ class Grid {
             this.grid[id2].addAttachment(id1, dist);
             return true;
         }
-
-        this.grid[id1].addAttachment(id2, dist);
+        if (this.grid[id1])
+            this.grid[id1].addAttachment(id2, dist);
         this.grid[id2].addAttachment(id1, dist);
+    }
+
+    handleClick(id) {
+        this.showInfo(id);
+        console.log("clicked node with id:", id);
+    }
+
+    showInfo(id) {
+        this.info.innerHTML = this.grid[id].info;
+    }
+
+    render() {
+        this.renderNodes();
+        this.renderAttachments();
+    }
+
+    renderNodes() {
+        let root = this.nodeContainerEl;
+        root.innerHTML = "";
+        for (let i = 0; i < this.grid.length; i++) {
+
+            let elem = document.createElement("div");
+            elem.className = "node";
+            elem.id = "node_" + i;
+
+            //Posisjonering
+            elem.style.top = this.grid[i].y + "px";
+            elem.style.left = this.grid[i].x + "px";
+
+            elem.addEventListener("click", () => { this.handleClick(i) });
+            root.appendChild(elem);
+
+        }
+    }
+
+    renderAttachments() {
+        console.log("dun");
     }
 }
 
@@ -53,9 +96,9 @@ class DGrid {
         //this.render();
     }
 
-    render() {
+    renderNodes(root) {
         //TODO: flytt den til Grid, istedenfor DGrid
-        let root = document.querySelector("#container");
+        /*let root = document.querySelector("#container");*/
         root.innerHTML = "";
         for (let i = 0; i < this.dGrid.length; i++) {
             let elem = document.createElement("div");
@@ -281,19 +324,24 @@ function getPath(e) {
 
 }
 
-var grid = new Grid;
+
+const nodeContainerEl = document.querySelector("#container");
+const canvas = document.querySelector("canvas");
+const info = document.querySelector("#info");
+const recap = document.querySelector("#recap");
+var grid = new Grid(nodeContainerEl, canvas, info, recap);
 
 
 
 
 
 function createRandomNode() {
-    let x = Math.round(Math.random() * 1400);
+    let x = Math.round(Math.random() * 700);
     let y = Math.round(Math.random() * 700);
     return grid.addNode(x, y);
 }
-
-const max = 15;
+/*
+const max = 10;
 
 for (let i = 0; i < max; i++) {
     if (i == 0) {
@@ -304,8 +352,23 @@ for (let i = 0; i < max; i++) {
 
 for (let i = 0; i < max; i++) {
     grid.attach(Math.round(Math.random() * max), Math.round(Math.random() * max));
+}*/
+
+//var djGrid = new DGrid(grid);
+//djGrid.setOrigin(0);
+//djGrid.setOrigin(0);
+
+function load(hutts, grid) {
+    for (let i = 0; i < hutts.length; i++) {
+        grid.addNode(hutts[i].x, hutts[i].y, hutts[i].info);
+    }
+    for (let i = 0; i < hutts.length; i++) {
+        for (let j = 0; j < hutts[i].attachments.length; j++) {
+            //console.log(hutts[i].id, hutts[i].attachments[j]);
+            grid.attach(hutts[i].id, hutts[i].attachments[j]);
+        }
+
+    }
 }
 
-var djGrid = new DGrid(grid);
-djGrid.setOrigin(0);
-//djGrid.setOrigin(0);
+load(hytter, grid);
