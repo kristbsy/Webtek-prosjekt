@@ -148,3 +148,9 @@ nav > ul > li > a:hover {
 img {
   max-width: 100%;
 }
+
+/* Footer-styling */
+footer {
+  position: relative;
+  bottom: 0;
+}
