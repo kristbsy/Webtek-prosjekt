@@ -46,7 +46,7 @@ const hytter = [
     id: 3,
     x: 300,
     y: 400,
-    attachments: [3, 4, 5, 6, 7],
+    attachments: [4, 5, 6, 7],
 
     info: {
       name: "Hytte 4",
@@ -60,7 +60,7 @@ const hytter = [
     id: 4,
     x: 300,
     y: 200,
-    attachments: [3, 4, 5, 6, 7],
+    attachments: [2, 3, 5],
 
     info: {
       name: "Hytte 5",
@@ -74,7 +74,7 @@ const hytter = [
     id: 5,
     x: 400,
     y: 300,
-    attachments: [3, 4, 5, 6, 7],
+    attachments: [3, 4, 6, 7],
 
     info: {
       name: "Hytte 6",
@@ -88,7 +88,7 @@ const hytter = [
     id: 6,
     x: 500,
     y: 400,
-    attachments: [3, 4, 5, 6, 7],
+    attachments: [2, 5, 3, 7],
 
     info: {
       name: "Hytte 7",
@@ -102,7 +102,7 @@ const hytter = [
     id: 7,
     x: 700,
     y: 200,
-    attachments: [3, 4, 5, 6, 7],
+    attachments: [2, 3, 5, 6],
 
     info: {
       name: "Hytte 8",

@@ -12,6 +12,7 @@ class Node {
         this.info = info;
         this.attachments = [];
         this.size = 40;
+        this.dGrid = [];
     }
 
     addAttachment(id, dist) {
@@ -26,6 +27,72 @@ class Grid {
         this.info = info;
         this.recap = recap;
         this.grid = [];
+        this.points = [];
+        this.path = [];
+    }
+
+    generateRecapInstanceHTML(id) {
+        let main = document.createElement("div");
+        let imgEl = document.createElement("img");
+        let outerEl = document.createElement("div");
+        let nameEl = document.createElement("div");
+        let daysToStayEl = document.createElement("div");
+        let inputEl = document.createElement("input");
+
+        main.className = "recapInstance";
+        nameEl.className = "hytteNavn";
+        daysToStayEl.className = "daysToStay";
+
+        imgEl.src = this.grid[id].info.img;
+        nameEl.innerHTML = this.grid[id].info.name;
+
+        inputEl.type = "number";
+        inputEl.name = "inputElNr_" + id;
+        inputEl.id = "inputElNr_" + id;
+        inputEl.max = "7";
+        inputEl.min = "0";
+        inputEl.value = "1";
+
+        daysToStayEl.innerHTML = "Dager å bli: ";
+        daysToStayEl.appendChild(inputEl);
+
+        outerEl.appendChild(nameEl);
+        outerEl.appendChild(document.createElement("br"));
+        outerEl.appendChild(daysToStayEl);
+
+        main.appendChild(imgEl);
+        main.appendChild(outerEl);
+        return main;
+    }
+
+    refreshRecap() {
+        let elements = [];
+        this.points.forEach(el => { elements.push(this.generateRecapInstanceHTML(el)) });
+        this.recap.innerHTML = "<h2>Den gjeldende turen</h2>";
+        elements.forEach(el => { this.recap.appendChild(el) });
+    }
+
+
+
+    initDjikstra(id) {
+        this.grid[id].dGrid = new DGrid(this.grid, id);
+    }
+
+    getPath(fromId, toId) {
+        if (this.grid[fromId].dGrid.length === 0) {
+            this.initDjikstra(fromId);
+            return this.getPath(fromId, toId);
+        }
+        let dGrid = this.grid[fromId].dGrid.dGrid
+        let path = [toId];
+        let currentNode = dGrid[toId];
+        while (currentNode.shortestOrigin != "origin") {
+            path.push(currentNode.shortestOrigin);
+            currentNode = dGrid[currentNode.shortestOrigin];
+        }
+        return path;
+
+
     }
 
     addNode(x, y, info) {
@@ -35,24 +102,31 @@ class Grid {
     }
 
     attach(id1, id2, dist) {
+        let distToSet = dist;
         if (typeof (dist) == "undefined") {
             let id1x = this.grid[id1].x;
             let id1y = this.grid[id1].y;
             let id2x = this.grid[id2].x;
             let id2y = this.grid[id2].y;
 
-            let dist = Math.sqrt(Math.pow((id1x - id2x), 2) + Math.pow((id1y - id2y), 2));
-            this.grid[id1].addAttachment(id2, dist);
-            this.grid[id2].addAttachment(id1, dist);
-            return true;
+            distToSet = Math.sqrt(Math.pow((id1x - id2x), 2) + Math.pow((id1y - id2y), 2));
         }
-        if (this.grid[id1])
-            this.grid[id1].addAttachment(id2, dist);
-        this.grid[id2].addAttachment(id1, dist);
+        let isDuplicate = false;
+        // console.log(this.grid[id1].attachments);
+        this.grid[id1].attachments.forEach(attachment => {
+            if (!isDuplicate) {
+                console.log(attachment.nodeId, id2);
+                isDuplicate = attachment.nodeId == id2;
+            }
+        });
+
+        if (!isDuplicate) {
+            this.grid[id1].addAttachment(id2, distToSet);
+            this.grid[id2].addAttachment(id1, distToSet);
+        }
     }
 
-    convertToHTML(info) {
-        console.log("changing");
+    convertToHTML(info, id) {
         let mainEl = document.createElement("div");
 
         let titleEl = document.createElement("h2");
@@ -86,6 +160,8 @@ class Grid {
         buttonWrapEl.appendChild(document.createElement("br"));
         buttonWrapEl.appendChild(buttonDiv);
 
+        buttonDiv.addEventListener("click", () => { this.handleButtonClick(id) });
+
         infoSplitEl.appendChild(featuresEl);
         infoSplitEl.appendChild(infoEl);
 
@@ -97,6 +173,16 @@ class Grid {
         return mainEl;
     }
 
+    handleButtonClick(id) {
+        this.points.push(id);
+        this.refreshRecap();
+        if (this.points.length === 2) {
+            this.path = this.getPath(this.points[0], this.points[1]).reverse();
+        }
+        this.render();
+
+    }
+
     handleClick(id) {
         //this.switchInfo(this.grid[id].info);
         this.showInfo(id);
@@ -104,7 +190,7 @@ class Grid {
     }
 
     showInfo(id) {
-        let newElement = this.convertToHTML(this.grid[id].info);
+        let newElement = this.convertToHTML(this.grid[id].info, id);
         this.info.replaceWith(newElement);
         this.info = newElement;
     }
@@ -121,13 +207,18 @@ class Grid {
             let size = this.grid[i].size;
             let elem = document.createElement("div");
 
+            if (this.path.includes(i)) {
+                elem.style.backgroundColor = "green";
+            } else {
+                elem.style.backgroundColor = "red";
+            }
+
             elem.className = "node";
             elem.style.width = size + "px";
             elem.style.height = size + "px";
             elem.id = "node_" + i;
 
             //Posisjonering
-            //console.log(this.grid[i].y / 700, size / 1400);
             elem.style.top = this.grid[i].y / 7 - size / (7 * 2) + "%";
             elem.style.left = this.grid[i].x / 7.2 - size / (7.2 * 2) + "%";
 
@@ -139,109 +230,24 @@ class Grid {
 
     renderAttachments() {
         let ctx = document.querySelector("canvas").getContext('2d');
-        console.log(ctx);
         for (let i = 0; i < this.grid.length; i++) {
             for (let j = 0; j < this.grid[i].attachments.length; j++) {
                 let to = this.grid[this.grid[i].attachments[j].nodeId];
                 ctx.moveTo(this.grid[i].x, this.grid[i].y);
-                //console.log(to);
                 ctx.lineTo(to.x, to.y);
                 ctx.stroke();
-                //console.log(this.grid[i].attachments[j]);
             }
         }
-        console.log("dun");
     }
 }
 
 class DGrid {
-    constructor(grid) {
-        this.initialGrid = grid.grid;
+    constructor(grid, origin) {
+        this.initialGrid = grid;
         this.dGrid = [];
         this.copy();
+        this.setOrigin(origin);
         //this.render();
-    }
-
-    renderNodes(root) {
-        //TODO: flytt den til Grid, istedenfor DGrid
-        /*let root = document.querySelector("#container");*/
-        root.innerHTML = "";
-        for (let i = 0; i < this.dGrid.length; i++) {
-            let elem = document.createElement("div");
-            elem.className = "node";
-            let elemInner = document.createElement("div");
-            elem.style.top = this.dGrid[i].y + "px";
-            elem.style.left = this.dGrid[i].x + "px";
-            elemInner.innerHTML = "id: " + i;
-            elemInner.innerHTML += "<br>";
-            elemInner.innerHTML += "od: " + this.dGrid[i].distanceFromOrigin;
-            elemInner.innerHTML += "<br>x: " + this.dGrid[i].x + ", y: " + this.dGrid[i].y;
-
-            elem.id = "number" + i;
-            elem.setAttribute('number', i);
-
-            elem.addEventListener("click", getPath);
-
-            elem.appendChild(elemInner);
-            root.appendChild(elem);
-        }
-        this.renderAttachments();
-    }
-
-    renderAttachments() {
-        //TODO: endre funksjonen til å bruke canvas istedenfor
-        let root = document.querySelector("#container");
-
-
-        let getSmallest = function (a, b) {
-            if (a < b) {
-                return a;
-            } else {
-                return b;
-            }
-        }
-        for (let i = 0; i < this.dGrid.length; i++) {
-            let currentNode = this.dGrid[i];
-            for (let j = 0; j < currentNode.attachments.length; j++) {
-                let length = currentNode.attachments[j].distance;
-                let elem = document.createElement("div");
-
-                let destNodeX = this.dGrid[currentNode.attachments[j].id].x;
-                let destNodeY = this.dGrid[currentNode.attachments[j].id].y;
-
-                let dx = currentNode.x - destNodeX;
-                let dy = currentNode.y - destNodeY;
-                let cx = getSmallest(currentNode.x, destNodeX) + Math.abs(dx) / 2 - length / 2;
-                let cy = getSmallest(currentNode.y, destNodeY) + Math.abs(dy) / 2;
-
-                elem.style.width = length + "px";
-                elem.id = "path-" + i + "-" + currentNode.attachments[j].id;
-                elem.setAttribute("dx", dx);
-                elem.setAttribute("dy", dy);
-                let rotation = -Math.acos(dx / length);
-
-                elem.style.left = cx + 25 + "px";
-                elem.style.top = cy + 25 + "px";
-
-                let innerEl = document.createElement("div");
-                innerEl.innerHTML = "Distance: " + Math.round(length);
-
-                innerEl.style.left = getSmallest(currentNode.x, destNodeX) + Math.abs(dx) / 2 + "px";
-                innerEl.style.top = cy + "px";
-
-
-                innerEl.style.position = "absolute";
-
-                root.appendChild(innerEl);
-
-                elem.className = "line";
-                if ((dx < 0 && dy < 0) || (dx >= 0 && dy <= 0)) {
-                    elem.style.transform = "rotate(" + rotation + "rad)";
-                    root.appendChild(elem);
-                }
-
-            }
-        }
     }
 
     copy() {
@@ -294,7 +300,6 @@ class DGrid {
         this.dGrid[id].distanceFromOrigin = 0;
         this.dGrid[id].shortestOrigin = "origin";
         this.check(id, id);
-        this.render();
     }
 
     check(origin) {
@@ -353,44 +358,6 @@ class DAttachment {
     }
 }
 
-function getPath(e) {
-    //TODO: sett inn i enten Grid eller DGrid
-    console.log(e.target.getAttribute('number'));
-    let currentId = Number(e.target.getAttribute('number'));
-    let path = [];
-    console.log(djGrid.dGrid[currentId].shortestOrigin);
-    while (djGrid.dGrid[currentId].shortestOrigin != "origin") {
-        path.push(currentId);
-        currentId = djGrid.dGrid[currentId].shortestOrigin;
-    }
-    path.push(currentId);
-    let corrected = path.reverse();
-    console.log(corrected);
-
-    let lines = document.querySelectorAll(".line");
-    for (let i = 0; i < lines.length; i++) {
-        lines[i].style.border = "2px solid red";
-        lines[i].style.zIndex = "0";
-    }
-
-    for (let i = 0; i < corrected.length - 1; i++) {
-        let first = corrected[i];
-        let second = corrected[i + 1];
-        try {
-            document.querySelector("#path-" + first + "-" + second).style.border = "2px solid blue";
-            //document.querySelector("#path-" + first + "-" + second).style.zIndex = "200";
-            console.log("success", "#path-" + first + "-" + second);
-        } catch (error) {
-            document.querySelector("#path-" + second + "-" + first).style.border = "2px solid blue";
-            //document.querySelector("#path-" + first + "-" + second).style.zIndex = "200";
-            console.log("success", "#path-" + second + "-" + first);
-        }
-
-    }
-
-}
-
-
 const nodeContainerEl = document.querySelector("#container");
 const canvas = document.querySelector("canvas");
 const info = document.querySelector("#info");
@@ -404,7 +371,6 @@ function load(hutts, grid) {
     }
     for (let i = 0; i < hutts.length; i++) {
         for (let j = 0; j < hutts[i].attachments.length; j++) {
-            //console.log(hutts[i].id, hutts[i].attachments[j]);
             grid.attach(hutts[i].id, hutts[i].attachments[j]);
         }
 
