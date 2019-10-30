@@ -20,6 +20,12 @@ const artikkel = [{
     }
 ];
 
+for (i in artikkel) {
+    console.log(artikkel[i].artikkelTitel);
+    console.log(artikkel[i].artikkelTekst);
+    console.log("--------------------");
+}
+
 function artikkelBytte(evt){
     event.preventDefault();
     let titel = document.getElementById("titelArikkel");
