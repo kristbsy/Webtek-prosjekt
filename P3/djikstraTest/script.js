@@ -11,6 +11,7 @@ class Node {
         this.y = y;
         this.info = info;
         this.attachments = [];
+        this.size = 40;
     }
 
     addAttachment(id, dist) {
@@ -29,7 +30,7 @@ class Grid {
 
     addNode(x, y, info) {
         this.grid.push(new Node(x, y, info));
-        this.render()
+        //this.render()
         return this.grid.length - 1;
     }
 
@@ -50,13 +51,62 @@ class Grid {
         this.grid[id2].addAttachment(id1, dist);
     }
 
+    convertToHTML(info) {
+        console.log("changing");
+        let mainEl = document.createElement("div");
+
+        let titleEl = document.createElement("h2");
+        let imgEl = document.createElement("img");
+        let infoEl = document.createElement("div");
+        let featuresEl = document.createElement("div")
+        let buttonDiv = document.createElement("div");
+        let infoSplitEl = document.createElement("div");
+        let buttonWrapEl = document.createElement("div");
+        let priceEl = document.createElement("div");
+
+        mainEl.id = "info";
+        buttonWrapEl.id = "buttonWrap";
+        infoSplitEl.id = "infoSplit";
+        featuresEl.id = "infoFeatures";
+        infoEl.id = "infoText";
+
+        buttonDiv.className = "button";
+        priceEl.style.marginLeft = "10px";
+        titleEl.style.height = "24px";
+
+        priceEl.innerHTML = "Pris per dag: " + info.price + "nok";
+        titleEl.innerText = info.name;
+
+        infoEl.innerText = info.text;
+        featuresEl.innerHTML = info.features;
+        buttonDiv.innerText = "LEGG TIL";
+        imgEl.src = info.img;
+
+        buttonWrapEl.appendChild(priceEl);
+        buttonWrapEl.appendChild(document.createElement("br"));
+        buttonWrapEl.appendChild(buttonDiv);
+
+        infoSplitEl.appendChild(featuresEl);
+        infoSplitEl.appendChild(infoEl);
+
+        mainEl.appendChild(imgEl);
+        mainEl.appendChild(titleEl);
+        mainEl.appendChild(infoSplitEl);
+        mainEl.appendChild(buttonWrapEl);
+
+        return mainEl;
+    }
+
     handleClick(id) {
+        //this.switchInfo(this.grid[id].info);
         this.showInfo(id);
         console.log("clicked node with id:", id);
     }
 
     showInfo(id) {
-        this.info.innerHTML = this.grid[id].info;
+        let newElement = this.convertToHTML(this.grid[id].info);
+        this.info.replaceWith(newElement);
+        this.info = newElement;
     }
 
     render() {
@@ -68,14 +118,18 @@ class Grid {
         let root = this.nodeContainerEl;
         root.innerHTML = "";
         for (let i = 0; i < this.grid.length; i++) {
-
+            let size = this.grid[i].size;
             let elem = document.createElement("div");
+
             elem.className = "node";
+            elem.style.width = size + "px";
+            elem.style.height = size + "px";
             elem.id = "node_" + i;
 
             //Posisjonering
-            elem.style.top = this.grid[i].y + "px";
-            elem.style.left = this.grid[i].x + "px";
+            //console.log(this.grid[i].y / 700, size / 1400);
+            elem.style.top = this.grid[i].y / 7 - size / (7 * 2) + "%";
+            elem.style.left = this.grid[i].x / 7.2 - size / (7.2 * 2) + "%";
 
             elem.addEventListener("click", () => { this.handleClick(i) });
             root.appendChild(elem);
@@ -84,6 +138,18 @@ class Grid {
     }
 
     renderAttachments() {
+        let ctx = document.querySelector("canvas").getContext('2d');
+        console.log(ctx);
+        for (let i = 0; i < this.grid.length; i++) {
+            for (let j = 0; j < this.grid[i].attachments.length; j++) {
+                let to = this.grid[this.grid[i].attachments[j].nodeId];
+                ctx.moveTo(this.grid[i].x, this.grid[i].y);
+                //console.log(to);
+                ctx.lineTo(to.x, to.y);
+                ctx.stroke();
+                //console.log(this.grid[i].attachments[j]);
+            }
+        }
         console.log("dun");
     }
 }
@@ -332,32 +398,6 @@ const recap = document.querySelector("#recap");
 var grid = new Grid(nodeContainerEl, canvas, info, recap);
 
 
-
-
-
-function createRandomNode() {
-    let x = Math.round(Math.random() * 700);
-    let y = Math.round(Math.random() * 700);
-    return grid.addNode(x, y);
-}
-/*
-const max = 10;
-
-for (let i = 0; i < max; i++) {
-    if (i == 0) {
-        createRandomNode()
-    }
-    grid.attach(i, createRandomNode());
-}
-
-for (let i = 0; i < max; i++) {
-    grid.attach(Math.round(Math.random() * max), Math.round(Math.random() * max));
-}*/
-
-//var djGrid = new DGrid(grid);
-//djGrid.setOrigin(0);
-//djGrid.setOrigin(0);
-
 function load(hutts, grid) {
     for (let i = 0; i < hutts.length; i++) {
         grid.addNode(hutts[i].x, hutts[i].y, hutts[i].info);
@@ -369,6 +409,8 @@ function load(hutts, grid) {
         }
 
     }
+    grid.render();
 }
 
 load(hytter, grid);
+

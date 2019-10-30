@@ -1,9 +1,9 @@
 main{
     height: 700px;
-    width: 70%;
+    width: 90%;
     margin: auto;
     display: grid;
-    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-columns: 7fr 3fr 3fr;
     grid-template-rows: 3fr 1fr;
     gap: 1%;
 }
@@ -17,16 +17,10 @@ main{
     grid-row-start: 1;
     grid-row-end: 3;
     position: relative;
-    overflow: scroll;
+    overflow: hidden;
 }
 
-#info {
-    border: 1px solid black;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
+
 
 #recap {
     border:1px solid black;
@@ -39,22 +33,26 @@ main{
 }
 
 canvas{
-    display: none;
+    z-index: 10;
     border: 1px solid black;
-    width:70%;
-    height: 70%;
-    position: absolute;
-    top: 10px;
-    left: 15%;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    width:100%;
+    height: 100%;
+    
 }
 
 .node{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background-color: red;
     border-radius: 50%;
     position: absolute;
     z-index: 200;
+}
+
+.node:hover{
+    transform:scale(1.1);
 }
 
 .node:hover div{
@@ -77,4 +75,68 @@ canvas{
     border-top: 2px solid red;
     height: 0px;
     position: absolute;
+}
+
+#info {
+    height: 100%;
+    border-collapse: collapse;
+    display: table;
+    border: 1px solid black;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#info>h2{
+    margin-left: 10px;
+}
+
+#info>img{
+    width: 100%;
+}
+
+#infoSplit{
+    display: flex;
+}
+
+#infoFeatures{
+    margin-right: 20px;
+    margin-left: 10px;;
+}
+
+#infoText{
+    margin-right: 10px;
+}
+
+#buttonWrap{
+    display: table-row;
+    vertical-align: bottom;
+    height: 80px;
+}
+
+.button{
+    margin: auto;
+    background-color: rgb(5, 189, 66);
+    border: 1px solid rgb(5, 160, 56);
+    width: 50%;
+    font-size: 18px;
+
+    transition: 0.3s;
+
+    height: 18px;
+    padding: 8px;
+    align-self: center;
+    text-align: center;
+    user-select: none;
+    cursor:pointer;
+}
+
+.button:hover{
+    transform: scale(1.1);
+    background-color: green;
+}
+
+.button:active{
+    transform: scale(1);
 }
