@@ -1,8 +1,8 @@
-h1{
+h1 {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-nav{
+nav {
   position: relative;
   top: 150px;
 }
@@ -15,18 +15,19 @@ nav{
   left: 0px;
 }
 
-ul{
+ul {
   display: inline;
 }
 
-#listeArtikkler >ul > li, #hytter > li{
+#listeArtikkler>ul>li,
+#hytter>li {
   color: blue;
   text-decoration: underline;
   cursor: pointer;
   width: 0;
 }
 
-nav>ul{
+nav>ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -38,10 +39,10 @@ nav>ul{
   bottom: 0px;
 }
 
-nav>ul>li>a{
+nav>ul>li>a {
   display: block;
   padding: 20px;
-  margin:0;
+  margin: 0;
   text-align: center;
   text-decoration: none;
   color: black;
@@ -51,24 +52,99 @@ nav>ul>li>a{
   font-size: 25px;
 }
 
-nav>ul>li{
-  margin:0;
+nav>ul>li {
+  margin: 0;
   display: inline-block;
   width: calc(100%/5);
 }
 
-nav>ul>li>a:hover{
+nav>ul>li>a:hover {
   background: darkgreen;
 }
 
-#container{
+#container {
   width: 70%;
   margin: auto;
-  height: 500px;
 }
 
-#kontaktOss{
+#kontaktOss {
   align-self: center;
   margin: auto;
   width: 70%;
+}
+
+/* From here on, the body below slides begin */
+
+#body_wrapper {
+  position: relative;
+  top: 200px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto;
+  row-gap: 1rem;
+  width: 100%;
+}
+
+/* slideshow-styling */
+
+#home_slides {
+  width: 100%;
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+#home_slides img {
+  width: 100%;
+}
+
+/* Artikkel-styling Homesiden */
+#home_news {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  width: auto;
+  margin-right: 0.5rem;
+  height: calc(126px*1.05*3);
+}
+
+.article_home {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: auto auto;
+}
+
+.art_img {
+  width: 100%;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  object-fit: contain;
+}
+
+.art_titel {
+  display: inline-block;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  height: auto;
+  overflow: hidden;
+}
+
+.art_tekst {
+  display: inline-block;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  max-height: 4.5em;
+  overflow: hidden;
+  margin-bottom: 0.5em;
+}
+
+/* Vær-styling */
+#home_weather {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  width: auto;
+  margin-left: 0.5rem;
+  height: auto;
+}
+
+img {
+  max-width: 100%;
 }
