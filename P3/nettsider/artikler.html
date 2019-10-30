@@ -12,7 +12,7 @@
 <body>
   <div id="container">
     <nav>
-      <a href="../home.html"><img src="../Logoer/tio_logo_ExtraLarge.png" alt="Tio logo" id="hovedlogo"></a>
+      <a href="../home.html"><img src="../img/Logoer/tio_logo_ExtraLarge.png" alt="Tio logo" id="hovedlogo"></a>
         <ul>
           <li><a href="artikler.html">Nyheter</a></li>
           <li><a href="booking.html">Booking</a></li>
@@ -22,6 +22,22 @@
         </ul>
     </nav>
   </div>
+  <div class="gridBox">
+    <div id="listeArtikkler" class="gridContent">
+      <ul>
+        <li id="artikkelNr0" onclick="artikkelBytte(0)">Hello</li>
+        <li id="artikkelNr1" onclick="artikkelBytte(1)">H</li>
+        <li id="artikkelNr2" onclick="artikkelBytte(2)">He</li>
+        <li id="artikkelNr3" onclick="artikkelBytte(3)">Hel</li>
+      </ul>
+    </div> 
+    <div id="arikkelen">
+      <h2 id="titelArikkel" class="gridContent"></h2>
+      <img id="bildeArtikkel" src="" class="gridContent"></div>
+      <div id="tekstArtikkel" class="gridContent"></div>
+    </div>
+  </div>
+  <script src="../scripts/artikkel.js"></script>
 </body>
 
 </html>
