@@ -1,144 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="Styling/main.css" />
+    <title>Webtek prosjekt</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="Styling/main.css">
-  <title>Webtek prosjekt</title>
-</head>
+  <body>
+    <div id="container">
+      <nav>
+        <a href="home.html"
+          ><img
+            src="img/Logoer/tio_logo_ExtraLarge.png"
+            alt="Tio logo"
+            id="hovedlogo"
+        /></a>
+        <ul>
+          <li><a href="nettsider/artikler.html">Nyheter</a></li>
+          <li><a href="nettsider/booking.html">Booking</a></li>
+          <li><a href="nettsider/merOmHyttene.html">Hytter</a></li>
+          <li><a href="nettsider/omOss.html">Turlaget</a></li>
+          <li><a href="nettsider/kontaktOss.html">Kontakt oss</a></li>
+        </ul>
+      </nav>
 
-<body>
-  <div id="container">
-    <nav>
-      <a href="home.html"><img src="img/Logoer/tio_logo_ExtraLarge.png" alt="Tio logo" id="hovedlogo"></a>
-      <ul>
-        <li><a href="nettsider/artikler.html">Nyheter</a></li>
-        <li><a href="nettsider/booking.html">Booking</a></li>
-        <li><a href="nettsider/merOmHyttene.html">Hytter</a></li>
-        <li><a href="nettsider/omOss.html">Turlaget</a></li>
-        <li><a href="nettsider/kontaktOss.html">Kontakt oss</a></li>
-      </ul>
-    </nav>
-
-
-    <div id="body_wrapper">
-      <div id="home_slides">
-        <img src="img/slide1_hytte.jpeg" alt="hytter i Oppdal" />
-      </div>
-
-
-      <div id="home_news" onload="artikkelHome()">
-        <div class="article_home">
-          <div class="art_img">
-            <img src="img/vaffelmeme.jpg" alt="vaffel">
-          </div>
-          <div class="art_titel">
-            <h3>Lorem Ipsum</h3>
-          </div>
-          <div class="art_tekst">
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-              deserunt mollit anim id est laborum</p>
-          </div>
+      <div id="body_wrapper">
+        <div id="home_slides">
+          <img src="img/slide1_hytte.jpeg" alt="hytter i Oppdal" />
         </div>
-        <div class="article_home">
-          <div class="art_img">
-            <img src="img/vaffelmeme.jpg" alt="vaffel">
-          </div>
-          <div>
+
+        <div id="home_news" onload="artikkelHome()">
+          <div class="article_home">
+            <div class="art_img">
+              <img src="img/vaffelmeme.jpg" alt="vaffel" />
+            </div>
             <div class="art_titel">
               <h3>Lorem Ipsum</h3>
             </div>
             <div class="art_tekst">
-              <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum</p>
+              <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum
+              </p>
+            </div>
+          </div>
+          <div class="article_home">
+            <div class="art_img">
+              <img src="img/vaffelmeme.jpg" alt="vaffel" />
+            </div>
+            <div>
+              <div class="art_titel">
+                <h3>Lorem Ipsum</h3>
+              </div>
+              <div class="art_tekst">
+                <p>
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="article_home">
+            <div class="art_img">
+              <img src="img/vaffelmeme.jpg" alt="vaffel" />
+            </div>
+            <div>
+              <div class="art_titel">
+                <h3>Lorem Ipsum</h3>
+              </div>
+              <div class="art_tekst">
+                <p>
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum
+                </p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="article_home">
-          <div class="art_img">
-            <img src="img/vaffelmeme.jpg" alt="vaffel">
-          </div>
-          <div>
-            <div class="art_titel">
-              <h3>Lorem Ipsum</h3>
-            </div>
-            <div class="art_tekst">
-              <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum</p>
-            </div>
-          </div>
-        </div>
-      </div>
 
-
-      <div id="home_weather">
-        <div class="article_home">
-          <div class="art_img">
-            <img src="img/vaffelmeme.jpg" alt="vaffel">
-          </div>
-          <div>
-            <div class="art_titel">
-              <h3>Lorem Ipsum</h3>
+        <div id="home_weather" onload="vaerHome()">
+          <div class="weather_prediction">
+            <div class="wea_timespan">idag</div>
+            <div class="wea_img">
+              <img src="/img/Logoer/tio_logo_Mediumpng.png" alt="tur_vær" />
             </div>
-            <div class="art_tekst">
-              <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum</p>
-            </div>
-          </div>
-        </div>
-        <div class="article_home">
-          <div class="art_img">
-            <img src="img/vaffelmeme.jpg" alt="vaffel">
-          </div>
-          <div>
-            <div class="art_titel">
-              <h3>Lorem Ipsum</h3>
-            </div>
-            <div class="art_tekst">
-              <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum</p>
-            </div>
-          </div>
-        </div>
-        <div class="article_home">
-          <div class="art_img">
-            <img src="img/vaffelmeme.jpg" alt="vaffel">
-          </div>
-          <div>
-            <div class="art_titel">
-              <h3>Lorem Ipsum</h3>
-            </div>
-            <div class="art_tekst">
-              <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum</p>
-            </div>
+            <div class="wea_summary">masse sol, ingen regn</div>
+            <div class="wea_temp">mange grader, veldig føles</div>
           </div>
         </div>
       </div>
+
+      <footer>
+        <div>Footer will be here</div>
+      </footer>
     </div>
-  </div>
-  <script src="scripts/artikkel.js">
-  </script>
-</body>
-
+    <script src="scripts/artikkel.js"></script>
+    <script></script>
+  </body>
 </html>

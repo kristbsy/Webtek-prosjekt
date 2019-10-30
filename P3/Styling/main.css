@@ -1,5 +1,5 @@
 h1 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 nav {
@@ -8,7 +8,7 @@ nav {
 }
 
 #hovedlogo {
-  width: calc(100%/8.5);
+  width: calc(100% / 8.5);
   float: left;
   position: absolute;
   bottom: 0px;
@@ -19,27 +19,27 @@ ul {
   display: inline;
 }
 
-#listeArtikkler>ul>li,
-#hytter>li {
+#listeArtikkler > ul > li,
+#hytter > li {
   color: blue;
   text-decoration: underline;
   cursor: pointer;
   width: 0;
 }
 
-nav>ul {
+nav > ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background: #64A842;
+  background: #64a842;
   display: flex;
-  width: calc(100%/8*7);
+  width: calc(100% / 8 * 7);
   position: absolute;
   right: 0px;
   bottom: 0px;
 }
 
-nav>ul>li>a {
+nav > ul > li > a {
   display: block;
   padding: 20px;
   margin: 0;
@@ -48,17 +48,17 @@ nav>ul>li>a {
   color: black;
   border: 1px solid black;
   transition: background 0.5s;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 25px;
 }
 
-nav>ul>li {
+nav > ul > li {
   margin: 0;
   display: inline-block;
-  width: calc(100%/5);
+  width: calc(100% / 5);
 }
 
-nav>ul>li>a:hover {
+nav > ul > li > a:hover {
   background: darkgreen;
 }
 
@@ -103,7 +103,7 @@ nav>ul>li>a:hover {
   grid-row: 2 / 3;
   width: auto;
   margin-right: 0.5rem;
-  height: calc(126px*1.05*3);
+  height: calc(126px * 1.05 * 3);
 }
 
 .article_home {
