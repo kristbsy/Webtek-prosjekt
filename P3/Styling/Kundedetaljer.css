@@ -22,10 +22,15 @@ fieldset legend {
 
 #bekreftbestilling:hover {
   background-color: #64A842;
+  cursor: pointer;
 }
 
 #avbrytbestilling:hover {
   background-color: #D60E00;
+}
+
+a:link {
+  text-decoration: none;
 }
 
 input[type=text], select {
