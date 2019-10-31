@@ -67,7 +67,6 @@ const hyttene = [{
 ];
 
 function byttHytte(evt){
-    event.preventDefault();
     let info = document.getElementById("infoDiv");
     let navn = document.getElementById("hytteNavn")
     let tilbehor = document.getElementById("tilbehørDiv");
@@ -77,3 +76,20 @@ function byttHytte(evt){
     tilbehor.innerHTML = hyttene[evt].hytteTilbehør;
     bilde.src = hyttene[evt].hytteBilde;
 }
+
+
+function MakeList(task){ //Function to make the listed elemetns show in the correct order.
+  for (let i = 0; i < hyttene.length; i++) {
+      let list = document.getElementById("hytter")
+      let node = document.createElement("li");
+
+      node.id = 'hytteNr'+i;
+      node.setAttribute('onclick', 'byttHytte('+i+')')
+
+      let textnode = document.createTextNode(hyttene[i].hytteNavn); //Defines what will be writen in one of the other elements.
+      node.appendChild(textnode); //Inserts the text into the li element.
+      list.appendChild(node);
+  }
+}
+
+MakeList()
