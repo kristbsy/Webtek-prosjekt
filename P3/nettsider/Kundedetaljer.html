@@ -3,9 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Kundedetaljer</title>
+    <link rel="stylesheet" href="../Styling/Kundedetaljer.css">
   </head>
   <body>
     <h1>Kundedetaljer</h1>
+    <h3>Fyll inn skjemaet og trykk bekreft bestilling for å sende bestillingen til oss.</h3>
+    <div>
     <form class="form" action="" method="post">
       <fieldset>
         <legend>Personopplysninger</legend>
@@ -24,22 +27,27 @@
         </label><br>
         <label for="epost">
           E-post
-        <input type="email" id="epost" name="epost" required>
-        </label><br>
+        <br><input type="email" id="epost" name="epost" required>
+      </label><br><br>
         <label for="adresse">
           Adresse
           <input type="text" id="adresse" name="adresse" placeholder="gatenavn og -nummer" required><br>
           <input type="text" pattern="[0-9]{4}" id="postnummer" name="adresse" placeholder="postnummer" required>
           <input type="text" id="poststed" name="adresse" placeholder="poststed" required>
-        </label>
-        <label for="">
-          Antall gjester
-          <input type="number" id="" name="" >
+        </label><br><br>
+        <label for="gjester">
+          Antall voksne gjester
+          <input type="number" id="gjester" name="antall gjester" min="1" max="10" required>
+        </label><br>
+        <label for="barn">
+        Antall barn under 16 år
+        <input type="number" id="barn" name="antall barn" min="0" max="10">
         </label>
       </fieldset>
       <p>Vi sender en faktura til den oppgitte e-postadressen når vi mottar bestillingen.</p>
-      <input type="submit" id="bekreft" name="bekreft" value="Bekreft bestilling">
+      <button type="submit" id="bekreftbestilling" name="button">Bekreft bestillingen</button>
+      <button type="submit" id="avbrytbestilling" name="button"><a href="../home.html">Avbryt</a></button>
     </form>
-
+    </div>
   </body>
 </html>

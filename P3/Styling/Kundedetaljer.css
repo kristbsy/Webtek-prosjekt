@@ -1,0 +1,53 @@
+div {
+  border-radius: 5px;
+  background-color: #A2CC8D;
+  padding: 20px;
+  width: 50%;
+  margin-left: 12%;
+}
+
+h1, h3 {
+  margin-left: 12%;
+}
+
+fieldset {
+  border-color: white;
+  border-style: solid;
+  font-style: italic;
+}
+
+fieldset legend {
+  font-size: 150%;
+}
+
+#bekreftbestilling:hover {
+  background-color: #64A842;
+  cursor: pointer;
+}
+
+#avbrytbestilling:hover {
+  background-color: #D60E00;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+input[type=text], select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  margin: 8px 0;
+}
+
+#postnummer {
+  width: 20%;
+}
+
+#poststed {
+  width: 40%;
+}
+
+#epost {
+  padding: 12px 20px;
+}
