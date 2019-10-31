@@ -11,7 +11,7 @@ const artikkel = [{
     },
     {
         artikkelTitel: 'Absultaket',
-        artikkelTekst: 'cfcfcfcfcfc',
+        artikkelTekst: '<img src="./img/Logoer/tio_logo_Mediumpng.png" alt="tur_vær" />',
         artikkelBilde: 'img/vaffelmeme.jpg'
     },
     {
