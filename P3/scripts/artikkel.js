@@ -2,7 +2,7 @@ const artikkel = [{
         artikkelTitel: 'Lorem Ipsum',
         artikkelTekst: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
         artikkelBilde: 'img/vaffelmeme.jpg',
-        artikkelTid: Date(2019, 11, 01)
+        artikkelTid: new Date(2019, 11, 01)
     },
     {
         artikkelTitel: 'Absultaket',
@@ -85,7 +85,23 @@ function artikkelHome() {
         news.insertBefore(art, news.lastChild);
     }
 }
-
-
 let news = document.getElementById("home_news");
 news.onload = artikkelHome();
+
+
+
+function MakeList(task){ //Function to make the listed elemetns show in the correct order.
+    for (let i = 0; i < artikkel.length; i++) {
+        let list = document.getElementById("listeArtikkler")
+        let node = document.createElement("li");
+
+        node.id = 'artikkelNr'+i;
+        node.setAttribute('onclick', 'artikkelBytte('+i+')');
+
+        let textnode = document.createTextNode(artikkel[i].artikkelTitel); //Defines what will be writen in one of the other elements.
+        node.appendChild(textnode); //Inserts the text into the li element.
+        list.appendChild(node);
+    }
+}
+
+MakeList()

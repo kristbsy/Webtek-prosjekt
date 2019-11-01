@@ -1,13 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="Styling/main.css" />
+    <title>Webtek prosjekt</title>
+    <style>
+        * {box-sizing:border-box}
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="Styling/main.css" />
-  <title>Webtek prosjekt</title>
-</head>
+        /* Slideshow container */
+        .slideshow-container {
+        max-width: 750px;
+        position: relative;
+        margin: auto;
+        }
+  
+        /* Hide the images by default */
+        .mySlides {
+        display: none;
+        }
+  
+        /* The dots/bullets/indicators */
+        .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        }
+  
+        .active, .dot:hover {
+        background-color: #717171;
+        }
+  
+        /* Fading animation */
+        .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 2s;
+        animation-name: fade;
+        animation-duration: 2s;
+        }
+  
+        @-webkit-keyframes fade {
+        from {opacity: .65}
+        to {opacity: 1}
+        }
+  
+        @keyframes fade {
+        from {opacity: .65}
+        to {opacity: 1}
+        }
+     </style>
+  </head>
 
 <body>
   <div id="container">
@@ -23,21 +71,98 @@
     </nav>
 
     <div id="body_wrapper">
-      <div id="home_slides">
-        <img src="img/slide1_hytte.jpeg" alt="hytter i Oppdal" />
+      <div class="slideshow-container">
+          <div class="mySlides fade">
+            <img src="Bilder Filmer Lyd/JuleBilde1.jpg" style="width:100%">
+          </div>
+      
+          <div class="mySlides fade">
+            <img src="Bilder Filmer Lyd/JuleBilde2.jpg" style="width:100%">
+          </div>
+      
+          <div class="mySlides fade">
+            <img src="Bilder Filmer Lyd/JuleBilde3.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides fade">
+            <img src="Bilder Filmer Lyd/JuleBilde4.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides fade">
+            <img src="Bilder Filmer Lyd/JuleBilde5.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides fade">
+            <img src="Bilder Filmer Lyd/JuleBilde6.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides fade">
+            <img src="Bilder Filmer Lyd/JuleBilde7.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides fade">
+            <img src="Bilder Filmer Lyd/JuleBilde8.jpg" style="width:100%">
+          </div>
+      </div>
+      <br>
+      
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+          <span class="dot" onclick="currentSlide(6)"></span>
+          <span class="dot" onclick="currentSlide(7)"></span>
+          <span class="dot" onclick="currentSlide(8)"></span>
       </div>
 
       <div id="home_news"></div>
 
       <div id="home_weather"></div>
-    </div>
-
-    <footer>
+      <footer>
       <div>Footer will be here</div>
-    </footer>
+      </footer>
+    </div>
   </div>
-  <script src="scripts/artikkel.js"></script>
-  <script src="scripts/vaer.js"></script>
-</body>
+    <script src="scripts/artikkel.js"></script>
+    <script src="scripts/vaer.js"></script>
+    <script>
+        //5 seconds between each slide:
+        let SlideshowIntervalID = setInterval(plusSlides, 5000, 1);
+  
+        var slideIndex = 1;
+        showSlides(slideIndex);
+  
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
 
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+  
+        function showSlides(n) {
+           var i;
+           var slides = document.getElementsByClassName("mySlides");
+           var dots = document.getElementsByClassName("dot");
+           if (n > slides.length) {slideIndex = 1}
+           if (n < 1) {slideIndex = slides.length}
+           for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+           }
+           for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+           }
+           slides[slideIndex-1].style.display = "block";
+           dots[slideIndex-1].className += " active";
+           
+           //Resets the interval
+           clearInterval(SlideshowIntervalID)
+           SlideshowIntervalID = setInterval(plusSlides, 5000, 1);
+        } 
+     </script>
+  </body>
 </html>

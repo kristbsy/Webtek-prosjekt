@@ -1,6 +1,6 @@
 .gridBox {
     display: grid;
-    grid-template-columns: 5fr 3fr 3fr;
+    grid-template-columns: 5fr 5fr 3fr;
     background-color: #2196F3;
     padding: 10px;
   }
