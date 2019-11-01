@@ -66,8 +66,6 @@ function load_vaer() {
     }
 }
 
-function vaer_main(){
-    load_vaer();
 }
 let vaeret = document.getElementById("home_weather");
 vaeret.onload = load_vaer();
