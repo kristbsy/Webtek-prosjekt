@@ -1,4 +1,4 @@
-function injectHeader() {
+/* function injectHeader() {
   let navEl = document.createElement("nav");
   navEl.innerHTML = '<ul>\
     < li > <a href="home.html" class="mainLink"><img src="img/Logoer/tio_logo_ExtraLarge.png" alt="Tio logo"\
@@ -9,6 +9,38 @@ function injectHeader() {
         <li><a href="nettsider/omOss.html">Turlaget</a></li>\
         <li><a href="nettsider/kontaktOss.html">Kontakt oss</a></li>\
 </ul > '
+}*/
+
+let liste = [
+  {
+    href: "artikler.html",
+    tekst: "Nyheter"
+  },
+  {
+    href: "booking.html",
+    tekst: "Booking"
+  },
+  {
+    href: "merOmHyttene.html",
+    tekst: "Hytter"
+  },
+  {
+    href: "omOss.html",
+    tekst: "Turlaget"
+  },
+  {
+    href: "kontaktOss.html",
+    tekst: "Kontakt oss"
+  }
+]
+
+
+function injectHeader() {
+  let navbar = document.getElementById("navbar")
+
+  for (let page of liste){
+    navbar.innerHTML += `<li><a href=${page.href}>${page.tekst}</a></li> `
+  }
 }
 
 function injectFooter() {
@@ -17,3 +49,4 @@ function injectFooter() {
 
 injectHeader();
 injectFooter();
+

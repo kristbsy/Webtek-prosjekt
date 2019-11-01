@@ -1,45 +1,3 @@
-const artikkel = [{
-    artikkelTitel: 'Lorem Ipsum',
-    artikkelTekst: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-    artikkelBilde: 'img/vaffelmeme.jpg',
-    artikkelTid: new Date(2019, 11, 0o1)
-},
-{
-    artikkelTitel: 'Absultaket',
-    artikkelTekst: '<b>bfbfbfbfbf</b> onafoinafion <h3>hello</h3>',
-    artikkelBilde: 'img/slide1_hytte.jpeg'
-},
-{
-    artikkelTitel: 'Absultaket',
-    artikkelTekst: '<img src="./img/Logoer/tio_logo_Mediumpng.png" alt="tur_vær" />',
-    artikkelBilde: 'img/vaffelmeme.jpg'
-},
-{
-    artikkelTitel: 'Absultaket',
-    artikkelTekst: 'dfdfdfdfdfdf',
-    artikkelBilde: '../img/slide1_hytte.jpeg'
-}
-];
-
-// for (i in artikkel) {
-//     let div = document.createElement("div");
-//     div.innerText = artikkel[i].artikkelTitel;
-
-//     console.log(artikkel[i].artikkelTitel);
-//     console.log(artikkel[i].artikkelTekst);
-//     console.log("--------------------");
-// }
-
-function artikkelBytte(evt) {
-    event.preventDefault();
-    let titel = document.getElementById("titelArikkel");
-    let tekst = document.getElementById("tekstArtikkel");
-    let bilde = document.getElementById("bildeArtikkel");
-    titel.innerHTML = artikkel[evt].artikkelTitel;
-    tekst.innerHTML = artikkel[evt].artikkelTekst;
-    bilde.src = artikkel[evt].artikkelBilde;
-}
-
 //home news creation
 
 function createArtikkel(artObj) {
@@ -102,4 +60,39 @@ function MakeList(task) { //Function to make the listed elemetns show in the cor
         node.appendChild(textnode); //Inserts the text into the li element.
         list.appendChild(node);
     }
+}
+//////////////////////////     Slideshow.js     //////////////////////////
+
+//5 seconds between each slide:
+let SlideshowIntervalID = setInterval(plusSlides, 5000, 1);
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+
+    //Resets the interval
+    clearInterval(SlideshowIntervalID)
+    SlideshowIntervalID = setInterval(plusSlides, 5000, 1);
 }

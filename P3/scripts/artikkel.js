@@ -1,23 +1,50 @@
 const artikkel = [{
-    artikkelTitel: 'Lorem Ipsum',
-    artikkelTekst: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-    artikkelBilde: 'img/vaffelmeme.jpg',
-    artikkelTid: new Date(2019, 11, 0o1)
+    artikkelTitel: 'Vinterferie uke 8',
+    artikkelTekst: 'Skiløypene vil bli kjørt opp hver formiddag hele vinterferien! På skisporet.no finner du en oversikt over alle løypene. I skrivende stund er skiføret nydelig, og langtidsvarselet virker lovende for en flott vinterferie i skisporet! <br><br> Husk; det er ingen skam med en kvikk-lunsj i solveggen på ei hytte heller.',
+    artikkelBilde: 'art_skispor',
+    artikkelTid: '10.02.2018'
 },
 {
-    artikkelTitel: 'Absultaket',
-    artikkelTekst: '<b>bfbfbfbfbf</b> onafoinafion <h3>hello</h3>',
-    artikkelBilde: 'img/slide1_hytte.jpeg'
+    artikkelTitel: 'Kajakk til utlån',
+    artikkelTekst: 'I naustet ved Langevatn ligger det kajakker som kan lånes for en rimelig penge. Betaling kan gjøres via Vipps eller ved å legge kontanter i kassen. <br><br> Vi anbefaler våttkort før man legger ut på tur, og alltid bruk redningsvest! Det ligger redningsvester i ulike barne- og voksenstørrelser i naustet. Husk også å registrere navn på alle padlere i boka. <br><br> Fra Elvskinnet og Klebbstuggu er det fine turer til Langevatn. I sørenden av vatnet ligger også en idyllisk bålplass. ',
+    artikkelBilde: 'art_kajakk',
+    artikkelTid: '08.07.2018'
 },
 {
-    artikkelTitel: 'Absultaket',
-    artikkelTekst: '<img src="./img/Logoer/tio_logo_Mediumpng.png" alt="tur_vær" />',
-    artikkelBilde: 'img/vaffelmeme.jpg'
+    artikkelTitel: 'Tid for blåbær!',
+    artikkelTekst: 'Nå er fjellet fullt av blåbær! Vi anbefaler å ta turen opp mot Storheia med armene fulle av bærplukkere og bøtter! Langs stien rundt Blåvatnet er det også mye blåbær, og dette er en fin tur å ta med små barn på.',
+    artikkelBilde: 'art_blabar',
+    artikkelTid: '02.08.2018'
 },
 {
-    artikkelTitel: 'Absultaket',
-    artikkelTekst: 'dfdfdfdfdfdf',
-    artikkelBilde: '../img/slide1_hytte.jpeg'
+    artikkelTitel: 'Vei-dugnad',
+    artikkelTekst: 'Tusen takk til alle som bidro på dugnad for å sette i stand grusveien opp til Nuddustruddu! Alle hull er nå fylt igjen, og vi fikk forsterket veien der fjorårets høstregn hadde gjort sitt. ',
+    artikkelBilde: 'art_vei',
+    artikkelTid: '15.09.2018'
+},
+{
+    artikkelTitel: 'Fjell-jul',
+    artikkelTekst: 'Drømmer du om en hvit jul? Hyttene våre er tilgjengelige for leie også i julehøytiden, og flere hytter er fremdeles ledige. Det er mulig å bestille scootertransport til og fra flere av hyttene, så man slipper å bære både ribbe og julegaver på ryggen. Ta kontakt med oss, så ordner vi dette. <br><br> Vi garanterer en hvit og stemningsfull julefeiring for hele familien!',
+    artikkelBilde: 'art_jul',
+    artikkelTid: '11.11.2018'
+},
+{
+    artikkelTitel: 'Påskeskirenn og påskeeggjakt!',
+    artikkelTekst: 'På Påskeaften arrangerer vi i tradisjonen tro påskeskirenn og påskeeggjakt for barna på Høtta! Det vil også bli grilling av pølser på bål og hjemmelaget kakao, og selvfølgelig en snørrete adjektivhistorie! <br><br> Skirennet starter kl 13, og vi setter i gang jakten på påskeeggene etter pølsestekingen.',
+    artikkelBilde: 'art_paske',
+    artikkelTid: '01.04.2019'
+},
+{
+    artikkelTitel: 'Fiske',
+    artikkelTekst: 'Lyse sommernetter er perfekte for å fiske. Vi anbefaler å ta med fiskestang til Svartsjøen, her er det mye ørret. Er du glad i røye, anbefaler vi en fisketur på Isvatnet. På Flåbånnhytta finnes også et lite røykeri perfekt for å røyke fisk. Husk i så fall og ta med rikelig med salt til forberedelsene. <br><br> Om du ønsker å fiske må du også huske å kjøpe fiskekort! Dette kan kjøpes på inatur.no eller på bensinstasjonen i sentrum.',
+    artikkelBilde: 'art_fiske',
+    artikkelTid: '29.06.2019'
+},
+{
+    artikkelTitel: 'Veden er klar! ',
+    artikkelTekst: 'De første snøfnuggene har meldt sin ankomst, men nå er det stablet ved på alle hyttene, så vinteren kan bare komme! Tusen takk til alle som bidro på vedhogst-dugnader i sommer!',
+    artikkelBilde: 'art_ved',
+    artikkelTid: '22.10.2019'
 }
 ];
 
@@ -32,7 +59,7 @@ function artikkelBytte(evt) {
 }
 
 function MakeList(task) { //Function to make the listed elemetns show in the correct order.
-    for (let i = 0; i < artikkel.length; i++) {
+    for (let i = (artikkel.length-1); i >= 0; i--) {
         let list = document.getElementById("listeArtikkler")
         let node = document.createElement("li");
 
