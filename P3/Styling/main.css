@@ -2,6 +2,11 @@ h1 {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
+body{
+  min-height: 100vh;
+  margin: 0;
+}
+
 #hovedlogo{
   max-height: 100%;
 }
@@ -23,7 +28,7 @@ nav>a{
 
 
 nav {
-  grid-row: 1/2;
+  height: 8vh;
   display: flex;
 }
 
@@ -70,11 +75,11 @@ nav>ul>li>a:hover {
 
 
 #container {
+  box-sizing: border-box;
+  padding-top: 10px;
   width: 70%;
   margin: auto;
-  display: grid;
-  min-height: 100%;
-  grid-template-rows: 5% 80% 10%;
+  min-height: 100vh;
 }
 
 /* Footer-styling */
