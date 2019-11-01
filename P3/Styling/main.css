@@ -2,6 +2,20 @@ h1 {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
+#hovedlogo{
+  max-height: 100%;
+}
+
+.mainLink{
+  flex: 1 1;
+  border: none;
+  background-color: transparent;
+}
+
+.mainLink:hover{
+  transform: scale(1.1);
+  background-color: transparent;
+}
 
 nav>a{
   width: calc(100%/8.5);
@@ -14,11 +28,10 @@ nav {
 }
 
 nav>ul {
-  display: inline;
+  display: flex;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background: #64a842;
   display: flex;
   width: 100%;
 }
@@ -30,8 +43,7 @@ nav>ul {
 nav>ul>li>a {
   height: 100%;
   display: block;
-  padding-top: 25%;
-  
+  background-color: #64a842;
   color: black;
   border: 1px solid black;
   text-align: center;
@@ -42,6 +54,7 @@ nav>ul>li>a {
 }
 
 nav>ul>li {
+  display: inline;
   margin: 0;
   width: calc(100% / 5);
 }
@@ -61,7 +74,7 @@ nav>ul>li>a:hover {
   margin: auto;
   display: grid;
   min-height: 100%;
-  grid-template-rows: 10% 80% 10%;
+  grid-template-rows: 5% 80% 10%;
 }
 
 /* Footer-styling */
