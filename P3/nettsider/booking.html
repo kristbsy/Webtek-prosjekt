@@ -2,62 +2,28 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="../Styling/main.css">
-  <link rel="stylesheet" href="../Styling/bookingStyle.css">
-  <title>Webtek prosjekt</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../Styling/booking.css">
+    <title>Document</title>
 </head>
 
 <body>
-  <div id="container">
-    <nav>
-      <a href="../home.html"><img src="../Logoer/tio_logo_ExtraLarge.png" alt="Tio logo" id="hovedlogo"></a>
-
-      <ul>
-        <li><a href="artikler.html">Nyheter</a></li>
-        <li><a href="booking.html">Booking</a></li>
-        <li><a href="merOmHyttene.html">Hytter</a></li>
-        <li><a href="omOss.html">Turlaget</a></li>
-        <li><a href="kontaktOss.html">Kontakt oss</a></li>
-      </ul>
-    </nav>
-  </div>
-  <div id="content" class="gridBox">
-    <div id="map" class="gridContent">
-      <img id="nodeKart" src="../img/nodeMap.png" alt="Kart med hyttene markert">
-    </div>
-    <div id="info" class="gridContent">
-      <div id="hytteInfo">
-        <p id="hytteTitel"></p>
-        <img id="hytteBilde" src="" alt="">
-        <p id="hytteTilbehør"></p>
-        <p id="hytteIntroTekst"></p>
-      </div>
-    </div>
-    <div id="form" class="gridContent">
-      <form id="bestiling">
-        <h2>Din tur</h2>
-        <div id=""> <!-- Eksempel på hva en innsatt hytte vil se ut -->
-          <p id="hytteNummer">1</p>
-          <p id="hytteNavn">Hyttenavn</p>
-          <select id="hytteNr(i)" name="hytte(i)" required>
-              <option disabled selected value> Hvor mange netter? </option>
-              <option value="0">0</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-          </select>
-          <p id="hyttePris">500kr /natt</p>
-          <p id="hytteDistanse">6.3km fra forige hytte</p>
+    <main>
+        <div id="container"></div>
+        <canvas height="700" width="720"></canvas>
+        <div id="info">
+            <p>Vennligst velg en hytte fra kartet for å få info</p>
         </div>
-        <button submit>Bestill</button>
-      </form>
-    </div>
-  </div>
-  <script src="../scripts/booking.js"></script>
+        <div id="recap">
+            <h2>Den gjeldende turen</h2>
+            <p>Listen er for øyeblikket tom. Vennligst legg til en hytte for å se sammendrag</p>
+        </div>
+    </main>
+
+    <script src="../scripts/hytter.js"></script>
+    <script src="../scripts/booking.js"></script>
 </body>
+
 </html>
