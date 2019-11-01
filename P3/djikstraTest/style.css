@@ -84,6 +84,11 @@ canvas{
 
 .node:hover{
     cursor: pointer;
+    transform: scale(1.1);
+}
+
+.node:active{
+    transform: scale(1);
 }
 
 .node div{
@@ -124,7 +129,8 @@ canvas{
 }
 
 #infoFeatures{
-    margin-right: 20px;
+    flex-shrink: 0;
+    margin-right: 15px;
     margin-left: 10px;;
 }
 
@@ -132,17 +138,22 @@ canvas{
     margin-right: 10px;
 }
 
-#buttonWrap{
+#bottomWrap{
     display: table-row;
     vertical-align: bottom;
-    height: 80px;
+    height: 115px;
+    margin-bottom: 10px;
+}
+
+#buttonWrap{
+    display: flex;
 }
 
 .button{
     margin: auto;
     background-color: rgb(5, 189, 66);
     border: 1px solid rgb(5, 160, 56);
-    width: 50%;
+    width: 80%;
     font-size: 18px;
 
     transition: 0.3s;

@@ -27,7 +27,7 @@ class Grid {
         this.info = info;
         this.recap = recap;
         this.grid = [];
-        this.points = [];
+        this.points = [-1, -1];
         this.path = [];
     }
 
@@ -67,7 +67,13 @@ class Grid {
 
     refreshRecap() {
         let elements = [];
-        this.points.forEach(el => { elements.push(this.generateRecapInstanceHTML(el)) });
+        if (this.points.includes(-1)) {
+            this.points.filter(el => el != -1).forEach(el => { elements.push(this.generateRecapInstanceHTML(el)) });
+        } else {
+            console.log(this.path)
+            this.path.filter(el => el != -1).forEach(el => { elements.push(this.generateRecapInstanceHTML(el)) });
+        }
+        console.log(elements);
         this.recap.innerHTML = "<h2>Den gjeldende turen</h2>";
         elements.forEach(el => { this.recap.appendChild(el) });
     }
@@ -79,7 +85,9 @@ class Grid {
     }
 
     getPath(fromId, toId) {
-        if (this.grid[fromId].dGrid.length === 0) {
+        console.log(fromId, toId, this.grid[fromId].dGrid.length);
+        if (this.grid[fromId].dGrid.length <= 0) {
+            console.log("instantiate")
             this.initDjikstra(fromId);
             return this.getPath(fromId, toId);
         }
@@ -112,10 +120,9 @@ class Grid {
             distToSet = Math.sqrt(Math.pow((id1x - id2x), 2) + Math.pow((id1y - id2y), 2));
         }
         let isDuplicate = false;
-        // console.log(this.grid[id1].attachments);
         this.grid[id1].attachments.forEach(attachment => {
             if (!isDuplicate) {
-                console.log(attachment.nodeId, id2);
+                //console.log(attachment.nodeId, id2);
                 isDuplicate = attachment.nodeId == id2;
             }
         });
@@ -134,17 +141,21 @@ class Grid {
         let infoEl = document.createElement("div");
         let featuresEl = document.createElement("div")
         let buttonDiv = document.createElement("div");
+        let button2Div = document.createElement("div")
         let infoSplitEl = document.createElement("div");
-        let buttonWrapEl = document.createElement("div");
+        let bottomWrapEl = document.createElement("div");
         let priceEl = document.createElement("div");
+        let buttonWrapEl = document.createElement("div");
 
+        buttonWrapEl.className = "buttonWrap";
         mainEl.id = "info";
-        buttonWrapEl.id = "buttonWrap";
+        bottomWrapEl.id = "bottomWrap";
         infoSplitEl.id = "infoSplit";
         featuresEl.id = "infoFeatures";
         infoEl.id = "infoText";
 
         buttonDiv.className = "button";
+        button2Div.className = "button";
         priceEl.style.marginLeft = "10px";
         titleEl.style.height = "24px";
 
@@ -153,34 +164,49 @@ class Grid {
 
         infoEl.innerText = info.text;
         featuresEl.innerHTML = info.features;
-        buttonDiv.innerText = "LEGG TIL";
+        buttonDiv.innerText = "Sett som start";
+        button2Div.innerText = "Sett som destinasjon"
         imgEl.src = info.img;
 
-        buttonWrapEl.appendChild(priceEl);
-        buttonWrapEl.appendChild(document.createElement("br"));
+
         buttonWrapEl.appendChild(buttonDiv);
+        buttonWrapEl.appendChild(button2Div);
+        bottomWrapEl.appendChild(priceEl);
+        bottomWrapEl.appendChild(document.createElement("br"));
+        bottomWrapEl.appendChild(buttonWrapEl);
 
-        buttonDiv.addEventListener("click", () => { this.handleButtonClick(id) });
-
+        buttonDiv.addEventListener("click", () => { this.handleStartClick(id) });
+        button2Div.addEventListener("click", () => { this.handleEndClick(id) });
         infoSplitEl.appendChild(featuresEl);
         infoSplitEl.appendChild(infoEl);
 
         mainEl.appendChild(imgEl);
         mainEl.appendChild(titleEl);
         mainEl.appendChild(infoSplitEl);
-        mainEl.appendChild(buttonWrapEl);
+        mainEl.appendChild(bottomWrapEl);
 
         return mainEl;
     }
 
-    handleButtonClick(id) {
-        this.points.push(id);
-        this.refreshRecap();
-        if (this.points.length === 2) {
-            this.path = this.getPath(this.points[0], this.points[1]).reverse();
-        }
-        this.render();
+    handleStartClick(id) {
+        this.points[0] = id;
 
+        if (!this.points.includes(-1)) {
+            this.path = this.getPath(this.points[0], this.points[1]).reverse();
+            this.render();
+        }
+        this.refreshRecap();
+
+    }
+
+    handleEndClick(id) {
+        this.points[1] = id;
+
+        if (!this.points.includes(-1)) {
+            this.path = this.getPath(this.points[0], this.points[1]).reverse();
+            this.render();
+        }
+        this.refreshRecap();
     }
 
     handleClick(id) {
@@ -230,14 +256,38 @@ class Grid {
 
     renderAttachments() {
         let ctx = document.querySelector("canvas").getContext('2d');
+
+        ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+        ctx.beginPath();
+        ctx.lineWidth = 2
+        ctx.strokeStyle = "black";
         for (let i = 0; i < this.grid.length; i++) {
             for (let j = 0; j < this.grid[i].attachments.length; j++) {
                 let to = this.grid[this.grid[i].attachments[j].nodeId];
+                ctx.fillStyle = "black";
                 ctx.moveTo(this.grid[i].x, this.grid[i].y);
                 ctx.lineTo(to.x, to.y);
-                ctx.stroke();
+
             }
         }
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.lineWidth = 3
+        ctx.strokeStyle = "green";
+        for (let i = 1; i < this.path.length; i++) {
+
+            let startX = this.grid[this.path[i]].x;
+            let startY = this.grid[this.path[i]].y;
+            let endX = this.grid[this.path[i - 1]].x;
+            let endY = this.grid[this.path[i - 1]].y;
+            ctx.fillStyle = "green";
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(endX, endY);
+
+        }
+        ctx.stroke();
     }
 }
 

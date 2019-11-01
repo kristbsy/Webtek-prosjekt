@@ -110,6 +110,20 @@ const hytter = [
       features: "en<br>to<br>tre",
       text: "En eksepsjonelt god brødtekst til hytte 8. All informasjonen du noensinne kunne trengt finnes i denne lille boksen. Er det ikke fantastisk?",
       img: "./hytte1.jpg"
+    }
+  },
+  {
+    id: 8,
+    x: 700,
+    y: 600,
+    attachments: [7],
+
+    info: {
+      name: "Hytte 9",
+      price: 10900,
+      features: "en<br>to<br>tre",
+      text: "En eksepsjonelt god brødtekst til hytte 9. All informasjonen du noensinne kunne trengt finnes i denne lille boksen. Er det ikke fantastisk?",
+      img: "./hytte1.jpg"
     },
   }
 ];
