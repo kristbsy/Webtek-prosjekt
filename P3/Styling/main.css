@@ -94,12 +94,12 @@ footer {
 
 
 /*Sett denne til riktig sted*/
-#listeArtikkler>ul>li,
+#listeArtikkler>li,
 #hytter>li {
   color: blue;
   text-decoration: underline;
   cursor: pointer;
-  width: 0;
+  width: 1px;
 }
 /*Denne også*/
 #kontaktOss {
