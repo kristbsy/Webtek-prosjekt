@@ -19,7 +19,7 @@ ul {
   display: inline;
 }
 
-#listeArtikkler > ul > li,
+#listeArtikkler > li,
 #hytter > li {
   color: blue;
   text-decoration: underline;
