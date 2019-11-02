@@ -4,15 +4,15 @@ let slideshow_hovedside = [
     alternativ_tekst: "Bilde av ..."
   },
   {
-    kilde: "img/slideshow/JuleBilde1.jpg",
+    kilde: "img/slideshow/JuleBilde2.jpg",
     alternativ_tekst: "Bilde av ..."
   },
   {
-    kilde: "img/slideshow/JuleBilde1.jpg",
+    kilde: "img/slideshow/JuleBilde3.jpg",
     alternativ_tekst: "Bilde av ..."
   },
   {
-    kilde: "img/slideshow/JuleBilde1.jpg",
+    kilde: "img/slideshow/JuleBilde4.jpg",
     alternativ_tekst: "Bilde av ..."
   }
 ]

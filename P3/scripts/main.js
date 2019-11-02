@@ -24,14 +24,24 @@ let liste = [
 
 function injectHeader() {
   let navbar = document.getElementById("navbar")
-
-  for (let page of liste){
-    navbar.innerHTML += `<li><a href=${page.href}>${page.tekst}</a></li>`
+  if (navbar != null){
+    for (let page of liste){
+      navbar.innerHTML += `<li><a href=${page.href}>${page.tekst}</a></li> `
+    }
   }
 }
 
 function injectFooter() {
-
+  let footer = document.getElementById("footer");
+  footer.innerHTML += `
+  Lokalt kontor: Krokveigen 76, Oppdal
+  <br>
+  Telefon: 986 45 123
+  <br>
+  Epost: TiO@turiioodal.no
+  <br>
+  Åpningstider: Man-Fre: 07:00 - 21:00, Lør-Søn: 09:00 - 21:00
+  `
 }
 
 injectHeader();
