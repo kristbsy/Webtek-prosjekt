@@ -7,55 +7,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="styling/main.css" />
   <link rel="stylesheet" href="styling/home.css">
+  <link rel="stylesheet" href="styling/slideshow.css">
   <title>Webtek prosjekt</title>
-  <style>
-    /*spesifiser?*/
-
-    /* The dots/bullets/indicators */
-
-
-    .active,
-    .dot:hover {
-      background-color: #717171;
-    }
-
-    /* Fading animation */
-    .fade {
-      -webkit-animation-name: fade;
-      -webkit-animation-duration: 2s;
-      animation-name: fade;
-      animation-duration: 2s;
-    }
-
-    @-webkit-keyframes fade {
-      from {
-        opacity: .65
-      }
-
-      to {
-        opacity: 1
-      }
-    }
-
-    @keyframes fade {
-      from {
-        opacity: .65
-      }
-
-      to {
-        opacity: 1
-      }
-    }
-  </style>
 </head>
 
 <body>
   <div id="container">
     <nav>
-
       <ul>
-        <li><a href="home.html" class="mainLink"><img src="img/logoer/tio_logo_ExtraLarge.png" alt="Tio logo"
-              id="hovedlogo" /></a></li>
+        <li><a href="home.html" class="mainLink"><img src="img/logoer/tio_logo_ExtraLarge.png" alt="Tio logo" id="hovedlogo" /></a></li>
         <li><a href="nettsider/artikler.html">Nyheter</a></li>
         <li><a href="nettsider/booking.html">Booking</a></li>
         <li><a href="nettsider/merOmHyttene.html">Hytter</a></li>
@@ -65,68 +25,51 @@
     </nav>
 
     <div id="body_wrapper">
-      <div class="slideshow-container">
-        <div class="mySlides fade">
-          <img src="img/slideshow/JuleBilde1.jpg" alt="slideshow bilde">
-        </div>
+      <div class="slideshow_container" id="slideshow_home">
+        <!-- Dette er hvor slideshow blidene vil komme -->
+      </div>
+      <div class="dotContainer" id="slideshow_buttons">
+        <!-- Dette er hvor slideshow knappen vil komme -->
+      </div>
 
-        <div class="mySlides fade">
-          <img src="img/slideshow/JuleBilde2.jpg" alt="slideshow bilde">
-        </div>
+      <div id="home_news">
+        <!-- Dette er hvor de tre nyeste nyhetene kommer -->
 
-        <div class="mySlides fade">
-          <img src="img/slideshow/JuleBilde3.jpg" alt="slideshow bilde">
+        <div class="arikkelen">
+            <h2 id="titelArikkel0" class="gridContent">null</h2>
+            <img id="bildeArtikkel0" src="null" class="gridContent" alt="null">
+            <div class="gridContent">
+              <p id="tekstArtikkel0"></p>
+            </div>
         </div>
-
-        <div class="mySlides fade">
-          <img src="img/slideshow/JuleBilde4.jpg" alt="slideshow bilde">
+        <div class="arikkelen">
+            <h2 id="titelArikkel1" class="gridContent">null</h2>
+            <img id="bildeArtikkel1" src="null" class="gridContent" alt="null">
+            <div class="gridContent">
+              <p id="tekstArtikkel1"></p>
+            </div>
         </div>
-
-        <div class="mySlides fade">
-          <img src="img/slideshow/JuleBilde5.jpg" alt="slideshow bilde">
-        </div>
-
-        <div class="mySlides fade">
-          <img src="img/slideshow/JuleBilde6.jpg" alt="slideshow bilde">
-        </div>
-
-        <div class="mySlides fade">
-          <img src="img/slideshow/JuleBilde7.jpg" alt="slideshow bilde">
-        </div>
-
-        <div class="mySlides fade">
-          <img src="img/slideshow/JuleBilde8.jpg" alt="slideshow bilde">
-        </div>
-        <div class="orderNow">
-          <div id="orderButton"></div>
-        </div>
-        <div class="dotContainer" style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
-          <span class="dot" onclick="currentSlide(4)"></span>
-          <span class="dot" onclick="currentSlide(5)"></span>
-          <span class="dot" onclick="currentSlide(6)"></span>
-          <span class="dot" onclick="currentSlide(7)"></span>
-          <span class="dot" onclick="currentSlide(8)"></span>
+        <div class="arikkelen">
+            <h2 id="titelArikkel2" class="gridContent">null</h2>
+            <img id="bildeArtikkel2" src="null" class="gridContent" alt="null">
+            <div class="gridContent">
+              <p id="tekstArtikkel2"></p>
+            </div>
         </div>
       </div>
-      <br>
 
-      <!-- The dots/circles -->
-
-
-      <div id="home_news"></div>
-
-      <div id="home_weather"></div>
+      <div id="home_weather">
+        <!-- Dette er hvor de tre neste ukenes vær vil være -->
+      </div>
 
     </div>
     <footer>
       <div>Footer will be here</div>
     </footer>
   </div>
-  <script src="scripts/home.js"></script>
+  <script src="scripts/artikkel.js"></script>
   <script src="scripts/vaer.js"></script>
+  <script src="scripts/slideshow.js"></script>
 </body>
 
 </html>
