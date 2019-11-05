@@ -53,14 +53,14 @@ const hyttene = [{
   hytteBilde: '../img/hytter/..'
 },
 {
-  hytteNavn: 'Tiulla',
-  hytteTekst: 'Dette er  teksten til Tiulla!  elektrisitet og varmeovner, slik at en fort får varmen tilbake i kroppen etter en tur i bakken. Inkludert i inventaret er det også en skotørker, og vi ber alle våre gjester lese instruksene før bruk, ettersom det har vært tidligere ulykker.',
+  hytteNavn: 'Sluggmøll',
+  hytteTekst: 'Dette er  teksten til Sluggmøll!  elektrisitet og varmeovner, slik at en fort får varmen tilbake i kroppen etter en tur i bakken. Inkludert i inventaret er det også en skotørker, og vi ber alle våre gjester lese instruksene før bruk, ettersom det har vært tidligere ulykker.',
   hytteTilbehør: 'Pris: 305 <br>Sengeplasser: 10<br> Innlagt vann: Ja<br>Innlagt strøm: Ja<br>Internett: Nei<br>Annet: Fine skimuligheter',
   hytteBilde: '../img/hytter/..'
 },
 {
-  hytteNavn: 'Sluggmøll',
-  hytteTekst: 'Dette er  teksten til Sluggmøll!  elektrisitet og varmeovner, slik at en fort får varmen tilbake i kroppen etter en tur i bakken. Inkludert i inventaret er det også en skotørker, og vi ber alle våre gjester lese instruksene før bruk, ettersom det har vært tidligere ulykker.',
+  hytteNavn: 'Tiulla',
+  hytteTekst: 'Dette er  teksten til Tiulla!  elektrisitet og varmeovner, slik at en fort får varmen tilbake i kroppen etter en tur i bakken. Inkludert i inventaret er det også en skotørker, og vi ber alle våre gjester lese instruksene før bruk, ettersom det har vært tidligere ulykker.',
   hytteTilbehør: 'Pris: 305 <br>Sengeplasser: 10<br> Innlagt vann: Ja<br>Innlagt strøm: Ja<br>Internett: Nei<br>Annet: Fine skimuligheter',
   hytteBilde: '../img/hytter/..'
 }
