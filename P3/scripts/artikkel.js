@@ -127,10 +127,18 @@ function getOrderedObject(articles) {
     return ordered;
 }
 
+function switchDisplay(event) {
+    let child = event.target.children[0];
+    if (typeof (child) !== "undefined" && event.target.nodeName == "LI") {
+        child.style.display = child.style.display == "none" ? "" : "none";
+    }
+}
+
 function generateList(orderedArticles) {
     let mainEl = document.createElement("ul")
     Object.keys(orderedArticles).forEach(outerKey => {
         let outerListEl = document.createElement("li");
+        outerListEl.addEventListener("click", switchDisplay)
         mainEl.prepend(outerListEl);
         outerListEl.innerText = outerKey;
 
@@ -139,6 +147,7 @@ function generateList(orderedArticles) {
 
         Object.keys(orderedArticles[outerKey]).forEach(innerKey => {
             let innerListEl = document.createElement("li");
+            //innerListEl.addEventListener("click", switchDisplay)
             middleListEl.prepend(innerListEl)
             innerListEl.innerText = innerKey;
 
@@ -146,6 +155,7 @@ function generateList(orderedArticles) {
             innerListEl.appendChild(lastUliSwear);
             orderedArticles[outerKey][innerKey].forEach(article => {
                 let innerMostLi = document.createElement("li");
+                //innerListEl.addEventListener("click", switchDisplay)
                 innerMostLi.innerText = article.artikkelTitel;
                 lastUliSwear.appendChild(innerMostLi);
             })
