@@ -5,6 +5,7 @@ h1 {
 body{
   min-height: 100vh;
   margin: 0;
+  position: relative;
 }
 
 #container>*{
@@ -79,7 +80,6 @@ nav>ul>li>a:hover {
   width: 70%;
   margin: auto;
   min-height: 100vh;
-  position: relative;
 }
 
 /* Footer-styling */
