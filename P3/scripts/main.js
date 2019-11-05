@@ -25,20 +25,23 @@ let liste = [
 function injectHeader() {
   let hrefPrefix = "";
   let imgPrefix = "";
+  let mainPrefix = "";
   if (location.href.split("/").slice(-1)[0] == "home.html") {
     hrefPrefix = "nettsider/";
     imgPrefix = "img/";
+    mainPrefix = "./"
   } else {
     hrefPrefix = "./";
     imgPrefix = "../img/"
+    mainPrefix = "../"
   }
   let navEl = document.createElement("nav");
   navEl.id = "navbar";
   let listElements = document.createElement("ul");
-  listElements.innerHTML += `<li><a href="../home.html" class="mainLink"><img src="${imgPrefix}Logoer/tio_logo_ExtraLarge.png" alt="Tio logo" id="hovedlogo" /></a></li>`
-  if (navEl != null){
-    for (let page of liste){
-      listElements.innerHTML += `<li><a href="${hrefPrefix} ${page.href}">${page.tekst}</a></li> `
+  listElements.innerHTML += `<li><a href="${mainPrefix}home.html" class="mainLink"><img src="${imgPrefix}Logoer/tio_logo_ExtraLarge.png" alt="Tio logo" id="hovedlogo" /></a></li>`
+  if (navEl != null) {
+    for (let page of liste) {
+      listElements.innerHTML += `<li><a href="${hrefPrefix}${page.href}">${page.tekst}</a></li> `
     }
   }
   navEl.appendChild(listElements);
