@@ -1,7 +1,12 @@
+let prefix = ".";
+if (location.href.split("/").slice(-1)[0] !== "home.html") {
+    prefix += ".";
+}
+
 const artikler = [{
     artikkelTitel: 'Vinterferie uke 8',
     artikkelTekst: 'Skiløypene vil bli kjørt opp hver formiddag hele vinterferien! På skisporet.no finner du en oversikt over alle løypene. I skrivende stund er skiføret nydelig, og langtidsvarselet virker lovende for en flott vinterferie i skisporet! <br><br> Husk; det er ingen skam med en kvikk-lunsj i solveggen på ei hytte heller.',
-    artikkelBilde: '../img/artikler/art_skispor.jpg',
+    artikkelBilde: '/img/Artikler/art_skispor.jpg',
     artikkelTid: new Date(2018, 2, 10),
     artikkelForfatter: "bjørn",
     artikkelBildeAlt: 'bilde av ...'
@@ -9,14 +14,14 @@ const artikler = [{
 {
     artikkelTitel: 'Kajakk til utlån',
     artikkelTekst: 'I naustet ved Langevatn ligger det kajakker som kan lånes for en rimelig penge. Betaling kan gjøres via Vipps eller ved å legge kontanter i kassen. <br><br> Vi anbefaler våttkort før man legger ut på tur, og alltid bruk redningsvest! Det ligger redningsvester i ulike barne- og voksenstørrelser i naustet. Husk også å registrere navn på alle padlere i boka. <br><br> Fra Elvskinnet og Klebbstuggu er det fine turer til Langevatn. I sørenden av vatnet ligger også en idyllisk bålplass. ',
-    artikkelBilde: '../img/artikler/art_kajakk.jpg',
+    artikkelBilde: '/img/artikler/art_kajakk.jpg',
     artikkelTid: new Date(2018, 7, 8),
     artikkelBildeAlt: 'bilde av ...'
 },
 {
     artikkelTitel: 'Tid for blåbær!',
     artikkelTekst: 'Nå er fjellet fullt av blåbær! Vi anbefaler å ta turen opp mot Storheia med armene fulle av bærplukkere og bøtter! Langs stien rundt Blåvatnet er det også mye blåbær, og dette er en fin tur å ta med små barn på.',
-    artikkelBilde: '../img/artikler/art_blabar.jpg',
+    artikkelBilde: '/img/artikler/art_blabar.jpg',
     artikkelTid: new Date(2018, 8, 2),
     artikkelForfatter: "bjørn",
     artikkelBildeAlt: 'bilde av ...'
@@ -24,7 +29,7 @@ const artikler = [{
 {
     artikkelTitel: 'Tid for blåbær!',
     artikkelTekst: 'Nå er fjellet fullt av blåbær! Vi anbefaler å ta turen opp mot Storheia med armene fulle av bærplukkere og bøtter! Langs stien rundt Blåvatnet er det også mye blåbær, og dette er en fin tur å ta med små barn på.',
-    artikkelBilde: '../img/artikler/art_blabar.jpg',
+    artikkelBilde: '/img/artikler/art_blabar.jpg',
     artikkelTid: new Date(2018, 0, 1),
     artikkelForfatter: "bjørn",
     artikkelBildeAlt: 'bilde av ...'
@@ -32,7 +37,7 @@ const artikler = [{
 {
     artikkelTitel: 'Vei-dugnad',
     artikkelTekst: 'Tusen takk til alle som bidro på dugnad for å sette i stand grusveien opp til Nuddustruddu! Alle hull er nå fylt igjen, og vi fikk forsterket veien der fjorårets høstregn hadde gjort sitt. ',
-    artikkelBilde: '../img/artikler/art_vei.jpg',
+    artikkelBilde: '/img/artikler/art_vei.jpg',
     artikkelTid: new Date(2018, 9, 15),
     artikkelForfatter: "bjørn",
     artikkelBildeAlt: 'bilde av ...'
@@ -40,7 +45,7 @@ const artikler = [{
 {
     artikkelTitel: 'Fjell-jul',
     artikkelTekst: 'Drømmer du om en hvit jul? Hyttene våre er tilgjengelige for leie også i julehøytiden, og flere hytter er fremdeles ledige. Det er mulig å bestille scootertransport til og fra flere av hyttene, så man slipper å bære både ribbe og julegaver på ryggen. Ta kontakt med oss, så ordner vi dette. <br><br> Vi garanterer en hvit og stemningsfull julefeiring for hele familien!',
-    artikkelBilde: '../img/artikler/art_jul.jpg',
+    artikkelBilde: '/img/artikler/art_jul.jpg',
     artikkelTid: new Date(2018, 11, 11),
     artikkelForfatter: "bjørn",
     artikkelBildeAlt: 'bilde av ...'
@@ -48,7 +53,7 @@ const artikler = [{
 {
     artikkelTitel: 'Påskeskirenn og påskeeggjakt!',
     artikkelTekst: 'På Påskeaften arrangerer vi i tradisjonen tro påskeskirenn og påskeeggjakt for barna på Høtta! Det vil også bli grilling av pølser på bål og hjemmelaget kakao, og selvfølgelig en snørrete adjektivhistorie! <br><br> Skirennet starter kl 13, og vi setter i gang jakten på påskeeggene etter pølsestekingen.',
-    artikkelBilde: '../img/artikler/art_paske.jpg',
+    artikkelBilde: '/img/artikler/art_paske.jpg',
     artikkelTid: new Date(2019, 4, 1),
     artikkelForfatter: "bjørn",
     artikkelBildeAlt: 'bilde av ...'
@@ -56,7 +61,7 @@ const artikler = [{
 {
     artikkelTitel: 'Fiske',
     artikkelTekst: 'Lyse sommernetter er perfekte for å fiske. Vi anbefaler å ta med fiskestang til Svartsjøen, her er det mye ørret. Er du glad i røye, anbefaler vi en fisketur på Isvatnet. På Flåbånnhytta finnes også et lite røykeri perfekt for å røyke fisk. Husk i så fall og ta med rikelig med salt til forberedelsene. <br><br> Om du ønsker å fiske må du også huske å kjøpe fiskekort! Dette kan kjøpes på inatur.no eller på bensinstasjonen i sentrum.',
-    artikkelBilde: '../img/artikler/art_fiske.jpg',
+    artikkelBilde: '/img/artikler/art_fiske.jpg',
     artikkelTid: new Date(2019, 6, 29),
     artikkelForfatter: "bjørn",
     artikkelBildeAlt: 'bilde av ...'
@@ -64,7 +69,7 @@ const artikler = [{
 {
     artikkelTitel: 'Veden er klar! ',
     artikkelTekst: 'De første snøfnuggene har meldt sin ankomst, men nå er det stablet ved på alle hyttene, så vinteren kan bare komme! Tusen takk til alle som bidro på vedhogst-dugnader i sommer!',
-    artikkelBilde: '../img/artikler/art_ved.jpg',
+    artikkelBilde: '/img/artikler/art_ved.jpg',
     artikkelTid: new Date(2019, 10, 22),
     artikkelForfatter: "bjørn",
     artikkelBildeAlt: 'bilde av ...'
@@ -87,7 +92,7 @@ function generateArticle(article) {
     titleEl.innerText = article.artikkelTitel;
 
     let imgEl = document.createElement("img");
-    imgEl.src = article.artikkelBilde;
+    imgEl.src = prefix + article.artikkelBilde;
 
     let paragraphEl = document.createElement("p");
     paragraphEl.innerHTML = article.artikkelTekst;
@@ -185,7 +190,7 @@ function MakeListHome(/*task*/) { //Function to make the listed elemetns show in
             let bilde = document.getElementById("bildeArtikkel" + i);
             titel.innerHTML = artikler[i].artikkelTitel;
             tekst.innerHTML = artikler[i].artikkelTekst;
-            bilde.src = artikler[i].artikkelBilde;
+            bilde.src = prefix + artikler[i].artikkelBilde;
             bilde.alt = artikler[i].artikkelBildeAlt;
         }
     }
