@@ -172,11 +172,11 @@ function generateList(orderedArticles) {
 }
 
 let news = document.getElementById("home_news");
-if (news = null){
-document.querySelector("#listeArtikkler").replaceWith(generateList(getOrderedObject(artikler)));
+if (news == null) {
+    document.querySelector("#listeArtikkler").replaceWith(generateList(getOrderedObject(artikler)));
 }
 
-function MakeListHome(task) { //Function to make the listed elemetns show in the correct order.
+function MakeListHome(/*task*/) { //Function to make the listed elemetns show in the correct order.
     let news = document.getElementById("home_news");
     if (news != null) {
         for (let i = 0; i < 3; i++) {
