@@ -1,20 +1,41 @@
 let slideshow_hovedside = [
   {
-    kilde: "img/slideshow/JuleBilde1.jpg",
-    alternativ_tekst: "Bilde av ..."
+    kilde: "img/slideshow/slide1.jpg",
+    alternativ_tekst: "Bilde av høst trær og fjell"
   },
   {
-    kilde: "img/slideshow/JuleBilde2.jpg",
-    alternativ_tekst: "Bilde av ..."
+    kilde: "img/slideshow/slide2.jpg",
+    alternativ_tekst: "Bilde av to voksne som går til fjels"
   },
   {
-    kilde: "img/slideshow/JuleBilde3.jpg",
-    alternativ_tekst: "Bilde av ..."
+    kilde: "img/slideshow/slide3.jpg",
+    alternativ_tekst: "Bilde av snødekte ski fjell"
   },
   {
-    kilde: "img/slideshow/JuleBilde4.jpg",
-    alternativ_tekst: "Bilde av ..."
+    kilde: "img/slideshow/slide4.jpg",
+    alternativ_tekst: "Bilde av flere tun og fjell"
+  },
+  {
+    kilde: "img/slideshow/slide5.jpg",
+    alternativ_tekst: "Bilde av skogens natur"
+  },
+  {
+    kilde: "img/slideshow/slide6.jpg",
+    alternativ_tekst: "Bilde av en på ski tur på snø in mot skogen"
+  },
+  {
+    kilde: "img/slideshow/slide7.jpg",
+    alternativ_tekst: "Bilde av klatretur på et stort fjell"
+  },
+  {
+    kilde: "img/slideshow/slide8.jpg",
+    alternativ_tekst: "Bilde av skogens natur"
+  },
+  {
+    kilde: "img/slideshow/slide9.jpg",
+    alternativ_tekst: "Bilde av innsjøen og trær"
   }
+
 ]
 
 let slideshow_hytte0 = [
@@ -254,9 +275,7 @@ function injectSlideshow(evt) {
 
       buttons.appendChild(span);
     }
-<<<<<<< HEAD
     
-
     let slideshow_hytte = document.getElementById("slideshow_hytter")
     if (slideshow_hytte != null && evt != null){
 
@@ -279,34 +298,6 @@ function injectSlideshow(evt) {
             let buttons = document.getElementById("slideshow_buttons");
             buttons.innerHTML = "";
             for (let i = 1; i < slideshow_hytte0.length+1; i++) {
-=======
-  }
-
-
-  let slideshow_hytte = document.getElementById("slideshow_hytter")
-  if (slideshow_hytte != null && evt != null) {
-
-    slideshow_hytte.innerHTML = "";
-    console.log(window['slideshow_hytte' + evt]);
-    switch (evt) {
-      case 0: {
-        for (let slide of slideshow_hytte0) {
-          let div = document.createElement("div");
-          div.className = "mySlides fade";
-
-          let img = document.createElement("img");
-          img.setAttribute('src', slide.kilde);
-          img.setAttribute('alt', slide.alternativ_tekst);
-
-          div.appendChild(img);
-          slideshow_hytte.appendChild(div);
-          div.style.display = "none";
-
-
-          let buttons = document.getElementById("slideshow_buttons");
-          buttons.innerHTML = "";
-          for (let i = 1; i < slideshow_hytte0.length + 1; i++) {
->>>>>>> a8c275ea9d1138092886a9be0edc64de15fc3e0a
             let span = document.createElement("span");
             span.className = "dot";
 
@@ -610,6 +601,7 @@ function injectSlideshow(evt) {
         break;
       }
     }
+  }
   }
 }
 injectSlideshow();
