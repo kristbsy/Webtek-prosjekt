@@ -104,13 +104,7 @@ footer {
 
 
 /*Sett denne til riktig sted*/
-#listeArtikkler>li,
-#hytter>li {
-  color: blue;
-  text-decoration: underline;
-  cursor: pointer;
-  width: 150px;
-}
+
 /*Denne også*/
 #kontaktOss {
   align-self: center;

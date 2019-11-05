@@ -6,11 +6,12 @@ const hytter = [
     attachments: [2, 3],
 
     info: {
-      name: "Hyttens navn",
+      name: "Absultaket",
       price: 1000,
-      features: "4 senger<br>Vann<br>Strøm<br>Radio",
-      text: "En hytte med god beliggenhet. Den har veldig fin utsikt. Hytten er ganske høyt oppe",
-      img: "./hytte1.jpg"
+      features: "Pris: 250 <br> Sengeplasser: 4 <br> Innlagt vann: Nei <br> Innlagt strøm: Ja <br>Internett:Nei <br> Annet: Dørene er 1,6m høy",
+      text: "",
+      longText: "Absultaket er høytliggende og høytstående. Det nyeste innenfor trekonstruksjon så er denne koselige 4-personshytta plassert så høyt vi kunne etter vår egen byggningsevne. Den står store 1,2 meter over bakken ved hjelp av at vi har brukt titalls stylter til å lage stolper. Styltene er konstruert for at et imaginært troll skal kunne bruke dem, og er derfor i stand til å holde flere tonn. <br><br> Innholdet i Absultaket er ikke like omfattende som i noen av våre andre hytter, men er utstyrt med en vedpeis slik at den holder komfortabel varme etter den har fyrt i kjappe 3 timer. <br><br> Med tanke på høyden av bygget er det ikke lagt inn vann, men med framtanke og planlegging kan dette kompenseres for at en tar med egne vannkanner eller bruker et lite beløp (459,95 kr) til å få deres væskebaserte forespørsler kjørt opp med ATV. Strøm er innlagt, men dette er takket være et 1x1 m solsellepanel satt på taket. Spenningen i støpselet er ikke nok til å lade en eventuell mobiltelefon.",
+      img: [['hytte1.jpg', 'bilde av kul hytte']]
     },
   },
   {
@@ -20,11 +21,12 @@ const hytter = [
     attachments: [2, 3],
 
     info: {
-      name: "Nuddustruddu",
+      name: "Bjørnehiet",
       price: 2000,
-      features: "1 seng<br>Vann<br>strøm<br>",
+      features: 'Pris:250 <br>Sengeplasser: 8<br>Innlagt vann: Ja<br>Innlagt strøm: Ja <br> Internett: Ja <br> Annet: Ikke egnet for de med høydeskrekk',
+      longText: 'Bjørnehiet er vår lengste hytte, på hele 20 meter. Dette kompenseres for med at den kun er 5 meter bred og 1.8 meter høyt, men er garantert i å gi deg den gode dvalefølelsen så snart du kryper langt nok inn. <br> <br>Hytta er utstyrt med bjørneskinn på veggene (fuskpels) og er godt isolert for selv de kaldeste kvelder som kan finne sted i oppdal. Innad hytta er det plassert et langbord, som kan romme opp til 16 personer, så hvis en vil ta slektstreffet her så er det en smule lite, med mindre noen skal sitte på border. På bakgrunn av den lave takhøyden er dette en ypperlig hytte for de som har med seg barn og kortvokste som vil ha litt variasjon i hverdagen. Skal poengteres at eventuell skalling i taket og skader deretter ikke er dekket av turlaget. Hvis det viser seg å være et problem anbefales det å investere eller leie hjelm før dere flytter inn.',
       text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium nostrum, doloremque consequatur aperiam, dolores nemo quos aspernatur doloribus accusantium ad perferendis in animi? Assumenda totam fugiat praesentium atque id dolorum?",
-      img: "./hytte2.jpg"
+      img: ["./hytte2.jpg"]
     },
   },
   {
