@@ -1,7 +1,7 @@
 function injectHeader() {
   let navEl = document.createElement("nav");
   navEl.innerHTML = '<ul>\
-    < li > <a href="home.html" class="mainLink"><img src="img/Logoer/tio_logo_ExtraLarge.png" alt="Tio logo"\
+    <li><a href="../home.html" class="mainLink"><img src="../img/Logoer/tio_logo_ExtraLarge.png" alt="Tio logo"\
       id="hovedlogo" /></a></li >\
         <li><a href="nettsider/artikler.html">Nyheter</a></li>\
         <li><a href="nettsider/booking.html">Booking</a></li>\
@@ -9,6 +9,7 @@ function injectHeader() {
         <li><a href="nettsider/omOss.html">Turlaget</a></li>\
         <li><a href="nettsider/kontaktOss.html">Kontakt oss</a></li>\
 </ul > '
+  document.querySelector("#container").prepend(navEl);
 }
 
 function injectFooter() {
