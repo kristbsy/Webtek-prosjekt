@@ -75,6 +75,10 @@ let months = ["Januar", "Februar", "Mars", "April", "Mai", "Juni", "Juli", "Augu
 
 let articleEl = [];
 
+function switchToArticle(article) {
+    document.querySelector("#artikkelen").replaceWith(generateArticle(article));
+}
+
 function generateArticle(article) {
     let mainEl = document.createElement("div")
     mainEl.id = "artikkelen";
@@ -161,6 +165,7 @@ function generateList(orderedArticles) {
                 let innerMostLi = document.createElement("li");
                 //innerListEl.addEventListener("click", switchDisplay)
                 innerMostLi.innerText = article.artikkelTitel;
+                innerMostLi.addEventListener("click", () => { switchToArticle(article) });
                 lastUliSwear.appendChild(innerMostLi);
             })
         })
