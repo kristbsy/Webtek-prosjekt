@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../Styling/main.css">
+  <link rel="stylesheet" href="../Scripts/slideshow.css">
   <title>Webtek prosjekt</title>
 </head>
 
@@ -16,12 +17,19 @@
       </ul>
     </div>
     <div id="hytten">
-      <img id="bildeDiv" src=""></img>
+      <div class="slideshow_container" id="slideshow_hytter">
+        <!-- Dette er hvor slideshow blidene vil komme -->
+
+      </div>
+      <div class="dotContainer" id="slideshow_buttons">
+        <!-- Dette er hvor slideshow knappen vil komme -->
+      </div>
       <h2 id="hytteNavn"></h2>
       <div id="infoDiv"></div>
       <div id="tilbehørDiv"></div>
     </div>
   </div>
+  <script src="../scripts/slideshow.js"></script>
   <script src="../scripts/hytte.js"></script>
   <script src="../scripts/main.js"></script>
 </body>

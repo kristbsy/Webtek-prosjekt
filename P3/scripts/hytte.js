@@ -70,11 +70,10 @@ function byttHytte(evt){
     let info = document.getElementById("infoDiv");
     let navn = document.getElementById("hytteNavn")
     let tilbehor = document.getElementById("tilbehørDiv");
-    let bilde = document.getElementById("bildeDiv");
     navn.innerHTML = hyttene[evt].hytteNavn;
     info.innerHTML = hyttene[evt].hytteTekst;
     tilbehor.innerHTML = hyttene[evt].hytteTilbehør;
-    bilde.src = hyttene[evt].hytteBilde;
+    injectSlideshow(evt);
 }
 
 
