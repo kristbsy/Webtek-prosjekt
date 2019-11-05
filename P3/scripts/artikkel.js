@@ -171,4 +171,23 @@ function generateList(orderedArticles) {
     return mainEl;
 }
 
+let news = document.getElementById("home_news");
+if (news = null){
 document.querySelector("#listeArtikkler").replaceWith(generateList(getOrderedObject(artikler)));
+}
+
+function MakeListHome(task) { //Function to make the listed elemetns show in the correct order.
+    let news = document.getElementById("home_news");
+    if (news != null) {
+        for (let i = 0; i < 3; i++) {
+            let titel = document.getElementById('titelArikkel' + i);
+            let tekst = document.getElementById("tekstArtikkel" + i);
+            let bilde = document.getElementById("bildeArtikkel" + i);
+            titel.innerHTML = artikler[i].artikkelTitel;
+            tekst.innerHTML = artikler[i].artikkelTekst;
+            bilde.src = artikler[i].artikkelBilde;
+            bilde.alt = artikler[i].artikkelBildeAlt;
+        }
+    }
+}
+MakeListHome();
