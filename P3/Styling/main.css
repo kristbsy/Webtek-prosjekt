@@ -5,7 +5,13 @@ h1 {
 body{
   min-height: 100vh;
   margin: 0;
+  padding-bottom: 120px;
   position: relative;
+}
+
+footer {
+  margin-top: 100px;
+  margin-bottom: 20px;
 }
 
 #container>*{
@@ -79,7 +85,6 @@ nav>ul>li>a:hover {
   padding-top: 10px;
   width: 70%;
   margin: auto;
-  min-height: 100vh;
 }
 
 /* Footer-styling */
