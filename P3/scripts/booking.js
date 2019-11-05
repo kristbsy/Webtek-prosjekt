@@ -43,7 +43,7 @@ class Grid {
         nameEl.className = "hytteNavn";
         daysToStayEl.className = "daysToStay";
 
-        imgEl.src = "../img/hytter" + this.grid[id].info.img;
+        imgEl.src = "../img/hytter/" + this.grid[id].info.img[0][0];
         nameEl.innerHTML = this.grid[id].info.name;
 
         inputEl.type = "number";
@@ -67,26 +67,80 @@ class Grid {
 
     refreshRecap() {
         let elements = [];
-        let inputs = document.querySelectorAll(".daysToStay>input");
-        let price = 0;
+        let inputs = document.querySelectorAll(".daysToStay>input")
+        let existingElements = document.querySelectorAll(".recapInstance");
         if (this.points.includes(-1)) {
-            this.points.filter(el => el != -1).forEach(el => {
-                elements.push(this.generateRecapInstanceHTML(el))
-                console.log(elements);
+            this.points.filter(el => el != -1).forEach((el, i) => {
+                let generatedElement = this.generateRecapInstanceHTML(el);
+                if (typeof (inputs[i]) == "undefined" || inputs.id == generatedElement.childNodes[1].childNodes[2].childNodes[1].id) {
+                    elements.push(generatedElement);
+                } else {
+                    elements.push(existingElements[i])
+                }
+                //elements[i] = generatedElement;
             });
         } else {
-            console.log(this.path)
-            this.path.filter(el => el != -1).forEach(el => { elements.push(this.generateRecapInstanceHTML(el)) });
+            //console.log(this.path)
+            this.path.filter(el => el != -1).forEach((el, i) => {
+                let generatedElement = this.generateRecapInstanceHTML(el);
+                if (typeof (inputs[i]) == "undefined" || inputs.id == generatedElement.childNodes[1].childNodes[2].childNodes[1].id) {
+                    elements.push(generatedElement);
+                } else {
+                    elements.push(existingElements[i])
+                }
+                //elements.push(this.generateRecapInstanceHTML(el))
+            });
         }
         console.log(elements);
         this.recap.innerHTML = "<h2>Den gjeldende turen</h2>";
         elements.forEach(el => { this.recap.appendChild(el) });
 
 
+        let totalPrice = 0;
+        inputs = document.querySelectorAll(".daysToStay>input")
 
+        if (this.points.includes(-1)) {
+            this.points.filter(el => el != -1).forEach((el, i) => {
+                totalPrice += inputs[i].value * this.grid[el].info.price;
+                console.log(totalPrice)
+            });
+        } else {
+            console.log(this.path)
+            this.path.filter(el => el != -1).forEach((el, i) => {
+                totalPrice += inputs[i].value * this.grid[el].info.price;
+                console.log(totalPrice)
+            });
+        }
+
+        //Lager pris-elementet og bestill nå knappen
+        let priceEl = document.createElement("h3");
+        let buttonEl = document.createElement("button")
+        buttonEl.addEventListener("click", () => { this.order(totalPrice) })
+        buttonEl.innerText = "Bestill";
+        priceEl.innerText = "Totalpris: " + totalPrice;
+        this.recap.appendChild(priceEl);
+        this.recap.appendChild(buttonEl);
     }
 
-
+    order(totalPrice) {
+        let inputs = document.querySelectorAll(".daysToStay>input")
+        //order er en todimensjonal array, der hver indre array inneholder hyttens id og dager man blir.
+        let orders = []
+        if (this.points.includes(-1)) {
+            this.points.filter(el => el != -1).forEach((el, i) => {
+                let order = [el, Number(inputs[i].value)];
+                orders.push(order);
+            });
+        } else {
+            this.path.filter(el => el != -1).forEach((el, i) => {
+                let order = [el, Number(inputs[i].value)];
+                orders.push(order)
+            });
+        }
+        localStorage.setItem('orders', JSON.stringify(orders));
+        localStorage.setItem('totalPrice', totalPrice);
+        //console.log(orders);
+    }
 
     initDjikstra(id) {
         this.grid[id].dGrid = new DGrid(this.grid, id);
@@ -174,7 +228,7 @@ class Grid {
         featuresEl.innerHTML = info.features;
         buttonDiv.innerText = "Sett som start";
         button2Div.innerText = "Sett som destinasjon"
-        imgEl.src = "../img/hytter" + info.img;
+        imgEl.src = "../img/hytter/" + info.img[0][0];
 
 
         buttonWrapEl.appendChild(buttonDiv);
@@ -416,7 +470,7 @@ class DAttachment {
     }
 }
 
-const nodeContainerEl = document.querySelector("#container");
+const nodeContainerEl = document.querySelector("#nodeContainer");
 const canvas = document.querySelector("canvas");
 const info = document.querySelector("#info");
 const recap = document.querySelector("#recap");

@@ -5,6 +5,17 @@ h1 {
 body{
   min-height: 100vh;
   margin: 0;
+  padding-bottom: 120px;
+  position: relative;
+}
+
+footer {
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+#container>*{
+  margin-bottom: 20px;
 }
 
 #hovedlogo{
@@ -42,10 +53,6 @@ nav>ul {
   width: 100%;
 }
 
-.navAnchorContainer{
-
-}
-
 nav>ul>li>a {
   height: 100%;
   display: block;
@@ -60,7 +67,7 @@ nav>ul>li>a {
 }
 
 nav>ul>li {
-  display: inline;
+  /*display: inline;*/
   margin: 0;
   width: calc(100% / 5);
 }
@@ -73,19 +80,16 @@ nav>ul>li>a:hover {
 
 
 
-
-
 #container {
   box-sizing: border-box;
   padding-top: 10px;
   width: 70%;
   margin: auto;
-  min-height: 100vh;
 }
 
 /* Footer-styling */
 footer {
-  position: relative;
+  position: absolute;
   bottom: 0;
 }
 
@@ -100,13 +104,7 @@ footer {
 
 
 /*Sett denne til riktig sted*/
-#listeArtikkler>li,
-#hytter>li {
-  color: blue;
-  text-decoration: underline;
-  cursor: pointer;
-  width: 150px;
-}
+
 /*Denne også*/
 #kontaktOss {
   align-self: center;

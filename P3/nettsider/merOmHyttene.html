@@ -6,27 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../Styling/main.css">
+  <link rel="stylesheet" href="../Scripts/slideshow.css">
   <title>Webtek prosjekt</title>
 </head>
 
 <body>
   <div id="container">
-    <nav>
-      <a href="../home.html"><img src="../img/Logoer/tio_logo_ExtraLarge.png" alt="Tio logo" id="hovedlogo"></a>
-      <ul id="navbar">
+    <div id="listeHytte">
+      <ul id="hytter">
       </ul>
-    </nav>
+    </div>
+    <div id="hytten">
+      <div class="slideshow_container" id="slideshow_hytter">
+        <!-- Dette er hvor slideshow blidene vil komme -->
+
+      </div>
+      <div class="dotContainer" id="slideshow_buttons">
+        <!-- Dette er hvor slideshow knappen vil komme -->
+      </div>
+      <h2 id="hytteNavn"></h2>
+      <div id="infoDiv"></div>
+      <div id="tilbehørDiv"></div>
+    </div>
   </div>
-  <div id="listeHytte">
-    <ul id="hytter">
-    </ul>
-  </div>
-  <div id="hytten">
-    <img id="bildeDiv" src=""></img>
-    <h2 id="hytteNavn"></h2>
-    <div id="infoDiv"></div>
-    <div id="tilbehørDiv"></div>
-  </div>
+  <script src="../scripts/slideshow.js"></script>
   <script src="../scripts/hytte.js"></script>
   <script src="../scripts/main.js"></script>
 </body>
