@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Kundedetaljer</title>
-    <link rel="stylesheet" href="../Styling/Kundedetaljer.css">
-  </head>
-  <body>
-    <h1>Kundedetaljer</h1>
-    <h3>Fyll inn skjemaet og trykk bekreft bestilling for å sende bestillingen til oss.</h3>
-    <div>
+
+<head>
+  <meta charset="utf-8">
+  <title>Kundedetaljer</title>
+  <link rel="stylesheet" href="../Styling/Kundedetaljer.css">
+</head>
+
+<body>
+  <h1>Kundedetaljer</h1>
+  <h3>Fyll inn skjemaet og trykk bekreft bestilling for å sende bestillingen til oss.</h3>
+  <div>
     <form class="form" action="" method="post">
       <fieldset>
         <legend>Personopplysninger</legend>
         <br>
         <label for="fornavn">
           Fornavn
-        <input type="text" id="fornavn" name="fornavn" required>
+          <input type="text" id="fornavn" name="fornavn" required>
         </label><br>
-        <label for="etternavn" required>
+        <label for="etternavn">
           Etternavn
-        <input type="text" id="etternavn" name="etternavn" required>
+          <input type="text" id="etternavn" name="etternavn" required>
         </label><br>
         <label for="telefon">
           Telefonnummer
-        <input type="text" pattern="[0-9]{8}" id="telefon" name="telefon" required>
+          <input type="text" pattern="[0-9]{8}" id="telefon" name="telefon" required>
         </label><br>
         <label for="epost">
           E-post
-        <br><input type="email" id="epost" name="epost" required>
-      </label><br><br>
+          <br><input type="email" id="epost" name="epost" required>
+        </label><br><br>
         <label for="adresse">
           Adresse
           <input type="text" id="adresse" name="adresse" placeholder="gatenavn og -nummer" required><br>
@@ -40,14 +42,15 @@
           <input type="number" id="gjester" name="antall gjester" min="1" max="10" required>
         </label><br>
         <label for="barn">
-        Antall barn under 16 år
-        <input type="number" id="barn" name="antall barn" min="0" max="10">
+          Antall barn under 16 år
+          <input type="number" id="barn" name="antall barn" min="0" max="10">
         </label>
       </fieldset>
       <p>Vi sender en faktura til den oppgitte e-postadressen når vi mottar bestillingen.</p>
       <button type="submit" id="bekreftbestilling" name="button">Bekreft bestillingen</button>
       <button type="submit" id="avbrytbestilling" name="button"><a href="../home.html">Avbryt</a></button>
     </form>
-    </div>
-  </body>
+  </div>
+</body>
+
 </html>
