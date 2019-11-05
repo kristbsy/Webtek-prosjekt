@@ -470,7 +470,7 @@ class DAttachment {
     }
 }
 
-const nodeContainerEl = document.querySelector("#container");
+const nodeContainerEl = document.querySelector("#nodeContainer");
 const canvas = document.querySelector("canvas");
 const info = document.querySelector("#info");
 const recap = document.querySelector("#recap");

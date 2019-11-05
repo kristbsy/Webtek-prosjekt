@@ -61,6 +61,5 @@ function injectFooter() {
   `
   document.body.append(footer);
 }
-
 injectHeader();
 injectFooter();
