@@ -95,8 +95,9 @@ function generateArticle(article) {
     let infoEl = document.createElement("sub");
     infoEl.innerText = "Skrevet av " + article.artikkelForfatter + ", " + article.artikkelTid;
 
-    mainEl.appendChild(titleEl);
     mainEl.appendChild(imgEl);
+    mainEl.appendChild(titleEl);
+
     mainEl.appendChild(paragraphEl);
     mainEl.appendChild(infoEl);
     return mainEl;
