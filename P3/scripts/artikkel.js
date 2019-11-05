@@ -71,6 +71,8 @@ const artikler = [{
 }
 ];
 
+let months = ["Januar", "Februar", "Mars", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Desember"]
+
 let articleEl = [];
 
 function generateArticle(article) {
@@ -143,15 +145,17 @@ function generateList(orderedArticles) {
         outerListEl.innerText = outerKey;
 
         let middleListEl = document.createElement("ul");
+        middleListEl.style.display = "none";
         outerListEl.appendChild(middleListEl);
 
         Object.keys(orderedArticles[outerKey]).forEach(innerKey => {
             let innerListEl = document.createElement("li");
             //innerListEl.addEventListener("click", switchDisplay)
             middleListEl.prepend(innerListEl)
-            innerListEl.innerText = innerKey;
+            innerListEl.innerText = months[innerKey - 1];
 
             let lastUliSwear = document.createElement("ul");
+            lastUliSwear.style.display = "none";
             innerListEl.appendChild(lastUliSwear);
             orderedArticles[outerKey][innerKey].forEach(article => {
                 let innerMostLi = document.createElement("li");
