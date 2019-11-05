@@ -49,8 +49,8 @@ function injectHeader() {
 }
 
 function injectFooter() {
-  let footer = document.querySelector("footer");
-  footer.innerHTML += `
+  let footer = document.createElement("footer");
+  footer.innerHTML = `
   Lokalt kontor: Krokveigen 76, Oppdal
   <br>
   Telefon: 986 45 123
@@ -59,6 +59,7 @@ function injectFooter() {
   <br>
   Åpningstider: Man-Fre: 07:00 - 21:00, Lør-Søn: 09:00 - 21:00
   `
+  document.body.append(footer);
 }
 
 injectHeader();
