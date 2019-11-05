@@ -6,26 +6,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../styling/main.css">
+  <link rel="stylesheet" href="../Styling/artikler.css">
   <title>Webtek prosjekt</title>
 </head>
 
 <body>
   <div id="container">
-    <div class="gridBox">
+
+  </div>
+  <div class="gridBox">
+    <div id="listContainer">
+      <ul id="listeArtikkler">
+        <li>2019<ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+          </ul>
+        </li>
+        <li>2018<ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+          </ul>
+        </li>
+        <li>2017<ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div id="artikkelen">
+      <h2 id="titelArikkel" class="gridContent"></h2>
+      <img id="bildeArtikkel" src="" class="gridContent" alt="">
       <div class="gridContent">
-        <ul id="listeArtikkler">
-        </ul>
-      </div>
-      <div id="arikkelen">
-        <h2 id="titelArikkel" class="gridContent"></h2>
-        <img id="bildeArtikkel" src="" class="gridContent" alt="">
-        <div class="gridContent">
-          <p id="tekstArtikkel"></p>
-        </div>
+        <p id="tekstArtikkel"></p>
       </div>
     </div>
   </div>
-
   <script src="../scripts/artikkel.js"></script>
   <script src="../scripts/main.js"></script>
 </body>

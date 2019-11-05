@@ -43,7 +43,7 @@ class Grid {
         nameEl.className = "hytteNavn";
         daysToStayEl.className = "daysToStay";
 
-        imgEl.src = "../img/hytter" + this.grid[id].info.img;
+        imgEl.src = "../img/hytter/" + this.grid[id].info.img[0][0];
         nameEl.innerHTML = this.grid[id].info.name;
 
         inputEl.type = "number";
@@ -228,7 +228,7 @@ class Grid {
         featuresEl.innerHTML = info.features;
         buttonDiv.innerText = "Sett som start";
         button2Div.innerText = "Sett som destinasjon"
-        imgEl.src = "../img/hytter" + info.img;
+        imgEl.src = "../img/hytter/" + info.img[0][0];
 
 
         buttonWrapEl.appendChild(buttonDiv);
