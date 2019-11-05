@@ -1,14 +1,14 @@
 .active, .dot:hover {
-      background-color: #717171;
-    }
+  background-color: #717171;
+}
 
     /* Fading animation */
-    .fade {
-      -webkit-animation-name: fade;
-      -webkit-animation-duration: 2s;
-      animation-name: fade;
-      animation-duration: 2s;
-    }
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  animation-name: fade;
+  animation-duration: 2s;
+}
 
     @-webkit-keyframes fade {
       from {
@@ -32,8 +32,9 @@
 
     .dotContainer{
       position: absolute;
-      bottom: 0px;
-      left: 50%;
+      bottom: 40px;
+      z-index: 100;
+      left: 30%;
     }
     
     .dot {
@@ -51,18 +52,109 @@
       background-size: contain;
     }
     
-    .slideshow-container {
-      /*max-width: 750px;*/
+    .slideshow_container {
+      width: 100%;
+      position: relative;
       max-height: 500px;
       height: 70vh;
       position: relative;
-      grid-column: 1/3;
-      grid-row: 1/2;
+      padding:0;
+      margin:0;
     }
     
+#slideShowImageContainer{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#bookBackground{
+  position: absolute;
+  height: 100%;
+  width: 30%;
+  right: 0;
+  background: rgba(0,0,0,0.80);
+  z-index: 30;
+  display: grid;
+  grid-template-rows: 7fr 2fr;
+  justify-items: center;
+  align-items: center;
+}
+
     .mySlides{
       display: none;
       margin: 0;
       margin-top: 10px;
       height: 100%;
     }
+
+#bookText{
+  font-weight: bolder;
+  color: white;
+  font-size: 5em;
+  text-align: center;
+  grid-row: 1/2;
+}
+
+#bookButton{
+  grid-row: 2/3;
+  font-size: 2em;
+  font-weight: bold;
+  background-color: rgba(200, 0, 0, 0.9);
+  width: 50%;
+  height: 50%;
+  border-radius: 13px;
+  margin:auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+#bookButton:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+#bookButton>a{
+  text-decoration: none;
+  color: white;
+  justify-self: center;
+}
+
+@media (max-width: 1350px){
+  #bookButton{
+    font-size: 1.5em;
+  }
+
+  #bookText{
+    font-size: 4em;
+  }
+}
+
+@media ( max-width: 1000px){
+  #bookButton{
+    font-size: 1em;
+  }
+
+  #bookText{
+    font-size: 3em;
+  }
+}
+
+@media(max-width: 700px){
+  #bookButton{
+    font-size: 0.7em;
+  }
+
+  #bookText{
+    font-size: 2em;
+  }
+}
+
+@media(max-width: 550px){
+  #bookText{
+    font-size: 1em;
+  }
+}
