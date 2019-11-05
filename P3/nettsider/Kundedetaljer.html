@@ -48,8 +48,9 @@
       <h3 id="pris">Pris: 0kr</h3>
       <p>Vi sender en faktura til den oppgitte e-postadressen når vi mottar bestillingen.</p>
       <button type="submit" id="bekreftbestilling" name="button">Bekreft bestillingen</button>
-      <button type="submit" id="avbrytbestilling" name="button"
-        onclick="()=>location.href = '../home.html'">Avbryt</button>
+      <!--Gjør om knappen til en link, ellers vil den ikke kunne sende til riktig side-->
+      <button id="avbrytbestilling" name="button" onclick="location.href = '../home.html;'"
+        formnovalidate>Avbryt</button>
     </form>
   </div>
   <script>
