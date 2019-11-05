@@ -52,10 +52,11 @@ const hytter = [
     attachments: [4, 5, 6, 7],
 
     info: {
-      name: "Hytte 4",
-      price: 10900,
+      name: "Elvskinnet",
+      price: 305,
       features: "en<br>to<br>tre",
       text: "En eksepsjonelt god brødtekst til hytte 4. All informasjonen du noensinne kunne trengt finnes i denne lille boksen. Er det ikke fantastisk?",
+      longText: "Dette er en av våre mer tradisjonsrike hytter. Navnet kommer fra 1850-tallet hvor en lokal adelsmann var bosatt i området. Hvert år arrangerte han et slags “sledeløp” ned det nærliggende elveleiet hvor deltakerne kun fikk ta i bruk et skinn av enten storfe eller svin for å ta seg nedover det nylige frosne elveleiet. Denne tradisjonen har vi valgt å holde litt i live med å utstyre hytta med diverse av sileutstyr og en nærliggende bakker er avskoget slik at en enkelt kan ta seg en tur uten å brekke ei hofte i prosessen.<br><br>Ellers er hytta utstyrt med full elektrisitet og varmeovner, slik at en fort får varmen tilbake i kroppen etter en tur i bakken. Inkludert i inventaret er det også en skotørker, og vi ber alle våre gjester lese instruksene før bruk, ettersom det har vært tidligere ulykker.",
       img: "./hytte1.jpg"
     },
   },
@@ -70,6 +71,7 @@ const hytter = [
       price: 10900,
       features: "en<br>to<br>tre",
       text: "En eksepsjonelt god brødtekst til hytte 5. All informasjonen du noensinne kunne trengt finnes i denne lille boksen. Er det ikke fantastisk?",
+      longText: "",
       img: "./hytte1.jpg"
     },
   },
@@ -84,6 +86,7 @@ const hytter = [
       price: 10900,
       features: "en<br>to<br>tre",
       text: "En eksepsjonelt god brødtekst til hytte 6. All informasjonen du noensinne kunne trengt finnes i denne lille boksen. Er det ikke fantastisk?",
+      longText: "",
       img: "./hytte1.jpg"
     },
   },
@@ -98,6 +101,7 @@ const hytter = [
       price: 10900,
       features: "en<br>to<br>tre",
       text: "En eksepsjonelt god brødtekst til hytte 7. All informasjonen du noensinne kunne trengt finnes i denne lille boksen. Er det ikke fantastisk?",
+      longText: "",
       img: "./hytte1.jpg"
     },
   },
@@ -112,6 +116,7 @@ const hytter = [
       price: 10900,
       features: "en<br>to<br>tre",
       text: "En eksepsjonelt god brødtekst til hytte 8. All informasjonen du noensinne kunne trengt finnes i denne lille boksen. Er det ikke fantastisk?",
+      longText: "",
       img: "./hytte1.jpg"
     }
   },
@@ -126,6 +131,37 @@ const hytter = [
       price: 10900,
       features: "en<br>to<br>tre",
       text: "En eksepsjonelt god brødtekst til hytte 9. All informasjonen du noensinne kunne trengt finnes i denne lille boksen. Er det ikke fantastisk?",
+      longText: "",
+      img: "./hytte1.jpg"
+    },
+  },
+  {
+    id: 8,
+    x: 700,
+    y: 600,
+    attachments: [7],
+
+    info: {
+      name: "Hytte 10",
+      price: 10900,
+      features: "en<br>to<br>tre",
+      text: "En eksepsjonelt god brødtekst til hytte 9. All informasjonen du noensinne kunne trengt finnes i denne lille boksen. Er det ikke fantastisk?",
+      longText: "",
+      img: "./hytte1.jpg"
+    },
+  },
+  {
+    id: 8,
+    x: 700,
+    y: 600,
+    attachments: [7],
+
+    info: {
+      name: "Hytte 11",
+      price: 10900,
+      features: "en<br>to<br>tre",
+      text: "En eksepsjonelt god brødtekst til hytte 9. All informasjonen du noensinne kunne trengt finnes i denne lille boksen. Er det ikke fantastisk?",
+      longText: "",
       img: "./hytte1.jpg"
     },
   }
