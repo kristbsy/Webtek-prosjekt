@@ -23,16 +23,25 @@ let liste = [
 
 
 function injectHeader() {
+  let hrefPrefix = "";
+  let imgPrefix = "";
+  if (location.href.split("/").slice(-1)[0] == "home.html") {
+    hrefPrefix = "nettsider/";
+    imgPrefix = "img/";
+  } else {
+    hrefPrefix = "./";
+    imgPrefix = "../img/"
+  }
   let navEl = document.createElement("nav");
-  navEl.innerHTML = '<ul>\
-    <li><a href="../home.html" class="mainLink"><img src="../img/Logoer/tio_logo_ExtraLarge.png" alt="Tio logo"\
+  navEl.innerHTML = `<ul>\
+    <li><a href="../home.html" class="mainLink"><img src="${imgPrefix}Logoer/tio_logo_ExtraLarge.png" alt="Tio logo"\
       id="hovedlogo" /></a></li >\
-        <li><a href="nettsider/artikler.html">Nyheter</a></li>\
-        <li><a href="nettsider/booking.html">Booking</a></li>\
-        <li><a href="nettsider/merOmHyttene.html">Hytter</a></li>\
-        <li><a href="nettsider/omOss.html">Turlaget</a></li>\
-        <li><a href="nettsider/kontaktOss.html">Kontakt oss</a></li>\
-</ul > '
+        <li><a href="${hrefPrefix}artikler.html">Nyheter</a></li>\
+        <li><a href="${hrefPrefix}booking.html">Booking</a></li>\
+        <li><a href="${hrefPrefix}merOmHyttene.html">Hytter</a></li>\
+        <li><a href="${hrefPrefix}omOss.html">Turlaget</a></li>\
+        <li><a href="${hrefPrefix}kontaktOss.html">Kontakt oss</a></li>\
+</ul > `
   document.querySelector("#container").prepend(navEl);
   /*
   ==============================================================================================================
@@ -46,7 +55,7 @@ function injectHeader() {
 }
 
 function injectFooter() {
-  let footer = document.getElementById("footer");
+  let footer = document.querySelector("footer");
   footer.innerHTML += `
   Lokalt kontor: Krokveigen 76, Oppdal
   <br>
