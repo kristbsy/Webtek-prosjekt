@@ -104,9 +104,6 @@ function generateArticle(article) {
 
 artikler.forEach(article => articleEl.push(generateArticle(article)));
 
-document.querySelector("#artikkelen").replaceWith(articleEl[0])
-
-
 
 function getOrderedObject(articles) {
     //sorterer artiklene inn i et objekt, der nøklene er året og deretter måneden
@@ -174,52 +171,3 @@ function generateList(orderedArticles) {
 }
 
 document.querySelector("#listeArtikkler").replaceWith(generateList(getOrderedObject(artikler)));
-
-/*
-function artikkelBytte(evt) {
-    event.preventDefault();
-    let titel = document.getElementById("titelArikkel");
-    let tekst = document.getElementById("tekstArtikkel");
-    let bilde = document.getElementById("bildeArtikkel");
-    titel.innerHTML = artikkel[evt].artikkelTitel;
-    tekst.innerHTML = artikkel[evt].artikkelTekst;
-    bilde.src = '.' + artikkel[evt].artikkelBilde;
-    bilde.alt = artikkel[evt].artikkelBildeAlt;
-}
-
-function MakeList(task) { //Function to make the listed elemetns show in the correct order.
-    let list = document.getElementById("listeArtikkler")
-    if (list != null) {
-        for (let i = (artikkel.length - 1); i >= 0; i--) {
-            let list = document.getElementById("listeArtikkler")
-            let node = document.createElement("li");
-
-            node.id = 'artikkelNr' + i;
-            node.setAttribute('onclick', 'artikkelBytte(' + i + ')');
-
-            let textnode = document.createTextNode(artikkel[i].artikkelTitel); //Defines what will be writen in one of the other elements.
-            node.appendChild(textnode); //Inserts the text into the li element.
-            list.appendChild(node);
-        }
-    }
-}
-
-function MakeListHome(task) { //Function to make the listed elemetns show in the correct order.
-    let news = document.getElementById("home_news");
-    if (news != null) {
-        for (let i = 0; i < 3; i++) {
-            let titel = document.getElementById('titelArikkel' + i);
-            let tekst = document.getElementById("tekstArtikkel" + i);
-            let bilde = document.getElementById("bildeArtikkel" + i);
-            titel.innerHTML = artikkel[i].artikkelTitel;
-            tekst.innerHTML = artikkel[i].artikkelTekst;
-            bilde.src = artikkel[i].artikkelBilde;
-            bilde.alt = artikkel[i].artikkelBildeAlt;
-        }
-    }
-}
-
-MakeList()
-MakeListHome();
-
-*/
