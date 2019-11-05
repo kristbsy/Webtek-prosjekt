@@ -31,8 +31,7 @@
           E-post
           <br><input type="email" id="epost" name="epost" required>
         </label><br><br>
-        <label for="adresse">
-          Adresse</label>
+        <label for="adresse">Adresse</label>
         <input type="text" id="adresse" name="street" placeholder="gatenavn og -nummer" required><br>
         <input type="text" pattern="[0-9]{4}" id="postnummer" name="postNumber" placeholder="postnummer" required>
         <input type="text" id="poststed" name="City" placeholder="poststed" required>
@@ -46,12 +45,16 @@
           <input type="number" id="barn" name="antall barn" min="0" max="10">
         </label>
       </fieldset>
+      <h3 id="pris">Pris: 0kr</h3>
       <p>Vi sender en faktura til den oppgitte e-postadressen når vi mottar bestillingen.</p>
       <button type="submit" id="bekreftbestilling" name="button">Bekreft bestillingen</button>
       <button type="submit" id="avbrytbestilling" name="button"
         onclick="()=>location.href = '../home.html'">Avbryt</button>
     </form>
   </div>
+  <script>
+    document.querySelector("#pris").innerText = "Pris: " + localStorage.getItem('totalPrice') + "nok";
+  </script>
 </body>
 
 </html>
