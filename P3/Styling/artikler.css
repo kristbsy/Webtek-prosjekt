@@ -1,6 +1,6 @@
 .articleContainer {
     display: grid;
-    grid-template-columns: 3fr 10fr;
+    grid-template-columns: 7fr 20fr;
     gap: 1%;
     max-width: 90vw;
     margin: auto;
@@ -14,9 +14,8 @@
   background-color: lightgray;
 }
 
-li{
-cursor: pointer;
-
+ul:hover{
+  cursor: pointer;
 }
 
 ul>li>ul>li>ul>li:hover{
@@ -35,27 +34,14 @@ img{
   }
 }
 
+@media (max-width: 420px){
+  ul{
+    margin: 0;
+    padding-inline-start: 0px;
+  }
+}
+
 h2{
   margin-top: 1%;
   margin-bottom: 7%;
 }
-
-#titelArikkel{
-
-}
-
-bildeArtikkel{
-
-}
-
-#tekstArtikkel{
-
-}
-/*
-#listeArtikkler>li,
-#hytter>li {
-  color: blue;
-  text-decoration: underline;
-  cursor: pointer;
-  width: 150px;
-}*/
