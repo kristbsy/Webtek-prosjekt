@@ -5,48 +5,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="../Styling/main.css">
+  <link rel="stylesheet" href="../styling/main.css">
   <title>Webtek prosjekt</title>
 </head>
 
 <body>
   <div id="container">
     <nav>
-      <a href="../home.html"><img src="../img/Logoer/tio_logo_ExtraLarge.png" alt="Tio logo" id="hovedlogo"></a>
-      <ul>
-        <li><a href="artikler.html">Nyheter</a></li>
-        <li><a href="booking.html">Booking</a></li>
-        <li><a href="merOmHyttene.html">Hytter</a></li>
-        <li><a href="omOss.html">Turlaget</a></li>
-        <li><a href="kontaktOss.html">Kontakt oss</a></li>
+      <a href="../home.html"><img src="../img/logoer/tio_logo_ExtraLarge.png" alt="Tio logo" id="hovedlogo"></a>
+      <ul id="navbar">
       </ul>
     </nav>
-    <div id="formDiv">
-      <form id="kontaktOss">
-        <h2>Kontakt Oss</h2>
-        <label for="henvendelse" id="userHenvendelse">Hva er din henvendelse?: </label>
-        <br>
-        <input type="text" name="henvendelse" id="henvendelse" required placeholder="">
-        <br>
-        <label for="email" id="userEmail">Email-addresse: </label>
-        <br>
-        <input type="email" name="email" id="email" required placeholder="">
-        <br>
-        <label for="opplysning">Hva ønsker du å fortelle?: </label>
-        <br>
-        <input type="text" name="opplysning" id="opplysning" required placeholder="">
-        <br>
-        <br>
-        <button type="submit">Send</button>
-      </form>
-    </div>
+  </div>
+  <div id="formDiv">
+    <form id="form_kontaktOss">
+      <h2>Kontakt Oss</h2>
+      <label for="inp_henvendelse">Hva er din henvendelse?: </label>
+    <br>
+      <input type="text" name="inp_henvendelse" id="inp_henvendelse" required placeholder="">
+    <br>
+      <label for="inp_email">Email-addresse: </label>
+    <br>
+      <input type="email" name="inp_email" id="inp_email" required placeholder="">
+    <br>
+      <label for="inp_opplysning">Hva ønsker du å fortelle?: </label>
+    <br>
+      <input type="text" name="inp_opplysning" id="inp_opplysning" required placeholder="">
+    <br>
+    <br>
+      <button type="submit">Send</button>
+    </form>
   </div>
 
 
-  <footer>
+  <footer id="footer">
 
   </footer>
   <script src="../scripts/kontaktOss.js"></script>
+  <script src="../scripts/main.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 
 //Funksjon som genererer et værvarsel. Henter en værklasse med noen bestemte trekk, og noen frø for videre generering av unik egenskap, feks temperatur
-function genererVaer() {
+function genererVaer(seed) {
     let vaers = [{
         "iko": "🌞", // her brukes enten en unicodekarakter eller en komplett bildetag
         "desk": "Sol og deilig vær!",
@@ -36,12 +36,11 @@ function genererVaer() {
     for (let i in vaers) {
         summen += vaers[i].vekt;
     }
-    let seed = Math.floor(Math.random() * summen);
+
     for (let i in vaers) {
-        //console.log(i,"|seed: ",seed,"|summen: ",summen,"|vekt: ", vaers[i].vekt)
-        if (summen - seed < vaers[i].vekt) {
-            console.log(i, "|summen: ", summen, "|seed: ", seed, "|su-se: ", summen - seed, "|vekt: ", vaers[i].vekt)
-            vaers[i].temp = Math.floor(Math.random() * (vaers[i].temp[1]) + vaers[i].temp[0])
+
+        if (summen - Math.floor(seed * summen) < vaers[i].vekt) {
+            vaers[i].temp = Math.floor(seed * (vaers[i].temp[1]) + vaers[i].temp[0])
             return vaers[i];
         }
         summen -= vaers[i].vekt;
@@ -53,8 +52,11 @@ function load_vaer() {
     let home_vaer = document.getElementById("home_weather");
     let varsel = ["morra", "nesteuke", "nesteneste"]
     for (let i = 0; i < 3; i++) {
-        let arr = genererVaer();
-        console.log(i, varsel[i])
+        
+        let naa = new Date();
+        let seed = Math.abs(Math.sin(naa.getUTCDate() + naa.getUTCMonth()*10 + naa.getUTCFullYear()*1000+i))/*Math.random()*/;
+        let arr = genererVaer(seed);
+        console.log(seed, arr);
         let vaer_tag =
             '<div class="weather_prediction"><div class="wea_time"><strong>' +
             varsel[i] +
@@ -71,6 +73,5 @@ function load_vaer() {
     }
 }
 
-//}
 let vaeret = document.getElementById("home_weather");
 vaeret.onload = load_vaer();
