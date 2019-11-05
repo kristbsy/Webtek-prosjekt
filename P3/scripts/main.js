@@ -23,7 +23,6 @@ let liste = [
 
 
 function injectHeader() {
-<<<<<<< HEAD
   let navEl = document.createElement("nav");
   navEl.innerHTML = '<ul>\
     <li><a href="../home.html" class="mainLink"><img src="../img/Logoer/tio_logo_ExtraLarge.png" alt="Tio logo"\
@@ -35,14 +34,15 @@ function injectHeader() {
         <li><a href="nettsider/kontaktOss.html">Kontakt oss</a></li>\
 </ul > '
   document.querySelector("#container").prepend(navEl);
-=======
-  let navbar = document.getElementById("navbar")
-  if (navbar != null){
-    for (let page of liste){
-      navbar.innerHTML += `<li><a href=${page.href}>${page.tekst}</a></li> `
-    }
-  }
->>>>>>> 08b442b9e157a736457c195c9c50a9e858671964
+  /*
+  ==============================================================================================================
+  *//*
+    let navbar = document.getElementById("navbar")
+    if (navbar != null){
+      for (let page of liste){
+        navbar.innerHTML += `<li><a href=${page.href}>${page.tekst}</a></li> `
+      }
+    }*/
 }
 
 function injectFooter() {

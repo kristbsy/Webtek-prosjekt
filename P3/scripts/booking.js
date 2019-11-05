@@ -52,7 +52,7 @@ class Grid {
         inputEl.max = "7";
         inputEl.min = "0";
         inputEl.value = "1";
-
+        inputEl.addEventListener("change", () => { this.refreshRecap() })
         daysToStayEl.innerHTML = "Dager å bli: ";
         daysToStayEl.appendChild(inputEl);
 
@@ -67,8 +67,13 @@ class Grid {
 
     refreshRecap() {
         let elements = [];
+        let inputs = document.querySelectorAll(".daysToStay>input");
+        let price = 0;
         if (this.points.includes(-1)) {
-            this.points.filter(el => el != -1).forEach(el => { elements.push(this.generateRecapInstanceHTML(el)) });
+            this.points.filter(el => el != -1).forEach(el => {
+                elements.push(this.generateRecapInstanceHTML(el))
+                console.log(elements);
+            });
         } else {
             console.log(this.path)
             this.path.filter(el => el != -1).forEach(el => { elements.push(this.generateRecapInstanceHTML(el)) });
@@ -76,6 +81,9 @@ class Grid {
         console.log(elements);
         this.recap.innerHTML = "<h2>Den gjeldende turen</h2>";
         elements.forEach(el => { this.recap.appendChild(el) });
+
+
+
     }
 
 
