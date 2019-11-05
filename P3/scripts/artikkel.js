@@ -22,6 +22,14 @@ const artikler = [{
     artikkelBildeAlt: 'bilde av ...'
 },
 {
+    artikkelTitel: 'Tid for blåbær!',
+    artikkelTekst: 'Nå er fjellet fullt av blåbær! Vi anbefaler å ta turen opp mot Storheia med armene fulle av bærplukkere og bøtter! Langs stien rundt Blåvatnet er det også mye blåbær, og dette er en fin tur å ta med små barn på.',
+    artikkelBilde: '../img/artikler/art_blabar.jpg',
+    artikkelTid: new Date(2018, 0, 1),
+    artikkelForfatter: "bjørn",
+    artikkelBildeAlt: 'bilde av ...'
+},
+{
     artikkelTitel: 'Vei-dugnad',
     artikkelTekst: 'Tusen takk til alle som bidro på dugnad for å sette i stand grusveien opp til Nuddustruddu! Alle hull er nå fylt igjen, og vi fikk forsterket veien der fjorårets høstregn hadde gjort sitt. ',
     artikkelBilde: '../img/artikler/art_vei.jpg',
@@ -95,13 +103,58 @@ document.querySelector("#artikkelen").replaceWith(articleEl[0])
 
 
 function getOrderedObject(articles) {
+    //sorterer artiklene inn i et objekt, der nøklene er året og deretter måneden
     let uniqueYears = []
     articles.forEach(el => uniqueYears.push(el.artikkelTid.getYear() + 1900));
     uniqueYears = [... new Set(uniqueYears)];
-    console.log(uniqueYears);
+    //console.log(uniqueYears);
+
+    let ordered = {};
+    let shallowOrdered = {}
+    uniqueYears.forEach(el => { ordered[el] = {}; shallowOrdered[el] = [] });
+
+    uniqueYears.forEach(year => {
+        shallowOrdered[year] = articles.filter(article => article.artikkelTid.getYear() + 1900 == year)
+    })
+
+    Object.keys(shallowOrdered).forEach(key => {
+        let uniqueMonths = []
+        shallowOrdered[key].forEach(article => uniqueMonths.push(article.artikkelTid.getMonth()))
+        uniqueMonths = [...new Set(uniqueMonths)]
+        uniqueMonths.forEach(month => { ordered[key][month + 1] = articles.filter(article => article.artikkelTid.getMonth() == month) })
+    })
+
+    return ordered;
 }
 
+function generateList(orderedArticles) {
+    let mainEl = document.createElement("ul")
+    Object.keys(orderedArticles).forEach(outerKey => {
+        let outerListEl = document.createElement("li");
+        mainEl.prepend(outerListEl);
+        outerListEl.innerText = outerKey;
 
+        let middleListEl = document.createElement("ul");
+        outerListEl.appendChild(middleListEl);
+
+        Object.keys(orderedArticles[outerKey]).forEach(innerKey => {
+            let innerListEl = document.createElement("li");
+            middleListEl.prepend(innerListEl)
+            innerListEl.innerText = innerKey;
+
+            let lastUliSwear = document.createElement("ul");
+            innerListEl.appendChild(lastUliSwear);
+            orderedArticles[outerKey][innerKey].forEach(article => {
+                let innerMostLi = document.createElement("li");
+                innerMostLi.innerText = article.artikkelTitel;
+                lastUliSwear.appendChild(innerMostLi);
+            })
+        })
+    })
+    return mainEl;
+}
+
+document.querySelector("#listeArtikkler").replaceWith(generateList(getOrderedObject(artikler)));
 
 /*
 function artikkelBytte(evt) {
