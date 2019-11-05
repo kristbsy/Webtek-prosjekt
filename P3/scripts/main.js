@@ -33,25 +33,16 @@ function injectHeader() {
     imgPrefix = "../img/"
   }
   let navEl = document.createElement("nav");
-  navEl.innerHTML = `<ul>\
-    <li><a href="../home.html" class="mainLink"><img src="${imgPrefix}Logoer/tio_logo_ExtraLarge.png" alt="Tio logo"\
-      id="hovedlogo" /></a></li >\
-        <li><a href="${hrefPrefix}artikler.html">Nyheter</a></li>\
-        <li><a href="${hrefPrefix}booking.html">Booking</a></li>\
-        <li><a href="${hrefPrefix}merOmHyttene.html">Hytter</a></li>\
-        <li><a href="${hrefPrefix}omOss.html">Turlaget</a></li>\
-        <li><a href="${hrefPrefix}kontaktOss.html">Kontakt oss</a></li>\
-</ul > `
+  navEl.id = "navbar";
+  let listElements = document.createElement("ul");
+  listElements.innerHTML += `<li><a href="../home.html" class="mainLink"><img src="${imgPrefix}Logoer/tio_logo_ExtraLarge.png" alt="Tio logo" id="hovedlogo" /></a></li>`
+  if (navEl != null){
+    for (let page of liste){
+      listElements.innerHTML += `<li><a href="${hrefPrefix} ${page.href}">${page.tekst}</a></li> `
+    }
+  }
+  navEl.appendChild(listElements);
   document.querySelector("#container").prepend(navEl);
-  /*
-  ==============================================================================================================
-  *//*
-    let navbar = document.getElementById("navbar")
-    if (navbar != null){
-      for (let page of liste){
-        navbar.innerHTML += `<li><a href=${page.href}>${page.tekst}</a></li> `
-      }
-    }*/
 }
 
 function injectFooter() {
@@ -69,4 +60,3 @@ function injectFooter() {
 
 injectHeader();
 injectFooter();
-
