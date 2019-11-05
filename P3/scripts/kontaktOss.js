@@ -1,6 +1,6 @@
 form_kontaktOss.onsubmit = function(evt){
     evt.preventDefault();
-    let info = document.getElementById("formDiv");
+    let info = document.getElementById("form_kontaktOss");
     let henvendelse = document.getElementById("inp_henvendelse");
     let email = document.getElementById("inp_email");
 
