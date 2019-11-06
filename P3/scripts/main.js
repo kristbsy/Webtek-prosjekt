@@ -8,15 +8,15 @@ let liste = [
     tekst: "Booking"
   },
   {
-    href: "merOmHyttene.html",
+    href: "mer_om_hyttene.html",
     tekst: "Hytter"
   },
   {
-    href: "omOss.html",
+    href: "om_oss.html",
     tekst: "Turlaget"
   },
   {
-    href: "kontaktOss.html",
+    href: "kontakt_oss.html",
     tekst: "Kontakt oss"
   }
 ]

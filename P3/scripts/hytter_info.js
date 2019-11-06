@@ -355,5 +355,3 @@ const hytter = [
     },
   }
 ];
-
-console.log(hytter[10].info.img[0].kilde)
