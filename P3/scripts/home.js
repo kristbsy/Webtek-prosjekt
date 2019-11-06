@@ -45,10 +45,10 @@ function artikkelHome() {
 }
 
 let news = document.getElementById("home_news");
-//news.onload = artikkelHome();
+news.onload = artikkelHome();
 
 
-
+/*
 function MakeList(task) { //Function to make the listed elemetns show in the correct order.
     for (let i = 0; i < artikkel.length; i++) {
         let list = document.getElementById("home_news")
@@ -62,3 +62,4 @@ function MakeList(task) { //Function to make the listed elemetns show in the cor
         list.appendChild(node);
     }
 }
+*/

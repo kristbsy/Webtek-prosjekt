@@ -38,6 +38,7 @@ let slideshow_hovedside = [
 
 ]
 //liste med liste med object
+
 let slideshow_hytte = [
   [ // 0
     {
@@ -95,7 +96,7 @@ let slideshow_hytte = [
       alternativ_tekst: "Bilde av hytten Einhaugens"
     }
   ],
-  
+
   [ // 3
     {
       kilde: "../img/hyttebilder/elvskinnet/elvskinnet_stue.jpg",
@@ -250,6 +251,7 @@ let slideshow_hytte = [
 ]
 
 //alternativ metode
+
 function slideshow_hytte_generator(slideshowNumber) {
   console.log(slideshow_hytte[slideshowNumber].length)
   let slideshow_hytte_container = document.getElementById("slideshow_hytter")
@@ -268,7 +270,7 @@ function slideshow_hytte_generator(slideshowNumber) {
 
     let buttons = document.getElementById("slideshow_buttons");
     buttons.innerHTML = "";
-    for (let i = 1; i < slideshow_hytte[slideshowNumber].length+1; i++) {
+    for (let i = 1; i < slideshow_hytte[slideshowNumber].length + 1; i++) {
       let span = document.createElement("span");
       span.className = "dot";
 
@@ -281,7 +283,7 @@ function slideshow_hytte_generator(slideshowNumber) {
 
 function slideshow_home_generator() {
   let slideshow_home = document.getElementById("slideShowImageContainer")
-  if (slideshow_home != null){
+  if (slideshow_home != null) {
     for (let slide of slideshow_hovedside) {
       let div = document.createElement("div");
       div.className = "mySlides fade";
@@ -316,31 +318,31 @@ let SlideshowIntervalID = setInterval(plusSlides, 5000, 1);
 
 let slideIndex = 1;
 showSlides(slideIndex);
-
+/*
 function currentSlide(n) {
-    showSlides(slideIndex = n);
+  showSlides(slideIndex = n);
 }
-
+*/
 function plusSlides(n) {
-    showSlides(slideIndex += n);
+  showSlides(slideIndex += n);
 }
 
 function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
 
-    //Resets the interval
-    clearInterval(SlideshowIntervalID)
-    SlideshowIntervalID = setInterval(plusSlides, 5000, 1);
+  //Resets the interval
+  clearInterval(SlideshowIntervalID)
+  SlideshowIntervalID = setInterval(plusSlides, 5000, 1);
 }
