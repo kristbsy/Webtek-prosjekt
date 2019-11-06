@@ -73,7 +73,7 @@ function byttHytte(evt){
     navn.innerHTML = hyttene[evt].hytteNavn;
     info.innerHTML = hyttene[evt].hytteTekst;
     tilbehor.innerHTML = hyttene[evt].hytteTilbehør;
-    injectSlideshow(evt);
+    slideshow_hytte_generator(evt);
 }
 
 
