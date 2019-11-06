@@ -12,7 +12,7 @@
   <h1>Kundedetaljer</h1>
   <h3>Fyll inn skjemaet og trykk bekreft bestilling for å sende bestillingen til oss.</h3>
   <div id="skjema">
-    <form id="bestilling" action="" method="post">
+    <form id="bestilling" action="/home.html" method="post">
       <fieldset>
         <legend>Personopplysninger</legend>
         <br>
@@ -48,9 +48,7 @@
       </fieldset>
       <h3 id="pris">Pris: 0kr</h3>
       <p>Vi sender en faktura til den oppgitte e-postadressen når vi mottar bestillingen.</p>
-      <button type="submit" id="bekreftbestilling" name="button">Bekreft bestillingen</button>
-      <!--Gjør om knappen til en link, ellers vil den ikke kunne sende til riktig side-->
-      <!-- <a id="avbrytbestilling" href="../home.html"><label for="avbryt"><button>Avbryt</button></label></a> -->
+      <input type="submit" id="bekreftbestilling" name="button" onclick="alert('Din bestilling er mottatt.\nKvittering vil sendes på mail')"></button><label class="button" for="bekreftbestilling" class="button">Bekreft bestillingen</label>
       <a href="/home.html"><label for="avbrytbestilling" class="button">Avbryt</label></a>
     </form>
   </div>
