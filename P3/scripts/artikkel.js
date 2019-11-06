@@ -136,9 +136,19 @@ function getOrderedObject(articles) {
 }
 
 function switchDisplay(event) {
-    let child = event.target.children[0];
+    const child = event.target.children[1];
+    const chevron = event.target.children[0];
     if (typeof (child) !== "undefined" && event.target.nodeName == "LI") {
         child.style.display = child.style.display == "none" ? "" : "none";
+    }
+    console.log(chevron)
+    if (typeof (chevron) !== "undefined" && chevron.classList.contains("chevron")) {
+        if (chevron.classList.contains("right")) {
+
+            chevron.classList.replace("right", "bottom")
+        } else {
+            chevron.classList.replace("bottom", "right");
+        }
     }
 }
 
@@ -146,9 +156,15 @@ function generateList(orderedArticles) {
     let mainEl = document.createElement("ul")
     Object.keys(orderedArticles).forEach(outerKey => {
         let outerListEl = document.createElement("li");
+        outerListEl.innerText = outerKey;
+        let chevronEl = document.createElement("span");
+        chevronEl.classList.add("chevron", "right")
+
         outerListEl.addEventListener("click", switchDisplay)
         mainEl.prepend(outerListEl);
-        outerListEl.innerText = outerKey;
+        outerListEl.appendChild(chevronEl)
+        console.log(chevronEl)
+
 
         let middleListEl = document.createElement("ul");
         middleListEl.style.display = "none";
@@ -160,6 +176,9 @@ function generateList(orderedArticles) {
             middleListEl.prepend(innerListEl)
             innerListEl.innerText = months[innerKey - 1];
 
+            let chevronEl = document.createElement("span");
+            chevronEl.classList.add("chevron", "right")
+            innerListEl.appendChild(chevronEl)
             let lastUliSwear = document.createElement("ul");
             lastUliSwear.style.display = "none";
             innerListEl.appendChild(lastUliSwear);
