@@ -1,9 +1,9 @@
 const hytter = [
   {
     id: 0,
-    x: 50,
-    y: 50,
-    attachments: [2, 3],
+    x: 100,
+    y: 25,
+    attachments: [5,7],
 
     info: {
       name: "Absultaket",
@@ -17,8 +17,8 @@ const hytter = [
   {
     id: 1,
     x: 552,
-    y: 300,
-    attachments: [2, 3],
+    y: 500,
+    attachments: [9,10],
 
     info: {
       name: "Bjørnehiet",
@@ -31,9 +31,9 @@ const hytter = [
   },
   {
     id: 2,
-    x: 552,
+    x: 1050,
     y: 100,
-    attachments: [1, 2],
+    attachments: [4,6,9,10],
 
     info: {
       name: "Einhaugen",
@@ -47,14 +47,14 @@ const hytter = [
 
   {
     id: 3,
-    x: 300,
-    y: 200,
-    attachments: [4, 5, 6, 7],
+    x: 250,
+    y: 450,
+    attachments: [1],
 
     info: {
       name: "Elvskinnet",
       price: 305,
-      features: "en<br>to<br>tre",
+      features: "Pris: 305 <br>Sengeplasser: 8<br>Innlagt vann: Ja<br>Innlagt strøm: Ja<br>Internett: Nei<br>Annet: Nytt kjøkkenutstyr  ",
       text: "",
       longText: "Dette er en av våre mer tradisjonsrike hytter. Navnet kommer fra 1850-tallet hvor en lokal adelsmann var bosatt i området. Hvert år arrangerte han et slags “sledeløp” ned det nærliggende elveleiet hvor deltakerne kun fikk ta i bruk et skinn av enten storfe eller svin for å ta seg nedover det nylige frosne elveleiet. Denne tradisjonen har vi valgt å holde litt i live med å utstyre hytta med diverse av sileutstyr og en nærliggende bakker er avskoget slik at en enkelt kan ta seg en tur uten å brekke ei hofte i prosessen.<br><br>Ellers er hytta utstyrt med full elektrisitet og varmeovner, slik at en fort får varmen tilbake i kroppen etter en tur i bakken. Inkludert i inventaret er det også en skotørker, og vi ber alle våre gjester lese instruksene før bruk, ettersom det har vært tidligere ulykker.",
       img: [['hytte1.jpg', 'bilde av kul hytte']]
@@ -62,9 +62,9 @@ const hytter = [
   },
   {
     id: 4,
-    x: 300,
-    y: 100,
-    attachments: [2, 3, 5],
+    x: 700,
+    y: 170,
+    attachments: [],
 
     info: {
       name: "Flåbånnhytta",
@@ -77,9 +77,9 @@ const hytter = [
   },
   {
     id: 5,
-    x: 400,
-    y: 150,
-    attachments: [3, 4, 6, 7],
+    x: 300,
+    y: 140,
+    attachments: [8,5,3,4],
 
     info: {
       name: "Gaustadhytta",
@@ -92,9 +92,9 @@ const hytter = [
   },
   {
     id: 6,
-    x: 500,
-    y: 200,
-    attachments: [2, 5, 3, 7],
+    x: 1015,
+    y: 370,
+    attachments: [],
 
     info: {
       name: "Høtta",
@@ -107,9 +107,9 @@ const hytter = [
   },
   {
     id: 7,
-    x: 20,
-    y: 100,
-    attachments: [2, 3, 5, 6],
+    x: 50,
+    y: 130,
+    attachments: [8],
 
     info: {
       name: "Nuddustruddu",
@@ -139,7 +139,7 @@ const hytter = [
     id: 9,
     x: 700,
     y: 320,
-    attachments: [2],
+    attachments: [4,10],
 
     info: {
       name: "Tiulla",
@@ -152,9 +152,9 @@ const hytter = [
   },
   {
     id: 10,
-    x: 440,
-    y: 300,
-    attachments: [1],
+    x: 800,
+    y: 500,
+    attachments: [],
 
     info: {
       name: "Sluggmøll",
