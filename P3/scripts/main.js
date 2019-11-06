@@ -1,5 +1,4 @@
-let liste = [
-  {
+let liste = [{
     href: "artikler.html",
     tekst: "Nyheter"
   },
@@ -47,6 +46,10 @@ function inject_header() {
   nav_el.appendChild(list_elements);
   document.querySelector("#container").prepend(nav_el);
 }
+
+['', '-ms-', '-webkit-', '-o-', '-moz-'].map(function (prefix) {
+  document.body.style[prefix + 'transform'] = 'rotate(180deg)';
+});
 
 function inject_footer() {
   let footer = document.createElement("footer");
