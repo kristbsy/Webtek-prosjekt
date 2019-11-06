@@ -1,50 +1,47 @@
-.gridBox {
+.articleContainer {
     display: grid;
-    grid-template-columns: 3fr 5fr;
-    background-color: #2196F3;
-    padding: 10px;
+    grid-template-columns: 7fr 20fr;
+    gap: 1%;
     max-width: 90vw;
     margin: auto;
 }
 
-ul{
-  list-style-type: none;
+#listContainer{
+  background-color: gray;
 }
 
-li::before{
-  font-weight: bolder;
-  content: "-";
+#artikkelen{
+  background-color: lightgray;
 }
 
-li{
-cursor: pointer;
-
+ul:hover{
+  cursor: pointer;
 }
 
-li>ul>li:hover{
+ul>li>ul>li>ul>li:hover{
   font-weight: bold;
 }
 
 img{
-  max-width: 100%
+  max-width: 95%;
+  padding: 2%;
 }
 
-#titelArikkel{
-
+@media (min-width: 1000px){
+  img{
+    max-width: 33%;
+    float: left;
+  }
 }
 
-bildeArtikkel{
-
+@media (max-width: 420px){
+  ul{
+    margin: 0;
+    padding-inline-start: 0px;
+  }
 }
 
-#tekstArtikkel{
-
+h2{
+  margin-top: 1%;
+  margin-bottom: 7%;
 }
-/*
-#listeArtikkler>li,
-#hytter>li {
-  color: blue;
-  text-decoration: underline;
-  cursor: pointer;
-  width: 150px;
-}*/
