@@ -119,7 +119,8 @@ class Grid {
 
         //Lager pris-elementet og bestill nå knappen
         let priceEl = document.createElement("h3");
-        let buttonEl = document.createElement("button")
+        let buttonEl = document.createElement("div")
+        buttonEl.className = "button"
         buttonEl.addEventListener("click", () => {
             this.order(totalPrice)
         })
