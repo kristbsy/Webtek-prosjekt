@@ -9,16 +9,16 @@
     padding: 10% 0;
 }
 
-form > * {
+form>* {
     margin-top: 10px;
 
 }
 
-.sprsm{
+.sprsm {
     width: 40%;
     outline: none;
     border: none;
-    text-align: center;  
+    text-align: center;
     font-family: Verdana, "Arial", Times, serif;
 }
 
@@ -28,10 +28,24 @@ textarea.sprsm {
     resize: none;
 }
 
-button[type="submit"] { 
+button[type="submit"] {
     width: 4em;
     font-size: 24px;
     font-family: Verdana, "Arial", Times, serif;
-    background-color: #64a842;
-    margin-top: 5%; 
+    background-color: rgb(5, 189, 66);
+    border: 1px solid rgb(5, 160, 56);
+    margin-top: 5%;
+    border: none;
+    color: white;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: green;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(1);
 }
