@@ -9,6 +9,7 @@ body {
   margin: 0;
   padding-bottom: 120px;
   position: relative;
+  cursor: wait;
 }
 
 #container>* {
