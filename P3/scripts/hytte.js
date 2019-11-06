@@ -79,7 +79,7 @@ function byttHytte(evt){
 
 function MakeList(task) { //Function to make the listed elemetns show in the correct order.
   for (let i = 0; i < hyttene.length; i++) {
-    let list = document.getElementById("hytter")
+    let list = document.getElementById("hytter_liste")
     let node = document.createElement("li");
 
     node.id = 'hytteNr' + i;
