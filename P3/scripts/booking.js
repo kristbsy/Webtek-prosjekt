@@ -235,7 +235,7 @@ class Grid {
         infoEl.innerText = info.text;
         featuresEl.innerHTML = info.features;
         buttonDiv.innerText = "Sett som start";
-        button2Div.innerText = "Sett som destinasjon"
+        button2Div.innerText = "Sett som slutt"
         imgEl.src = info.img[0].kilde;
 
 
