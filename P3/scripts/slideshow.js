@@ -1,5 +1,4 @@
-let slideshow_hovedside = [
-  {
+let slideshow_hovedside = [{
     kilde: "img/slideshow/slide1.jpg",
     alternativ_tekst: "Bilde av høst trær og fjell"
   },
@@ -331,8 +330,12 @@ function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
+  if (n >= slides.length) {
+    slideIndex = 1
+  }
+  if (n < 1) {
+    slideIndex = slides.length
+  }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }

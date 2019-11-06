@@ -81,6 +81,12 @@
   }
 }
 
+#tilbehørDiv {
+  float: right;
+  background-color: darkgray;
+  margin: 2%;
+  max-width: 33%;
+}
 
 .liste_hytte_container {
   display: grid;
