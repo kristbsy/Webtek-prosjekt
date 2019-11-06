@@ -163,7 +163,7 @@ function generateList(orderedArticles) {
         outerListEl.addEventListener("click", switchDisplay)
         mainEl.prepend(outerListEl);
         outerListEl.appendChild(chevronEl)
-        console.log(chevronEl)
+        //console.log(chevronEl)
 
 
         let middleListEl = document.createElement("ul");
@@ -176,9 +176,11 @@ function generateList(orderedArticles) {
             middleListEl.prepend(innerListEl)
             innerListEl.innerText = months[innerKey - 1];
 
+
             let chevronEl = document.createElement("span");
-            chevronEl.classList.add("chevron", "right")
-            innerListEl.appendChild(chevronEl)
+            chevronEl.classList.add("chevron", "right");
+            innerListEl.appendChild(chevronEl);
+
             let lastUliSwear = document.createElement("ul");
             lastUliSwear.style.display = "none";
             innerListEl.appendChild(lastUliSwear);

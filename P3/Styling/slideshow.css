@@ -83,12 +83,14 @@
 .mySlides>img {
       background-size: contain;
 }
+
+
     
 .slideshow_container {
       width: 100%;
       position: relative;
       max-height: 500px;
-      overflow: auto;
+      overflow: hidden;
       position: relative;
       padding:0;
       margin:0;
