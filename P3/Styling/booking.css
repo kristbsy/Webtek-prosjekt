@@ -1,6 +1,7 @@
 @media(max-width: 1300px){
-    #recap{
+    #recap, #info{
         overflow-x: scroll;
+        grid-row: 2/3
     }
 }
 
@@ -14,7 +15,7 @@ main{
     margin: auto;
     display: grid;
     grid-template-columns: 7fr 3fr 3fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: auto auto;
     gap: 1%;
 }
 
