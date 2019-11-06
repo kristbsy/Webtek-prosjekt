@@ -147,7 +147,7 @@ class Grid {
         localStorage.setItem('orders', JSON.stringify(orders));
         localStorage.setItem('totalPrice', totalPrice);
         //console.log(orders);
-        location.href = "Kundedetaljer.html";
+        location.href = "kundedetaljer.html";
     }
 
     initDjikstra(id) {
