@@ -12,6 +12,8 @@
 
 #artikkelen{
   background-color: lightgray;
+  padding: 5px;
+  padding-bottom: 10px;
 }
 
 ul{
@@ -43,13 +45,13 @@ ul>li>ul>li>ul>li:hover{
   font-weight: bold;
 }
 
-img{
+#artikkelen>img{
   max-width: 95%;
   padding: 2%;
 }
 
 @media (min-width: 1000px){
-  img{
+  #artikkelen>img{
     max-width: 33%;
     float: left;
   }
