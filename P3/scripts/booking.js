@@ -235,7 +235,7 @@ class Grid {
         featuresEl.innerHTML = info.features;
         buttonDiv.innerText = "Sett som start";
         button2Div.innerText = "Sett som destinasjon"
-        imgEl.src = "../img/hytter/" + info.img[0][0];
+        imgEl.src = "../img/hytter/" + info.img[0].kilde;
 
 
         buttonWrapEl.appendChild(buttonDiv);
