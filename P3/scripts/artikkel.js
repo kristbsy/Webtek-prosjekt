@@ -99,7 +99,7 @@ function generateArticle(article) {
 
     let infoEl = document.createElement("sub");
     let tidObjekt = article.artikkelTid;
-    let tid = tidObjekt.getDate() + ". " + months[tidObjekt.getMonth + 1] + " " + tidObjekt.getYear + 1900;
+    let tid = tidObjekt.getDate() + ". " + months[tidObjekt.getMonth() + 1] + " " + (Number(tidObjekt.getYear()) + 1900);
     infoEl.innerText = "Skrevet av " + article.artikkelForfatter + ", " + tid /*article.artikkelTid*/ ;
 
     mainEl.appendChild(imgEl);
