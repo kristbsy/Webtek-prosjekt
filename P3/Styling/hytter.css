@@ -1,0 +1,43 @@
+.liste_hytte_container {
+    display: grid;
+    grid-template-columns: 7fr 20fr;
+    gap: 1%;
+    max-width: 90vw;
+    margin: auto;
+}
+
+#hytter_liste{
+  background-color: gray;
+}
+
+#hytten{
+  background-color: lightgray;
+}
+
+ul>li:hover{
+  cursor: pointer;
+}
+
+#slideshow_hytter{
+  max-width: 95%;
+  padding: 2%;
+}
+
+@media (min-width: 1000px){
+    #slideshow_hytter{
+    max-width: 33%;
+    float: left;
+  }
+}
+
+@media (max-width: 420px){
+  ul{
+    margin: 0;
+    padding-inline-start: 0px;
+  }
+}
+
+h2{
+  margin-top: 1%;
+  margin-bottom: 7%;
+}
