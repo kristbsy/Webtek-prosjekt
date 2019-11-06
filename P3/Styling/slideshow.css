@@ -38,7 +38,6 @@
 }
 
 
-    
 .dot {
       cursor: pointer;
       height: 15px;
@@ -73,13 +72,12 @@
 }
 
 @media(max-width: 700px){
-
   .dot{
     height: 9px;
     width: 9px;
   }
 }
-    
+
 .mySlides>img {
       background-size: contain;
 }
