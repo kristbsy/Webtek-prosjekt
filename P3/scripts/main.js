@@ -8,16 +8,21 @@ let liste = [
     tekst: "Booking"
   },
   {
-    href: "merOmHyttene.html",
+    href: "mer_om_hyttene.html",
     tekst: "Hytter"
   },
   {
-    href: "omOss.html",
+    href: "om_oss.html",
     tekst: "Turlaget"
   },
   {
-    href: "kontaktOss.html",
+<<<<<<< HEAD
+    href: "kontakt_oss.html",
     tekst: "Kontakt oss"
+=======
+    href: "kontaktOss.html",
+    tekst: "Kontakt"
+>>>>>>> b3c3a09f641735ac4050775911d4a4535a87dcfc
   }
 ]
 

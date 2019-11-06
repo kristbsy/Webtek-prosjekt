@@ -33,17 +33,18 @@ class Grid {
 
     generateRecapInstanceHTML(id) {
         let main = document.createElement("div");
-        let imgEl = document.createElement("img");
+        //imgEl skulle egentlig være et bilde, men det breaka ting, so now we're here
+        let imgEl = document.createElement("div");
         let outerEl = document.createElement("div");
-        let nameEl = document.createElement("div");
+        let nameEl = document.createElement("h4");
         let daysToStayEl = document.createElement("div");
         let inputEl = document.createElement("input");
-
+        let imgContainer = document.createElement("div");
         main.className = "recapInstance";
         nameEl.className = "hytteNavn";
         daysToStayEl.className = "daysToStay";
-
-        imgEl.src = "../img/hytter/" + this.grid[id].info.img[0][0];
+        imgContainer.className = "imgContainer";
+        //imgEl.src = "../img/hytter/" + this.grid[id].info.img[0][0];
         nameEl.innerHTML = this.grid[id].info.name;
 
         inputEl.type = "number";
@@ -52,14 +53,16 @@ class Grid {
         inputEl.max = "7";
         inputEl.min = "0";
         inputEl.value = "1";
-        inputEl.addEventListener("change", () => { this.refreshRecap() })
+        inputEl.addEventListener("change", () => {
+            this.refreshRecap()
+        })
         daysToStayEl.innerHTML = "Dager å bli: ";
         daysToStayEl.appendChild(inputEl);
 
         outerEl.appendChild(nameEl);
         outerEl.appendChild(document.createElement("br"));
         outerEl.appendChild(daysToStayEl);
-
+        //imgContainer.appendChild(imgEl);
         main.appendChild(imgEl);
         main.appendChild(outerEl);
         return main;
@@ -93,7 +96,9 @@ class Grid {
         }
         console.log(elements);
         this.recap.innerHTML = "<h2>Den gjeldende turen</h2>";
-        elements.forEach(el => { this.recap.appendChild(el) });
+        elements.forEach(el => {
+            this.recap.appendChild(el)
+        });
 
 
         let totalPrice = 0;
@@ -115,7 +120,9 @@ class Grid {
         //Lager pris-elementet og bestill nå knappen
         let priceEl = document.createElement("h3");
         let buttonEl = document.createElement("button")
-        buttonEl.addEventListener("click", () => { this.order(totalPrice) })
+        buttonEl.addEventListener("click", () => {
+            this.order(totalPrice)
+        })
         buttonEl.innerText = "Bestill";
         priceEl.innerText = "Totalpris: " + totalPrice;
         this.recap.appendChild(priceEl);
@@ -140,6 +147,7 @@ class Grid {
         localStorage.setItem('orders', JSON.stringify(orders));
         localStorage.setItem('totalPrice', totalPrice);
         //console.log(orders);
+        location.href = "Kundedetaljer.html";
     }
 
     initDjikstra(id) {
@@ -228,7 +236,7 @@ class Grid {
         featuresEl.innerHTML = info.features;
         buttonDiv.innerText = "Sett som start";
         button2Div.innerText = "Sett som destinasjon"
-        imgEl.src = "../img/hytter/" + info.img[0][0];
+        imgEl.src = info.img[0].kilde;
 
 
         buttonWrapEl.appendChild(buttonDiv);
@@ -237,8 +245,12 @@ class Grid {
         bottomWrapEl.appendChild(document.createElement("br"));
         bottomWrapEl.appendChild(buttonWrapEl);
 
-        buttonDiv.addEventListener("click", () => { this.handleStartClick(id) });
-        button2Div.addEventListener("click", () => { this.handleEndClick(id) });
+        buttonDiv.addEventListener("click", () => {
+            this.handleStartClick(id)
+        });
+        button2Div.addEventListener("click", () => {
+            this.handleEndClick(id)
+        });
         infoSplitEl.appendChild(featuresEl);
         infoSplitEl.appendChild(infoEl);
 
@@ -312,7 +324,9 @@ class Grid {
             elem.style.top = this.grid[i].y / this.canvas.height * 100 - size / (7 * 2) + "%";
             elem.style.left = this.grid[i].x / this.canvas.width * 100 - size / (7.2 * 2) + "%";
 
-            elem.addEventListener("click", () => { this.handleClick(i) });
+            elem.addEventListener("click", () => {
+                this.handleClick(i)
+            });
             root.appendChild(elem);
 
         }
@@ -493,4 +507,3 @@ function load(hutts, grid) {
 }
 
 load(hytter, grid);
-

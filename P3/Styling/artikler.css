@@ -1,75 +1,79 @@
 .articleContainer {
-    display: grid;
-    grid-template-columns: 7fr 20fr;
-    gap: 1%;
-    max-width: 90vw;
-    margin: auto;
+  display: grid;
+  grid-template-columns: 7fr 20fr;
+  gap: 1%;
+  max-width: 90vw;
+  margin: auto;
 }
 
-#listContainer{
-  background-color: gray;
+span {
+  padding-left: 3px;
 }
 
-#artikkelen{
+#listContainer {
+  background-color: darkslategray;
+}
+
+#artikkelen {
   background-color: lightgray;
   padding: 5px;
   padding-bottom: 10px;
 }
 
-ul{
+ul {
   list-style-type: none;
   margin-left: 10px;
-  padding-left:0px;
-  
+  padding-left: 0px;
+  color: white;
 }
 
-li{
+li {
   padding-bottom: 5px;
 }
 
-ul ul{
+ul ul {
   margin-left: 20px;
 }
 
-ul ul ul{
+ul ul ul {
   margin-left: 30px;
 }
 
 
 
-ul:hover{
+ul:hover {
   cursor: pointer;
 }
 
-ul>li>ul>li>ul>li:hover{
+ul>li>ul>li>ul>li:hover {
   font-weight: bold;
 }
 
-#artikkelen>img{
+#artikkelen>img {
   max-width: 95%;
   padding: 2%;
 }
 
-@media (min-width: 1000px){
-  #artikkelen>img{
+@media (min-width: 1000px) {
+  #artikkelen>img {
     max-width: 33%;
     float: left;
   }
 }
 
-@media (max-width: 420px){
-  ul{
+@media (max-width: 420px) {
+  ul {
     margin: 0;
     padding-inline-start: 0px;
   }
 }
 
-h2{
+h2 {
   margin-top: 1%;
   margin-bottom: 7%;
 }
 
-.chevron::after{
+.chevron::after {
   border-style: solid;
   border-width: 0.15em 0.15em 0 0;
   content: '';
@@ -80,13 +84,13 @@ h2{
   top: 0.3em;
   display: inline-block;
   vertical-align: top;
-  
+
 }
 
-.chevron.right:after{
+.chevron.right:after {
   transform: rotate(45deg);
 }
 
-.chevron.bottom:after{
+.chevron.bottom:after {
   transform: rotate(135deg);
 }
