@@ -67,7 +67,7 @@ const hytter = [
     attachments: [2, 3, 5],
 
     info: {
-      name: "Hytte 5",
+      name: "Flåbånnhytta",
       price: 10900,
       features: "en<br>to<br>tre",
       text: "En eksepsjonelt god brødtekst til hytte 5. All informasjonen du noensinne kunne trengt finnes i denne lille boksen. Er det ikke fantastisk?",
@@ -82,7 +82,7 @@ const hytter = [
     attachments: [3, 4, 6, 7],
 
     info: {
-      name: "Hytte 6",
+      name: "Gaustadhytta",
       price: 10900,
       features: "en<br>to<br>tre",
       text: "En eksepsjonelt god brødtekst til hytte 6. All informasjonen du noensinne kunne trengt finnes i denne lille boksen. Er det ikke fantastisk?",
@@ -97,7 +97,7 @@ const hytter = [
     attachments: [2, 5, 3, 7],
 
     info: {
-      name: "Hytte 7",
+      name: "Høtta",
       price: 10900,
       features: "en<br>to<br>tre",
       text: "En eksepsjonelt god brødtekst til hytte 7. All informasjonen du noensinne kunne trengt finnes i denne lille boksen. Er det ikke fantastisk?",
@@ -112,7 +112,7 @@ const hytter = [
     attachments: [2, 3, 5, 6],
 
     info: {
-      name: "Hytte 8",
+      name: "Nuddustruddu",
       price: 10900,
       features: "en<br>to<br>tre",
       text: "En eksepsjonelt god brødtekst til hytte 8. All informasjonen du noensinne kunne trengt finnes i denne lille boksen. Er det ikke fantastisk?",
@@ -127,7 +127,7 @@ const hytter = [
     attachments: [3],
 
     info: {
-      name: "Hytte 9",
+      name: "Puudklubb",
       price: 10900,
       features: "en<br>to<br>tre",
       text: "En eksepsjonelt god brødtekst til hytte 9. All informasjonen du noensinne kunne trengt finnes i denne lille boksen. Er det ikke fantastisk?",
@@ -142,7 +142,7 @@ const hytter = [
     attachments: [2],
 
     info: {
-      name: "Hytte 10",
+      name: "Tiulla",
       price: 10900,
       features: "en<br>to<br>tre",
       text: "En eksepsjonelt god brødtekst til hytte 9. All informasjonen du noensinne kunne trengt finnes i denne lille boksen. Er det ikke fantastisk?",
@@ -157,7 +157,7 @@ const hytter = [
     attachments: [1],
 
     info: {
-      name: "Hytte 11",
+      name: "Sluggmøll",
       price: 10900,
       features: "en<br>to<br>tre",
       text: "En eksepsjonelt god brødtekst til hytte 9. All informasjonen du noensinne kunne trengt finnes i denne lille boksen. Er det ikke fantastisk?",
