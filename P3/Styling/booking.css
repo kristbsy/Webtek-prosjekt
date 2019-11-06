@@ -151,22 +151,6 @@ canvas {
     display: flex;
 }
 
-.button {
-    margin: auto;
-    background-color: rgb(5, 189, 66);
-    border: 1px solid rgb(5, 160, 56);
-    width: 80%;
-    font-size: 18px;
-
-    transition: 0.3s;
-
-    height: 18px;
-    padding: 8px;
-    align-self: center;
-    text-align: center;
-    user-select: none;
-    cursor: pointer;
-}
 
 .button:hover {
     transform: scale(1.05);
