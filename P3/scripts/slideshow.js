@@ -58,10 +58,10 @@ function slideshow_hytte_generator(slideshowNumber) {
       let span = document.createElement("span");
       span.className = "dot";
 
-      span.setAttribute('onclick', 'currentSlide(' + i + ')');
+      span.setAttribute('onclick', 'current_slide(' + i + ')');
       buttons.appendChild(span);
     }
-    showSlides(0);
+    show_slides(0);
   }
 }
 
@@ -86,7 +86,7 @@ function slideshow_home_generator() {
       let span = document.createElement("span");
       span.className = "dot";
 
-      span.setAttribute('onclick', 'currentSlide(' + i + ')');
+      span.setAttribute('onclick', 'current_slide(' + i + ')');
 
       buttons.appendChild(span);
     }
@@ -98,20 +98,20 @@ slideshow_home_generator();
 ///////////////////////////     Slideshow.js     //////////////////////////
 
 //5 seconds between each slide:
-let SlideshowIntervalID = setInterval(plusSlides, 5000, 1);
+let slideshow_interval_ID = setInterval(plus_slides, 5000, 1);
 
-let slideIndex = 1;
-showSlides(slideIndex);
+let slide_index = 1;
+show_slides(slide_index);
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+function current_slide(n) {
+  show_slides(slide_index = n);
 }
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+function plus_slides(n) {
+  show_slides(slide_index += n);
 }
 
-function showSlides(n) {
+function show_slides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
@@ -127,10 +127,10 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
+  slides[slide_index - 1].style.display = "block";
+  dots[slide_index - 1].className += " active";
 
   //Resets the interval
-  clearInterval(SlideshowIntervalID)
-  SlideshowIntervalID = setInterval(plusSlides, 5000, 1);
+  clearInterval(slideshow_interval_ID)
+  slideshow_interval_ID = setInterval(plus_slides, 5000, 1);
 }
