@@ -4,8 +4,6 @@
 
 #body_wrapper {
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
   row-gap: 1rem;
   width: 100%;
 }
@@ -28,21 +26,15 @@
   height: 100%;
 }
 
-#home_news{
-
-}
-
 #home_slides img {
   width: 100%;
 }
 
 /* Artikkel-styling Homesiden */
 #home_news {
-  grid-column: 1 / 2;
   grid-row: 2 / 3;
   width: auto;
   margin-right: 0.5rem;
-  height: calc(126px * 1.05 * 3);
 }
 
 .artikkelen {
@@ -76,7 +68,6 @@
 }
 
 #home_weather {
-  grid-column: 2 / 3;
   grid-row: 2 / 3;
   width: auto;
   margin-left: 0.5rem;
