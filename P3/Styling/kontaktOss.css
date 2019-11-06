@@ -25,6 +25,7 @@ form > * {
 textarea.sprsm {
     width: 50%;
     padding: 0 5%;
+    resize: none;
 }
 
 button[type="submit"] { 
