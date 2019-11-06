@@ -17,7 +17,7 @@ let liste = [
   },
   {
     href: "kontakt_oss.html",
-    tekst: "Kontakt oss"
+    tekst: "Kontakt"
   }
 ]
 
