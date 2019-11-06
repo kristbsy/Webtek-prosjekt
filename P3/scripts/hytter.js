@@ -68,10 +68,10 @@ const hytter = [
 
     info: {
       name: "Flåbånnhytta",
-      price: 10900,
-      features: "en<br>to<br>tre",
+      price: 250,
+      features: "Pris: 250<br>Sengeplasser: 6<br>Innlagt vann: Ja<br>Innlagt strøm: Nei<br>Internett: Nei<br>Annet: Favoritt blant historienerder",
       text: "En eksepsjonelt god brødtekst til hytte 5. All informasjonen du noensinne kunne trengt finnes i denne lille boksen. Er det ikke fantastisk?",
-      longText: "",
+      longText: "Situert litt lavere i terrenget enn de fleste av våre andre hytter er denne hytta det perfekte valget om en ønsker seg en topptur, samtidig som et koselig sted å komme tilbake til når turen er ferdig. En annen effekt av slik lav beliggenhet er at hytta er lett tilgjengelig for de som ikke ønsker en fjelltur, men heller et lite sted hvor en kan unnslippe fra det daglige strev og styr.<br><br>Navnet Flåbånn er også et eldre navn fra gammelt av, og stammer fra områdets tidligere bruk av en familie som var notorisk for sine forsøk på å lure enhver gjennomreisende for at de hadde av verdisaker, altså “flå” dem. Den familien varte ikke så lenge når de prøvde å lure en gruppe russere, som raskt flådde dem tilbake. Etter den tid stod området tomt lenge før TiO kjøpte opp tomta og nå bruker den til langt hyggeligere ting. ",
       img: [['hytte1.jpg', 'bilde av kul hytte']]
     },
   },
@@ -83,10 +83,10 @@ const hytter = [
 
     info: {
       name: "Gaustadhytta",
-      price: 10900,
-      features: "en<br>to<br>tre",
+      price: 600,
+      features: "Pris: 600<br>Sengeplasser: 8<br>Innlagt vann: Ja<br>Innlagt strøm: Ja<br>Internett: Ja<br>Annet: Luksusfaktore",
       text: "En eksepsjonelt god brødtekst til hytte 6. All informasjonen du noensinne kunne trengt finnes i denne lille boksen. Er det ikke fantastisk?",
-      longText: "",
+      longText: "Gaustadhytta er muligens den mest luksuriøse hytta TiO har ansvar for. Utstyrt med alt en skulle trenge for å leve et moderne liv er inkludert i denne glamorøse tømmerbygningen. Med luksuser som boblebad på terrassen, badstu og et velutviklet lydanlegg vil du være komfortabel hvor enn du er under besøket. I kjelleren er det en automatisert vinkjeller, som vil behage enhver vinkjenner. Hele systemet er automatisert, og ved å bruke konsollen installert i veggen kan du få ut et flaske med rødt fra 1991 for en rimelig penge.<br><br>Som vår mest eksklusive hytte er denne rimelig populær blant de av dere som egentlig ønsker å unnslippe fra naturen. Gaustadhytta er da et ypperlig sluttpunkt for en hver reise gjennom turområdet. Planlegg en lengre reise via flere av våre andre flott hytter og velg denne som sluttpunkt, noe dine slitne lemmer blir å takke deg grundig for.",
       img: [['hytte1.jpg', 'bilde av kul hytte']]
     },
   },
@@ -98,10 +98,10 @@ const hytter = [
 
     info: {
       name: "Høtta",
-      price: 10900,
-      features: "en<br>to<br>tre",
+      price: 49,
+      features: "Pris: 49<br>Sengeplasser: 12<br>Innlagt vann: Nei<br>Innlagt strøm: Nei<br>Internett: Nei<br>Annet: Fyringsved ikke inkludert",
       text: "En eksepsjonelt god brødtekst til hytte 7. All informasjonen du noensinne kunne trengt finnes i denne lille boksen. Er det ikke fantastisk?",
-      longText: "",
+      longText: "Muligens den hytta som har nærmet likhet til den hytta dine tipp-oldeforeldre kunne ha brukte kalde og gjennomblåste kvelder i. Høtta er vår beste forsøk på å gi et retro og ruralt preg til ditt hytteopphold. Her har vi spart på alle punkter og brukt mest mulig minst mulig tid og penger på luksus. Det som er brukt penger på er at taket er tett, vedovnen er fungerende og sengene er mykere enn gulvet. <br><br>Denne hytta ble opprettet etter oppfordring  fra en gruppe tyske vikningentusiaster, som spurte hvorvidt det var noen steder du kunne få fliser i tærne hvis du ikke hadde på deg sko inne.  Så i vår søken etter å gi et tilbud til så mange forskjellige typer som mulig har vi nå opprettet Høtta for de turgåerne som vil bo et sted de kunne ha bygget selv på et par timer.",
       img: [['hytte1.jpg', 'bilde av kul hytte']]
     },
   },
@@ -113,10 +113,10 @@ const hytter = [
 
     info: {
       name: "Nuddustruddu",
-      price: 10900,
-      features: "en<br>to<br>tre",
+      price: 295,
+      features: "Pris: 295<br>Sengeplasser: 8<br>Innlagt vann: Ja<br>Innlagt strøm: Ja<br>Internett: Ja<br>Annet: Kabel TV",
       text: "En eksepsjonelt god brødtekst til hytte 8. All informasjonen du noensinne kunne trengt finnes i denne lille boksen. Er det ikke fantastisk?",
-      longText: "",
+      longText: "Plassert med ideelle omgivelser for en varm nuddelkopp i armen har Nuddustruddu alt av hva enhver hyttenuddler skulle trenge av utstyr og omgivelser for å rolig slurpe i seg innholdet av en tur-sized Mr. Lee nuddelpakke.For de som vil ha en litt villere opplevelse enn enkel matspising tilbyr Nuddustruddu rik natur i omgivelsene, blust med både molte og blåbær, samt mose hvis det er hva du liker. Via disse naturlige resursene vil denne hytta ikke bare sette smak, men også minner fra turen.<br><br>Det som er innad Nuddustruddu er ikke bare bær og nuddelkopper. Hytta har flere soverom, så hvis samholdet ryker så gjør ikke muligheten for en god natts søvn. <br><br>Hytta er en av våre nyere hytter, og ble bygget i 2009 etter at TiO utvidet på bakgrunn av høy etterspørsel etter flere bomuligheter. Hytta står på en solid grunnmur og males hvert andre år i naturlige farger, slik at området beholder sin idylliske sjarm.",
       img: [['hytte1.jpg', 'bilde av kul hytte']]
     }
   },
@@ -128,10 +128,10 @@ const hytter = [
 
     info: {
       name: "Puudklubb",
-      price: 10900,
-      features: "en<br>to<br>tre",
+      price: 250,
+      features: "Pris: 250<br>Sengeplasser: 8<br>Innlagt vann: Ja<br>Innlagt strøm: Ja<br>Internett: Nei<br>Annet: Kamera til leie",
       text: "En eksepsjonelt god brødtekst til hytte 9. All informasjonen du noensinne kunne trengt finnes i denne lille boksen. Er det ikke fantastisk?",
-      longText: "",
+      longText: "Hvis du velger å ta turen innom PuudKlubb så kan TiO nærmest garantere for at hytta vil gi deg en følelse av samvær med de som tidligere har bodd der. Vi har bygget ut et prosjekt som vi kaller “magiske hytteblikk”, som baserer seg rundt de 4 kameraene som besøkende kan leie. De er av typen “Fujifilm Instax Mini 9” som skriver bilder på størrelse med et kredittkort. Selve bildene kommer inkludert i leie av kameraene, men vi anbefaler at du gjerne henger opp ett av dem i hytta, slik at andre kan få innblikk i dine øyeblikk. Skal også merkes at vi i TiO ber deg vise respekt for andres bilder når du henger opp dine egne.<br><br>Ellers så er Puudklubb en rimelig og beskjeden hytte, uten unødvendig mye fjas og stas. Det tilbys vann og strøm med begrenset kapasitet, så vær beredt på å samarbeide hvis flere trenger å lade telefonen samtidig.",
       img: [['hytte1.jpg', 'bilde av kul hytte']]
     },
   },
@@ -143,10 +143,10 @@ const hytter = [
 
     info: {
       name: "Tiulla",
-      price: 10900,
-      features: "en<br>to<br>tre",
+      price: 200,
+      features: "Pris: 200<br>Sengeplasser: 8<br>Innlagt vann: Nei<br>Innlagt strøm: Ja<br>Internett: Nei<br>Annet: obs, sau",
       text: "En eksepsjonelt god brødtekst til hytte 9. All informasjonen du noensinne kunne trengt finnes i denne lille boksen. Er det ikke fantastisk?",
-      longText: "",
+      longText: "Alle har et forhold til de kaldeste av vinterdager i dette landet, og alle har noe de virkelig liker å gjøre når kulda kryper inn gjennom veggene og angriper tærne dine. Noen tar på seg sokker, andre tøfler, og de som ikke planlegger å røre seg for mye ruller seg selv inn i et ullteppe. I Tiulla har vi innredet med det siste. Mer spesifikt med 10 av dem. Ullen som er brukt er av beste fra de lokale sauene fra gården til Bregge Saaughøm. Liknende tepper kan kjøpes direkte fra herr Bregge for en rimelig pris. <br><br> Vær obs på at det er beitende sauer på området. Klapp de på eget ansvar, det har vært ett tilfelle av at en sau bet en innpåsliten 11-åring. Foruten plagsom adferd fra mennesker så er sauene tamme. <br><br> Ellers er hytta et beroligende sted, og med bakgrunnslyd fra det lokale dyrelivet vil du kunne prøve å telle sauer basert på lyd, ikke mentalt bilde.",
       img: [['hytte1.jpg', 'bilde av kul hytte']]
     },
   },
@@ -159,9 +159,9 @@ const hytter = [
     info: {
       name: "Sluggmøll",
       price: 10900,
-      features: "en<br>to<br>tre",
+      features: "Pris: 210<br>Sengeplasser: 7<br>Innlagt vann: Nei<br>Innlagt strøm: Ja<br>Internett: Nei<br>Annet: Fin bod",
       text: "En eksepsjonelt god brødtekst til hytte 9. All informasjonen du noensinne kunne trengt finnes i denne lille boksen. Er det ikke fantastisk?",
-      longText: "",
+      longText: "Plassert midt i et skogtun gir Sluggmøll deg en optimal mulighet til å lukke alt ute. Trærne gir ingen beskyttelse mot verken radiobølger eller gps, men har installert et eget “silent-room” som skal gi deg total isolasjon når du vil ha fred fra distraksjoner gjennom din mobiltelefon. Døra til stillerommet er ikke utstyrt med lås, så dine kjære vil fortsatt kunne dra deg tilbake til sivilisasjon når regningene begynner å dryppe inn-.<br><br> Sluggmøll gir deg også flere aktiviteter for deg og familien som ikke inkluderer noe som helst digialt. Den sideliggende boden er utstyrt med spennende spill som dart (med 2 piler), hestesko (1 hestesko og 1 stake) og en gammel dance dance revolution-matte (radio inkludert slik at dere i det minste får lyd).  Hytta inneholder også et fint stuebord med flere brettspill for deres bruk. Det inkluderer klassikere som Risk (christmas edition) og Arkham Horror",
       img: [['hytte1.jpg', 'bilde av kul hytte']]
     },
   }
