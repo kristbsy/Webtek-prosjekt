@@ -54,7 +54,7 @@ nav>ul>li>a {
   height: 100%;
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   /* weird-flex: giraffe; */
   background-color: #64a842;
   color: cornsilk;
