@@ -22,33 +22,33 @@ let liste = [
 ]
 
 
-function injectHeader() {
-  let hrefPrefix = "";
-  let imgPrefix = "";
-  let mainPrefix = "";
+function inject_header() {
+  let href_prefix = "";
+  let img_prefix = "";
+  let main_prefix = "";
   if (location.href.split("/").slice(-1)[0] == "home.html") {
-    hrefPrefix = "nettsider/";
-    imgPrefix = "img/";
-    mainPrefix = "./"
+    href_prefix = "nettsider/";
+    img_prefix = "img/";
+    main_prefix = "./"
   } else {
-    hrefPrefix = "./";
-    imgPrefix = "../img/"
-    mainPrefix = "../"
+    href_prefix = "./";
+    img_prefix = "../img/"
+    main_prefix = "../"
   }
-  let navEl = document.createElement("nav");
-  navEl.id = "navbar";
-  let listElements = document.createElement("ul");
-  listElements.innerHTML += `<li><a href="${mainPrefix}home.html" class="mainLink"><img src="${imgPrefix}Logoer/tio_logo_ExtraLarge.png" alt="Tio logo" id="hovedlogo" /></a></li>`
-  if (navEl != null) {
+  let nav_el = document.createElement("nav");
+  nav_el.id = "navbar";
+  let list_elements = document.createElement("ul");
+  list_elements.innerHTML += `<li><a href="${main_prefix}home.html" class="mainLink"><img src="${img_prefix}Logoer/tio_logo_ExtraLarge.png" alt="Tio logo" id="hovedlogo" /></a></li>`
+  if (nav_el != null) {
     for (let page of liste) {
-      listElements.innerHTML += `<li><a href="${hrefPrefix}${page.href}">${page.tekst}</a></li> `
+      list_elements.innerHTML += `<li><a href="${href_prefix}${page.href}">${page.tekst}</a></li> `
     }
   }
-  navEl.appendChild(listElements);
-  document.querySelector("#container").prepend(navEl);
+  nav_el.appendChild(list_elements);
+  document.querySelector("#container").prepend(nav_el);
 }
 
-function injectFooter() {
+function inject_footer() {
   let footer = document.createElement("footer");
   footer.innerHTML = `
   Lokalt kontor: Krokveigen 76, Oppdal
@@ -61,5 +61,6 @@ function injectFooter() {
   `
   document.body.append(footer);
 }
-injectHeader();
-injectFooter();
+
+inject_header();
+inject_footer();

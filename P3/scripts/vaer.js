@@ -1,6 +1,6 @@
 
 //Funksjon som genererer et værvarsel. Henter en værklasse med noen bestemte trekk, og noen frø for videre generering av unik egenskap, feks temperatur
-function genererVaer(seed) {
+function generer_vaer(seed) {
     let vaers = [{
         "iko": "🌞", // her brukes enten en unicodekarakter eller en komplett bildetag
         "desk": "Sol og deilig vær!",
@@ -55,7 +55,7 @@ function load_vaer() {
         
         let naa = new Date();
         let seed = Math.abs(Math.sin(naa.getUTCDate() + naa.getUTCMonth()*10 + naa.getUTCFullYear()*1000+i))/*Math.random()*/;
-        let arr = genererVaer(seed);
+        let arr = generer_vaer(seed);
         console.log(seed, arr);
         let vaer_tag =
             '<div class="weather_prediction"><div class="wea_time"><strong>' +
