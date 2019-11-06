@@ -4,14 +4,15 @@
 <head>
   <meta charset="utf-8">
   <title>Kundedetaljer</title>
+  <link rel="stylesheet" href="/Styling/main.css">
   <link rel="stylesheet" href="../styling/kundedetaljer.css">
 </head>
 
 <body>
   <h1>Kundedetaljer</h1>
   <h3>Fyll inn skjemaet og trykk bekreft bestilling for å sende bestillingen til oss.</h3>
-  <div>
-    <form class="form" id="bestilling" action="" method="post">
+  <div id="skjema">
+    <form id="bestilling" action="" method="post">
       <fieldset>
         <legend>Personopplysninger</legend>
         <br>
@@ -50,7 +51,7 @@
       <button type="submit" id="bekreftbestilling" name="button">Bekreft bestillingen</button>
       <!--Gjør om knappen til en link, ellers vil den ikke kunne sende til riktig side-->
       <!-- <a id="avbrytbestilling" href="../home.html"><label for="avbryt"><button>Avbryt</button></label></a> -->
-      <div></div>
+      <a href="/home.html"><label for="avbrytbestilling" class="button">Avbryt</label></a>
     </form>
   </div>
   <script>

@@ -1,13 +1,15 @@
-div {
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#skjema {
   border-radius: 5px;
   background-color: #A2CC8D;
   padding: 20px;
   width: 50%;
-  margin-left: 12%;
-}
-
-h1, h3 {
-  margin-left: 12%;
+  margin: auto auto;
 }
 
 fieldset {
@@ -26,7 +28,7 @@ fieldset legend {
 }
 
 #avbrytbestilling {
-  display: inline-block;
+  display: inline-block ;
 }
 
 #avbrytbestilling:hover button{
@@ -55,4 +57,8 @@ input[type=text], select {
 
 #pris{
   margin-left: 0;
+}
+
+a {
+  text-decoration: none;
 }
