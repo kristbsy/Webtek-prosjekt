@@ -1,13 +1,10 @@
-*{
-  font-size: 200%;
-}
-
-h1, h2 {
+h1,
+h2 {
   font-family: Georgia, "Times New Roman", Times, serif;
   text-transform: uppercase;
 }
 
-body{
+body {
   min-height: 100vh;
   margin: 0;
   padding-bottom: 120px;
@@ -19,27 +16,27 @@ footer {
   margin-bottom: 20px;
 }
 
-#container>*{
+#container>* {
   margin-bottom: 20px;
 }
 
-#hovedlogo{
+#hovedlogo {
   max-height: 100%;
   max-width: 100%;
 }
 
-.mainLink{
+.mainLink {
   flex: 1 1;
   border: none;
   background-color: transparent;
 }
 
-.mainLink:hover{
+.mainLink:hover {
   transform: scale(1.1);
   background-color: transparent;
 }
 
-nav>a{
+nav>a {
   width: calc(100%/8.5);
 }
 
@@ -106,4 +103,3 @@ footer {
   margin: auto;
   width: 70%;
 }
-
