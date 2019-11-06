@@ -12,7 +12,30 @@
 
 #artikkelen{
   background-color: lightgray;
+  padding: 5px;
+  padding-bottom: 10px;
 }
+
+ul{
+  list-style-type: none;
+  margin-left: 10px;
+  padding-left:0px;
+  
+}
+
+li{
+  padding-bottom: 5px;
+}
+
+ul ul{
+  margin-left: 20px;
+}
+
+ul ul ul{
+  margin-left: 30px;
+}
+
+
 
 ul:hover{
   cursor: pointer;
@@ -22,13 +45,13 @@ ul>li>ul>li>ul>li:hover{
   font-weight: bold;
 }
 
-img{
+#artikkelen>img{
   max-width: 95%;
   padding: 2%;
 }
 
 @media (min-width: 1000px){
-  img{
+  #artikkelen>img{
     max-width: 33%;
     float: left;
   }
@@ -46,7 +69,7 @@ h2{
   margin-bottom: 7%;
 }
 
-.chevron::before{
+.chevron::after{
   border-style: solid;
   border-width: 0.15em 0.15em 0 0;
   content: '';
@@ -60,10 +83,10 @@ h2{
   
 }
 
-.chevron.right:before{
+.chevron.right:after{
   transform: rotate(45deg);
 }
 
-.chevron.bottom:before{
+.chevron.bottom:after{
   transform: rotate(135deg);
 }
