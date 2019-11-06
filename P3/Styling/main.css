@@ -92,6 +92,10 @@ nav>ul>li>a:hover {
 footer {
   position: absolute;
   bottom: 0;
+  background-color: beige;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%
 }
 
 
@@ -102,4 +106,3 @@ footer {
   margin: auto;
   width: 70%;
 }
-
