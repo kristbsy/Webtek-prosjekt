@@ -1,0 +1,15 @@
+.container_alt{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.container_styremedlem{
+  background-color: #F5F5F5;
+  width: 24%;
+  min-width: 150px;
+}
+
+.container_om_turlaget{
+  background-color: #F5F5F5;
+}
