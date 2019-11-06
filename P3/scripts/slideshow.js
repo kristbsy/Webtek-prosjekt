@@ -79,17 +79,6 @@ function slideshow_home_generator() {
       div.appendChild(img);
       slideshow_home.appendChild(div);
     }
-
-    let buttons = document.getElementById("slideshow_buttons");
-
-    for (let i = 1; i < slideshow_hovedside.length + 1; i++) {
-      let span = document.createElement("span");
-      span.className = "dot";
-
-      span.setAttribute('onclick', 'current_slide(' + i + ')');
-
-      buttons.appendChild(span);
-    }
   }
 }
 
@@ -124,11 +113,8 @@ function show_slides(n) {
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
+
   slides[slide_index - 1].style.display = "block";
-  dots[slide_index - 1].className += " active";
 
   //Resets the interval
   clearInterval(slideshow_interval_ID)
