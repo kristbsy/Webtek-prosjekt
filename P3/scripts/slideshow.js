@@ -98,7 +98,7 @@ slideshow_home_generator();
 ///////////////////////////     Slideshow.js     //////////////////////////
 
 //5 seconds between each slide:
-let slideshow_interval_ID = set_interval(plus_slides, 5000, 1);
+let slideshow_interval_ID = setInterval(plus_slides, 5000, 1);
 
 let slide_index = 1;
 show_slides(slide_index);
@@ -132,5 +132,5 @@ function show_slides(n) {
 
   //Resets the interval
   clear_interval(slideshow_interval_ID)
-  slideshow_interval_ID = set_interval(plus_slides, 5000, 1);
+  slideshow_interval_ID = setInterval(plus_slides, 5000, 1);
 }
