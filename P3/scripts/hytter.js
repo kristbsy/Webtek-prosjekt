@@ -17,7 +17,7 @@ const hytter = [
   {
     id: 1,
     x: 552,
-    y: 600,
+    y: 300,
     attachments: [2, 3],
 
     info: {
@@ -32,7 +32,7 @@ const hytter = [
   {
     id: 2,
     x: 552,
-    y: 200,
+    y: 100,
     attachments: [1, 2],
 
     info: {
@@ -48,7 +48,7 @@ const hytter = [
   {
     id: 3,
     x: 300,
-    y: 400,
+    y: 200,
     attachments: [4, 5, 6, 7],
 
     info: {
@@ -63,11 +63,11 @@ const hytter = [
   {
     id: 4,
     x: 300,
-    y: 200,
+    y: 100,
     attachments: [2, 3, 5],
 
     info: {
-      name: "Hytte 5",
+      name: "Flåbånnhytta",
       price: 10900,
       features: "en<br>to<br>tre",
       text: "En eksepsjonelt god brødtekst til hytte 5. All informasjonen du noensinne kunne trengt finnes i denne lille boksen. Er det ikke fantastisk?",
@@ -78,11 +78,11 @@ const hytter = [
   {
     id: 5,
     x: 400,
-    y: 300,
+    y: 150,
     attachments: [3, 4, 6, 7],
 
     info: {
-      name: "Hytte 6",
+      name: "Gaustadhytta",
       price: 10900,
       features: "en<br>to<br>tre",
       text: "En eksepsjonelt god brødtekst til hytte 6. All informasjonen du noensinne kunne trengt finnes i denne lille boksen. Er det ikke fantastisk?",
@@ -93,11 +93,11 @@ const hytter = [
   {
     id: 6,
     x: 500,
-    y: 400,
+    y: 200,
     attachments: [2, 5, 3, 7],
 
     info: {
-      name: "Hytte 7",
+      name: "Høtta",
       price: 10900,
       features: "en<br>to<br>tre",
       text: "En eksepsjonelt god brødtekst til hytte 7. All informasjonen du noensinne kunne trengt finnes i denne lille boksen. Er det ikke fantastisk?",
@@ -107,12 +107,12 @@ const hytter = [
   },
   {
     id: 7,
-    x: 700,
-    y: 200,
+    x: 20,
+    y: 100,
     attachments: [2, 3, 5, 6],
 
     info: {
-      name: "Hytte 8",
+      name: "Nuddustruddu",
       price: 10900,
       features: "en<br>to<br>tre",
       text: "En eksepsjonelt god brødtekst til hytte 8. All informasjonen du noensinne kunne trengt finnes i denne lille boksen. Er det ikke fantastisk?",
@@ -122,12 +122,12 @@ const hytter = [
   },
   {
     id: 8,
-    x: 700,
-    y: 600,
-    attachments: [7],
+    x: 50,
+    y: 300,
+    attachments: [3],
 
     info: {
-      name: "Hytte 9",
+      name: "Puudklubb",
       price: 10900,
       features: "en<br>to<br>tre",
       text: "En eksepsjonelt god brødtekst til hytte 9. All informasjonen du noensinne kunne trengt finnes i denne lille boksen. Er det ikke fantastisk?",
@@ -138,11 +138,11 @@ const hytter = [
   {
     id: 9,
     x: 700,
-    y: 600,
-    attachments: [7],
+    y: 320,
+    attachments: [2],
 
     info: {
-      name: "Hytte 10",
+      name: "Tiulla",
       price: 10900,
       features: "en<br>to<br>tre",
       text: "En eksepsjonelt god brødtekst til hytte 9. All informasjonen du noensinne kunne trengt finnes i denne lille boksen. Er det ikke fantastisk?",
@@ -152,12 +152,12 @@ const hytter = [
   },
   {
     id: 10,
-    x: 700,
-    y: 600,
-    attachments: [7],
+    x: 440,
+    y: 300,
+    attachments: [1],
 
     info: {
-      name: "Hytte 11",
+      name: "Sluggmøll",
       price: 10900,
       features: "en<br>to<br>tre",
       text: "En eksepsjonelt god brødtekst til hytte 9. All informasjonen du noensinne kunne trengt finnes i denne lille boksen. Er det ikke fantastisk?",

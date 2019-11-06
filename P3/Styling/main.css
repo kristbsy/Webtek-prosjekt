@@ -1,5 +1,6 @@
-h1 {
+h1, h2 {
   font-family: Georgia, "Times New Roman", Times, serif;
+  text-transform: uppercase;
 }
 
 body{
@@ -93,19 +94,9 @@ footer {
   bottom: 0;
 }
 
-/* From here on, the body below slides begin */
-
-
-
-/* slideshow-styling */
-
-
-
 
 
 /*Sett denne til riktig sted*/
-
-/*Denne også*/
 #kontaktOss {
   align-self: center;
   margin: auto;
