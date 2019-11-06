@@ -1,0 +1,36 @@
+#form_kontaktOss {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    background-color: #efefef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10% 0;
+}
+
+form > * {
+    margin-top: 10px;
+
+}
+
+.sprsm{
+    width: 40%;
+    outline: none;
+    border: none;
+    text-align: center;  
+    font-family: Verdana, "Arial", Times, serif;
+}
+
+textarea.sprsm {
+    width: 50%;
+    padding: 0 5%;
+}
+
+button[type="submit"] { 
+    width: 4em;
+    font-size: 24px;
+    font-family: Verdana, "Arial", Times, serif;
+    background-color: #64a842;
+    margin-top: 5%; 
+}
