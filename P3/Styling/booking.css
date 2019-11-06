@@ -166,12 +166,12 @@ canvas{
 }
 
 .button:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
     background-color: green;
 }
 
 .button:active{
-    transform: scale(1);
+    transform: scale(0.9);
 }
 
 @media(max-width: 1200px){

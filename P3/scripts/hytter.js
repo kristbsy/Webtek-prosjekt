@@ -158,7 +158,7 @@ const hytter = [
 
     info: {
       name: "Sluggmøll",
-      price: 10900,
+      price: 210,
       features: "Pris: 210<br>Sengeplasser: 7<br>Innlagt vann: Nei<br>Innlagt strøm: Ja<br>Internett: Nei<br>Annet: Fin bod",
       text: "",
       longText: "Plassert midt i et skogtun gir Sluggmøll deg en optimal mulighet til å lukke alt ute. Trærne gir ingen beskyttelse mot verken radiobølger eller gps, men har installert et eget “silent-room” som skal gi deg total isolasjon når du vil ha fred fra distraksjoner gjennom din mobiltelefon. Døra til stillerommet er ikke utstyrt med lås, så dine kjære vil fortsatt kunne dra deg tilbake til sivilisasjon når regningene begynner å dryppe inn-.<br><br> Sluggmøll gir deg også flere aktiviteter for deg og familien som ikke inkluderer noe som helst digialt. Den sideliggende boden er utstyrt med spennende spill som dart (med 2 piler), hestesko (1 hestesko og 1 stake) og en gammel dance dance revolution-matte (radio inkludert slik at dere i det minste får lyd).  Hytta inneholder også et fint stuebord med flere brettspill for deres bruk. Det inkluderer klassikere som Risk (christmas edition) og Arkham Horror",
