@@ -98,7 +98,7 @@ slideshow_home_generator();
 ///////////////////////////     Slideshow.js     //////////////////////////
 
 //5 seconds between each slide:
-let slideshow_interval_ID = setInterval(plus_slides, 5000, 1);
+let slideshow_interval_ID = set_interval(plus_slides, 5000, 1);
 
 let slide_index = 1;
 show_slides(slide_index);
@@ -116,10 +116,10 @@ function show_slides(n) {
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
   if (n >= slides.length) {
-    slideIndex = 1
+    slide_index = 1
   }
   if (n < 1) {
-    slideIndex = slides.length
+    slide_index = slides.length
   }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
@@ -131,6 +131,6 @@ function show_slides(n) {
   dots[slide_index - 1].className += " active";
 
   //Resets the interval
-  clearInterval(slideshow_interval_ID)
-  slideshow_interval_ID = setInterval(plus_slides, 5000, 1);
+  clear_interval(slideshow_interval_ID)
+  slideshow_interval_ID = set_interval(plus_slides, 5000, 1);
 }
