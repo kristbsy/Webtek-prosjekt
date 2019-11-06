@@ -11,7 +11,7 @@ span {
 }
 
 #listContainer {
-  background-color: gray;
+  background-color: darkslategray;
 }
 
 #artikkelen {
@@ -24,7 +24,7 @@ ul {
   list-style-type: none;
   margin-left: 10px;
   padding-left: 0px;
-
+  color: white;
 }
 
 li {
