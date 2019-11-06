@@ -16,8 +16,13 @@ let liste = [
     tekst: "Turlaget"
   },
   {
+<<<<<<< HEAD
     href: "kontakt_oss.html",
     tekst: "Kontakt oss"
+=======
+    href: "kontaktOss.html",
+    tekst: "Kontakt"
+>>>>>>> b3c3a09f641735ac4050775911d4a4535a87dcfc
   }
 ]
 
