@@ -25,12 +25,13 @@ fieldset legend {
   cursor: pointer;
 }
 
-#avbrytbestilling:hover {
-  background-color: #D60E00;
+#avbrytbestilling {
+  display: inline-block;
 }
 
-a:link {
-  text-decoration: none;
+#avbrytbestilling:hover button{
+  background-color: #D60E00;
+  cursor: pointer;
 }
 
 input[type=text], select {

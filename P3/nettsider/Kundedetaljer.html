@@ -49,9 +49,9 @@
       <p>Vi sender en faktura til den oppgitte e-postadressen når vi mottar bestillingen.</p>
       <button type="submit" id="bekreftbestilling" name="button">Bekreft bestillingen</button>
       <!--Gjør om knappen til en link, ellers vil den ikke kunne sende til riktig side-->
-      <button id="avbrytbestilling" name="button" onclick="location.href = '../home.html;'"
-        formnovalidate>Avbryt</button>
+      <!-- <a id="avbrytbestilling" href="../home.html"><label for="avbryt"><button>Avbryt</button></label></a> -->
     </form>
+    <a id="avbrytbestilling" href="../home.html"><button>Avbryt</button></a>
   </div>
   <script>
     document.querySelector("#pris").innerText = "Pris: " + localStorage.getItem('totalPrice') + "nok";
