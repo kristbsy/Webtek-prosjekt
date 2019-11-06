@@ -40,11 +40,12 @@ function artikkelHome() {
     for (let i = 0; i < 3; i++) {
         let art = createArtikkel(artikkel[i]);
         let news = document.getElementById("home_news");
-        news.insertBefore(art, news.lastChild);
+        news.prepend(art);
     }
 }
+
 let news = document.getElementById("home_news");
-news.onload = artikkelHome();
+//news.onload = artikkelHome();
 
 
 

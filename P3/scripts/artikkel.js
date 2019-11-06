@@ -113,13 +113,12 @@ artikler.forEach(article => articleEl.push(generateArticle(article)));
 
 function getOrderedObject(articles) {
     //sorterer artiklene inn i et objekt, der nøklene er året og deretter måneden
-    let uniqueYears = []
-    articles.forEach(el => uniqueYears.push(el.artikkelTid.getYear() + 1900));
-    uniqueYears = [... new Set(uniqueYears)];
+    let years = []
+    articles.forEach(el => years.push(el.artikkelTid.getYear() + 1900));
+    const uniqueYears = Array.from(new Set(years));
     //console.log(uniqueYears);
-
-    let ordered = {};
-    let shallowOrdered = {}
+    const ordered = {};
+    const shallowOrdered = {}
     uniqueYears.forEach(el => { ordered[el] = {}; shallowOrdered[el] = [] });
 
     uniqueYears.forEach(year => {

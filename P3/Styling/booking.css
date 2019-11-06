@@ -1,16 +1,11 @@
-@media(max-width: 1300px){
-    #recap, #info{
-        overflow-x: scroll;
-        grid-row: 2/3
-    }
-}
+
 
 :root{
     --nodeDisplayWidth: 750px;
 }
 
 main{
-    height: 80vh;
+    /*height: 80vh;*/
     width: 90%;
     margin: auto;
     display: grid;
@@ -29,7 +24,6 @@ main{
     grid-column-end: 2;
     grid-row: 1/2;
     position: relative;
-    overflow: hidden;
 }
 
 
@@ -178,4 +172,53 @@ canvas{
 
 .button:active{
     transform: scale(1);
+}
+
+@media(max-width: 1200px){
+    :root{
+        --nodeDisplayWidth: 500px;
+    }
+}
+
+@media(max-width: 915px){
+    :root{
+        --nodeDisplayWidth: 400px;
+    }
+}
+
+@media(max-width: 800px){
+    :root{
+        --nodeDisplayWidth: 300px;
+    }
+    img{
+        display: none;
+    }
+    .recapInstance{
+        border-top:1px solid black;
+        margin-top: 10px;
+        margin: 5px;
+    }
+}
+
+@media(max-width: 600px){
+    #recap, #info{
+        overflow-x: scroll;
+        grid-row: 2 / 3
+    }
+
+    #info{
+        grid-column: 1/2;
+    }
+
+    #recap{
+        grid-column: 2/3;
+    }
+
+    canvas, #nodeContainer{
+        grid-row: 1/3;
+    }
+
+    main{
+        grid-template-columns: auto auto;
+    }
 }

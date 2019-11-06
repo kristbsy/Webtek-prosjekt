@@ -53,6 +53,10 @@
   height: 100%;
 }
 
+#home_news{
+  
+}
+
 #home_slides img {
   width: 100%;
 }
@@ -66,7 +70,7 @@
   height: calc(126px * 1.05 * 3);
 }
 
-.art_home {
+.artikkelen {
   display: grid;
   grid-template-columns: 30% 70%;
   grid-template-rows: auto auto;
