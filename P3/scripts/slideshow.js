@@ -252,7 +252,7 @@ let slideshow_hytte10 = [
 
 function injectSlideshow(evt) {
   let slideshow_home = document.getElementById("slideShowImageContainer")
-  if (slideshow_home != null) {
+  if (slideshow_home != null){
     for (let slide of slideshow_hovedside) {
       let div = document.createElement("div");
       div.className = "mySlides fade";
@@ -275,12 +275,11 @@ function injectSlideshow(evt) {
 
       buttons.appendChild(span);
     }
-    
+  }
     let slideshow_hytte = document.getElementById("slideshow_hytter")
     if (slideshow_hytte != null && evt != null){
-
       slideshow_hytte.innerHTML = "";
-      switch(evt) {
+      switch(evt){
         case 0: {
           for (let slide of slideshow_hytte0){
             let div = document.createElement("div");
@@ -294,7 +293,6 @@ function injectSlideshow(evt) {
             slideshow_hytte.appendChild(div);
             div.style.display = "none";
 
-            
             let buttons = document.getElementById("slideshow_buttons");
             buttons.innerHTML = "";
             for (let i = 1; i < slideshow_hytte0.length+1; i++) {
@@ -602,11 +600,11 @@ function injectSlideshow(evt) {
       }
     }
   }
-  }
 }
+
 injectSlideshow();
 
-//////////////////////////     Slideshow.js     //////////////////////////
+///////////////////////////     Slideshow.js     //////////////////////////
 
 //5 seconds between each slide:
 let SlideshowIntervalID = setInterval(plusSlides, 5000, 1);
@@ -615,29 +613,29 @@ let slideIndex = 1;
 showSlides(slideIndex);
 
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+    showSlides(slideIndex = n);
 }
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+    showSlides(slideIndex += n);
 }
 
 function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
 
-  //Resets the interval
-  clearInterval(SlideshowIntervalID)
-  SlideshowIntervalID = setInterval(plusSlides, 5000, 1);
+    //Resets the interval
+    clearInterval(SlideshowIntervalID)
+    SlideshowIntervalID = setInterval(plusSlides, 5000, 1);
 }
