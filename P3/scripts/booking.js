@@ -302,13 +302,15 @@ class Grid {
             }
 
             elem.className = "node";
+            /*
             elem.style.width = size + "px";
             elem.style.height = size + "px";
+            */
             elem.id = "node_" + i;
 
             //Posisjonering
-            elem.style.top = this.grid[i].y / 7 - size / (7 * 2) + "%";
-            elem.style.left = this.grid[i].x / 7.2 - size / (7.2 * 2) + "%";
+            elem.style.top = this.grid[i].y / this.canvas.height * 100 - size / (7 * 2) + "%";
+            elem.style.left = this.grid[i].x / this.canvas.width * 100 - size / (7.2 * 2) + "%";
 
             elem.addEventListener("click", () => { this.handleClick(i) });
             root.appendChild(elem);
