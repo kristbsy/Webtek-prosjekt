@@ -9,6 +9,16 @@ body {
   margin: 0;
   padding-bottom: 120px;
   position: relative;
+
+}
+
+.button:hover {
+  transform: scale(1.05);
+  background-color: green;
+}
+
+.button:active {
+  transform: scale(0.9);
 }
 
 #container>* {
