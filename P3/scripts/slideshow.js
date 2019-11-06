@@ -131,6 +131,6 @@ function show_slides(n) {
   dots[slide_index - 1].className += " active";
 
   //Resets the interval
-  clear_interval(slideshow_interval_ID)
+  clearInterval(slideshow_interval_ID)
   slideshow_interval_ID = setInterval(plus_slides, 5000, 1);
 }
