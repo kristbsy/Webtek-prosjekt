@@ -47,12 +47,6 @@ function inject_header() {
   document.querySelector("#container").prepend(nav_el);
 }
 
-['', '-ms-', '-webkit-', '-o-', '-moz-'].map(function (prefix) {
-  Array.prototype.slice.call(document.querySelectorAll('div,p,span,img,a,body')).map(function (el) {
-    el.style[prefix + 'transform'] = 'rotate(' + (Math.floor(Math.random() * 3) - 1) + 'deg)';
-  });
-});
-
 function inject_footer() {
   let footer = document.createElement("footer");
   footer.innerHTML = `
@@ -69,10 +63,3 @@ function inject_footer() {
 
 inject_header();
 inject_footer();
-
-
-['', '-ms-', '-webkit-', '-o-', '-moz-'].map(function (prefix) {
-  Array.prototype.slice.call(document.querySelectorAll('div,p,span,img,a,body')).map(function (el) {
-    el.style[prefix + 'transform'] = 'rotate(' + (Math.floor(Math.random() * 3) - 1) + 'deg)';
-  });
-});
