@@ -39,10 +39,6 @@
   grid-row: 1 / 2;
 }
 
-.mySlides>img {
-  background-size: contain;
-}
-
 
 .mySlides {
   display: none;
