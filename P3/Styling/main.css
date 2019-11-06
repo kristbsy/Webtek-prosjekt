@@ -52,10 +52,13 @@ nav>ul {
 
 nav>ul>li>a {
   height: 100%;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* weird-flex: giraffe; */
   background-color: #64a842;
-  color: black;
-  border: 1px solid black;
+  color: cornsilk;
+  border: 1px solid white;
   text-align: center;
   text-decoration: none;
   transition: background 0.5s;
@@ -72,10 +75,6 @@ nav>ul>li {
 nav>ul>li>a:hover {
   background: darkgreen;
 }
-
-
-
-
 
 #container {
   box-sizing: border-box;
@@ -95,9 +94,6 @@ footer {
   margin-top: 100px;
   padding: 4px;
 }
-
-
-
 
 /*Sett denne til riktig sted*/
 #kontaktOss {
