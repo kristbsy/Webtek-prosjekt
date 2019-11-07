@@ -29,9 +29,12 @@
 
 #body_wrapper {
   display: grid;
-  row-gap: 1rem;
+  row-gap: 5rem;
   width: 100%;
+  grid-template-columns: 1fr 0.5fr 1fr;
 }
+
+
 
 #home_slides {
   width: 100%;
@@ -57,7 +60,7 @@
 
 /* Artikkel-styling Homesiden */
 #home_news {
-  grid-row: 2 / 3;
+  grid-column: 1 / 2;
   width: auto;
   margin-right: 0.5rem;
 }
@@ -93,7 +96,7 @@
 }
 
 #home_weather {
-  grid-row: 2 / 3;
+  grid-column: 3 / 4;
   width: auto;
   margin-left: 0.5rem;
   height: auto;
@@ -101,4 +104,28 @@
 
 img {
   max-width: 100%;
+}
+
+@media(max-width: 900px) {
+  #body_wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #home_weather {
+    grid-column: 2/3;
+  }
+
+  #home_news {
+    grid-column: 1/2;
+  }
+}
+
+@media(max-width: 530px) {
+  #body_wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  #home_weather {
+    display: none;
+  }
 }
