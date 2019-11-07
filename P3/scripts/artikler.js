@@ -141,8 +141,6 @@ function get_ordered_object(articles) {
         })
     })
 
-    console.log(ordered)
-
     return ordered;
 }
 
