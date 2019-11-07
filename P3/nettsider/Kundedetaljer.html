@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Kundedetaljer</title>
-  <link rel="stylesheet" href="/Styling/main.css">
+  <link rel="stylesheet" href="../Styling/main.css">
   <link rel="stylesheet" href="../styling/kundedetaljer.css">
 </head>
 
@@ -12,7 +12,7 @@
   <h1>Kundedetaljer</h1>
   <h3>Fyll inn skjemaet og trykk bekreft bestilling for å sende bestillingen til oss.</h3>
   <div id="skjema">
-    <form id="bestilling" action="/home.html" method="post">
+    <form id="bestilling" method="post">
       <fieldset>
         <legend>Personopplysninger</legend>
         <br>
@@ -48,13 +48,15 @@
       </fieldset>
       <h3 id="pris">Pris: 0kr</h3>
       <p>Vi sender en faktura til den oppgitte e-postadressen når vi mottar bestillingen.</p>
-      <input type="submit" id="bekreftbestilling" name="button" onclick="alert('Din bestilling er mottatt.\nKvittering vil sendes på mail')"></button><label class="button" for="bekreftbestilling" class="button">Bekreft bestillingen</label>
-      <a href="/home.html"><label for="avbrytbestilling" class="button">Avbryt</label></a>
+        <button type="submit" id="bekreftbestilling">Bekreft bestillingen</button>
     </form>
+    <br><br>
+    <a href="../home.html"><input type="button" id="avbrytbestilling" value="Avbryt"></a>
   </div>
   <script>
     document.querySelector("#pris").innerText = "Pris: " + localStorage.getItem('totalPrice') + "nok";
   </script>
+  <script src="../scripts/kundedetaljer.js"></script>
 </body>
 
 </html>
