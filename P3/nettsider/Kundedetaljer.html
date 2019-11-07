@@ -4,14 +4,16 @@
 <head>
   <meta charset="utf-8">
   <title>Kundedetaljer</title>
+  <link rel="stylesheet" href="../Styling/main.css">
   <link rel="stylesheet" href="../styling/kundedetaljer.css">
+  <title>Kundedetaljer - Turistlaget i Oppdal</title>
 </head>
 
 <body>
   <h1>Kundedetaljer</h1>
   <h3>Fyll inn skjemaet og trykk bekreft bestilling for å sende bestillingen til oss.</h3>
-  <div>
-    <form class="form" id="bestilling" action="" method="post">
+  <div id="skjema">
+    <form id="bestilling" method="post">
       <fieldset>
         <legend>Personopplysninger</legend>
         <br>
@@ -47,15 +49,15 @@
       </fieldset>
       <h3 id="pris">Pris: 0kr</h3>
       <p>Vi sender en faktura til den oppgitte e-postadressen når vi mottar bestillingen.</p>
-      <button type="submit" id="bekreftbestilling" name="button">Bekreft bestillingen</button>
-      <!--Gjør om knappen til en link, ellers vil den ikke kunne sende til riktig side-->
-      <!-- <a id="avbrytbestilling" href="../home.html"><label for="avbryt"><button>Avbryt</button></label></a> -->
-      <div></div>
+        <button type="submit" id="bekreftbestilling">Bekreft bestillingen</button>
     </form>
+    <br><br>
+    <a href="../home.html"><input type="button" id="avbrytbestilling" value="Avbryt"></a>
   </div>
   <script>
     document.querySelector("#pris").innerText = "Pris: " + localStorage.getItem('totalPrice') + "nok";
   </script>
+  <script src="../scripts/kundedetaljer.js"></script>
 </body>
 
 </html>

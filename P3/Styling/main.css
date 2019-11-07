@@ -95,9 +95,10 @@ nav>ul>li>a:hover {
 
 /* Footer-styling */
 footer {
+  color: cornsilk;
   position: absolute;
   bottom: 0;
-  background-color: beige;
+  background-color: #64a842;
   width: 70%;
   margin-left: 15%;
   margin-right: 15%;
@@ -123,6 +124,7 @@ footer {
   background-color: rgb(5, 189, 66);
   border: 1px solid rgb(5, 160, 56);
   width: 80%;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 18px;
   color: cornsilk;
 

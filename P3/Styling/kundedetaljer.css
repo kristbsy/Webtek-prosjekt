@@ -1,13 +1,15 @@
-div {
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#skjema {
   border-radius: 5px;
   background-color: #A2CC8D;
   padding: 20px;
   width: 50%;
-  margin-left: 12%;
-}
-
-h1, h3 {
-  margin-left: 12%;
+  margin: auto auto;
 }
 
 fieldset {
@@ -25,11 +27,19 @@ fieldset legend {
   cursor: pointer;
 }
 
-#avbrytbestilling {
-  display: inline-block;
+#returnerHjem:hover {
+  background-color: #64A842;
+  cursor: pointer;
 }
 
-#avbrytbestilling:hover button{
+#avbrytbestilling {
+  display: inline-block ;
+  cursor: pointer;
+}
+
+
+
+#avbrytbestilling:hover{
   background-color: #D60E00;
   cursor: pointer;
 }
@@ -55,4 +65,12 @@ input[type=text], select {
 
 #pris{
   margin-left: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+input[type="submit"] {
+  display: none;
 }
