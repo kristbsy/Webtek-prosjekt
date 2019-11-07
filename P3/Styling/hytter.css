@@ -167,3 +167,10 @@ h2 {
   margin-top: 1%;
   margin-bottom: 7%;
 }
+
+@media (max-width: 550px) {
+  #tilbehørDiv {
+    float: none;
+    max-width: 100%;
+  }
+}
