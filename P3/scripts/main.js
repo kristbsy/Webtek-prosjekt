@@ -25,36 +25,15 @@ function inject_header() {
   let href_prefix = "";
   let img_prefix = "";
   let main_prefix = "";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> abe083234f4064e054bf6c8f0151fdb55be2c95d
   if (location.href.split("/").slice(-1)[0] == "home.html") {
     href_prefix = "nettsider/";
     img_prefix = "img/";
     main_prefix = "./"
   } else {
     href_prefix = "./";
-<<<<<<< HEAD
     img_prefix = "../img/"
     main_prefix = "../"
   }
-=======
-    img_prefix = "/img/"
-    main_prefix = "/"
-  }
-=======
-  // if (location.href.split("/").slice(-1)[0] == "home.html") {
-  //   href_prefix = "nettsider/";
-  //   img_prefix = "img/";
-  //   main_prefix = "./"
-  // } else {
-  //   href_prefix = "./";
-  //   img_prefix = "/img/"
-  //   main_prefix = "/"
-  // }
->>>>>>> 8e8c85c39af01b4acc9afb2adfe6f7856786a5b9
->>>>>>> abe083234f4064e054bf6c8f0151fdb55be2c95d
   let nav_el = document.createElement("nav");
   nav_el.id = "navbar";
   let list_elements = document.createElement("ul");
