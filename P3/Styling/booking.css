@@ -13,7 +13,7 @@ main {
 }
 
 #nodeContainer {
-    background-image: url('/img/oppdalskart.png');
+    background-image: url('../img/oppdalskart.png');
     background-repeat: no-repeat;
     background-size: contain;
     width: var(--nodeDisplayWidth);

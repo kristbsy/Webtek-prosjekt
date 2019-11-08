@@ -46,7 +46,7 @@ class Grid {
         nameEl.className = "hytteNavn";
         daysToStayEl.className = "daysToStay";
         imgContainer.className = "imgContainer";
-        //imgEl.src = "/img/hytter/" + this.grid[id].info.img[0][0];
+        //imgEl.src = "../img/hytter/" + this.grid[id].info.img[0][0];
         nameEl.innerHTML = this.grid[id].info.name;
 
         inputEl.type = "number";
