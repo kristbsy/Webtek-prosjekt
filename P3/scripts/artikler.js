@@ -6,7 +6,11 @@ if (location.href.split("/").slice(-1)[0] !== "home.html") {
 const artikler = [{
         artikkel_titel: 'Vinterferie uke 8',
         artikkel_tekst: 'Skiløypene vil bli kjørt opp hver formiddag hele vinterferien! På skisporet.no finner du en oversikt over alle løypene. I skrivende stund er skiføret nydelig, og langtidsvarselet virker lovende for en flott vinterferie i skisporet! <br><br> Husk; det er ingen skam med en kvikk-lunsj i solveggen på ei hytte heller.',
+<<<<<<< HEAD
         artikkel_bilde: '/img/artikler/art_skispor.jpg',
+=======
+        artikkel_bilde: '/img/Artikler/art_skispor.jpg',
+>>>>>>> 8e8c85c39af01b4acc9afb2adfe6f7856786a5b9
         artikkel_tid: new Date(2018, 2, 10),
         artikkel_forfatter: "bjørn",
         artikkel_bilde_alt: 'bilde av ...'
