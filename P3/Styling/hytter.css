@@ -103,10 +103,20 @@
 }
 
 #hytter_liste {
-  background-color: gray;
+  background-color: darkslategray;
+  color: white;
+  font-size: large;
   margin: 0;
   padding: 5px;
   list-style-type: none;
+}
+
+#hytter_liste>li {
+  padding: 3px;
+}
+
+#hytter_liste>li:hover {
+  font-weight: bold;
 }
 
 #dotAndSlideShowContainer {
@@ -156,4 +166,11 @@ ul>li:hover {
 h2 {
   margin-top: 1%;
   margin-bottom: 7%;
+}
+
+@media (max-width: 550px) {
+  #tilbehørDiv {
+    float: none;
+    max-width: 100%;
+  }
 }

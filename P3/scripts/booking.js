@@ -1,3 +1,5 @@
+let currentNode = -1;
+
 class Attachment {
     constructor(id, distance) {
         this.nodeId = id;
@@ -44,7 +46,7 @@ class Grid {
         nameEl.className = "hytteNavn";
         daysToStayEl.className = "daysToStay";
         imgContainer.className = "imgContainer";
-        //imgEl.src = "../img/hytter/" + this.grid[id].info.img[0][0];
+        //imgEl.src = "/img/hytter/" + this.grid[id].info.img[0][0];
         nameEl.innerHTML = this.grid[id].info.name;
 
         inputEl.type = "number";
@@ -265,6 +267,7 @@ class Grid {
 
     handleStartClick(id) {
         this.points[0] = id;
+        currentNode = -1;
 
         if (!this.points.includes(-1)) {
             this.path = this.getPath(this.points[0], this.points[1]).reverse();
@@ -276,6 +279,7 @@ class Grid {
 
     handleEndClick(id) {
         this.points[1] = id;
+        currentNode = -1;
 
         if (!this.points.includes(-1)) {
             this.path = this.getPath(this.points[0], this.points[1]).reverse();
@@ -288,6 +292,8 @@ class Grid {
         //this.switchInfo(this.grid[id].info);
         this.showInfo(id);
         console.log("clicked node with id:", id);
+        currentNode = id;
+        this.render();
     }
 
     showInfo(id) {
@@ -304,11 +310,21 @@ class Grid {
     renderNodes() {
         let root = this.nodeContainerEl;
         root.innerHTML = "";
+        console.log(this.path[-1]);
         for (let i = 0; i < this.grid.length; i++) {
             let size = this.grid[i].size;
             let elem = document.createElement("div");
 
-            if (this.path.includes(i)) {
+            if (i === currentNode) {
+                elem.style.backgroundColor = "yellow"
+            }else if (i === this.path[0]) {
+                elem.style.backgroundColor = "lightgreen"
+                console.log(`lightgreen, i:${i}, path: ${this.path}`)
+            }else if (i === this.path[this.path.length-1] && i != -1) {
+                elem.style.backgroundColor = "darkgreen"
+                console.log(`darkgreen, i:${i}, path: ${this.path}`)
+            }else if(this.path.includes(i)) {
+                console.log(`green, i:${i}, path: ${this.path}`)
                 elem.style.backgroundColor = "green";
             } else {
                 elem.style.backgroundColor = "red";

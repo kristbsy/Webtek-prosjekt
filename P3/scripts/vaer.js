@@ -50,13 +50,12 @@ function generer_vaer(seed) {
 // Funksjon for å injesere tre værmeldinger i nettsiden
 function load_vaer() {
     let home_vaer = document.getElementById("home_weather");
-    let varsel = ["morra", "nesteuke", "nesteneste"]
+    let varsel = ["I morgen", "Førstkommende uke", "Neste uke"]
     for (let i = 0; i < 3; i++) {
         
         let naa = new Date();
         let seed = Math.abs(Math.sin(naa.getUTCDate() + naa.getUTCMonth()*10 + naa.getUTCFullYear()*1000+i))/*Math.random()*/;
         let arr = generer_vaer(seed);
-        console.log(seed, arr);
         let vaer_tag =
             '<div class="weather_prediction"><div class="wea_time"><strong>' +
             varsel[i] +

@@ -79,6 +79,33 @@ canvas {
     z-index: 200;
 }
 
+.node[style] {
+    border-radius: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent !important;
+}
+
+.node[style*="red"] {
+    background-image: url(../img/house_icon_black.png);
+}
+
+.node[style*="yellow"] {
+    background-image: url(../img/house_icon_yellow.png);
+}
+
+.node[style*="green"] {
+    background-image: url(../img/house_icon_green.png);
+}
+
+.node[style*="dark"] {
+    background-image: url(../img/house_icon_green_destinasjon.png);
+}
+
+.node[style*="light"] {
+    background-image: url(../img/house_icon_green_start.png);
+}
+
 .node:hover {
     transform: scale(1.1);
 }

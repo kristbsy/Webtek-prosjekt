@@ -31,8 +31,8 @@ function inject_header() {
     main_prefix = "./"
   } else {
     href_prefix = "./";
-    img_prefix = "../img/"
-    main_prefix = "../"
+    img_prefix = "/img/"
+    main_prefix = "/"
   }
   let nav_el = document.createElement("nav");
   nav_el.id = "navbar";
