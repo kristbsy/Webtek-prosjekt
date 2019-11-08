@@ -87,6 +87,10 @@ canvas {
 }
 
 .node[style*="red"] {
+<<<<<<< HEAD:P3/Styling/booking.css
+    background-image: url(../img/house_icon_black.png);
+=======
+<<<<<<< HEAD:P3/Styling/booking.css
     background-image: url(../img/house_icon_black.png);
 }
 
@@ -104,6 +108,30 @@ canvas {
 
 .node[style*="light"] {
     background-image: url(../img/house_icon_green_start.png);
+=======
+    background-image: url(/Webtek-prosjekt/P3/img/house_icon_black.png);
+>>>>>>> abe083234f4064e054bf6c8f0151fdb55be2c95d:P3/styling/booking.css
+}
+
+.node[style*="yellow"] {
+    background-image: url(../img/house_icon_yellow.png);
+}
+
+.node[style*="green"] {
+    background-image: url(../img/house_icon_green.png);
+}
+
+.node[style*="dark"] {
+    background-image: url(../img/house_icon_green_destinasjon.png);
+}
+
+.node[style*="light"] {
+<<<<<<< HEAD:P3/Styling/booking.css
+    background-image: url(../img/house_icon_green_start.png);
+=======
+    background-image: url(/Webtek-prosjekt/P3/img/house_icon_green_start.png);
+>>>>>>> 8e8c85c39af01b4acc9afb2adfe6f7856786a5b9:P3/styling/booking.css
+>>>>>>> abe083234f4064e054bf6c8f0151fdb55be2c95d:P3/styling/booking.css
 }
 
 .node:hover {
