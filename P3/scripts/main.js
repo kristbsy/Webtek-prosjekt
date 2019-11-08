@@ -25,7 +25,6 @@ function inject_header() {
   let href_prefix = "nettsider/";
   let img_prefix = "img/";
   let main_prefix = "";
-<<<<<<< HEAD
   if (location.href.split("/").slice(-1)[0] == "home.html") {
     href_prefix = "nettsider/";
     img_prefix = "img/";
@@ -35,17 +34,6 @@ function inject_header() {
     img_prefix = "/img/"
     main_prefix = "/"
   }
-=======
-  // if (location.href.split("/").slice(-1)[0] == "home.html") {
-  //   href_prefix = "nettsider/";
-  //   img_prefix = "img/";
-  //   main_prefix = "./"
-  // } else {
-  //   href_prefix = "./";
-  //   img_prefix = "/img/"
-  //   main_prefix = "/"
-  // }
->>>>>>> 8e8c85c39af01b4acc9afb2adfe6f7856786a5b9
   let nav_el = document.createElement("nav");
   nav_el.id = "navbar";
   let list_elements = document.createElement("ul");
