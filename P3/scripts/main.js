@@ -22,18 +22,18 @@ let liste = [{
 
 
 function inject_header() {
-  let href_prefix = "";
-  let img_prefix = "";
+  let href_prefix = "nettsider/";
+  let img_prefix = "img/";
   let main_prefix = "";
-  if (location.href.split("/").slice(-1)[0] == "home.html") {
-    href_prefix = "nettsider/";
-    img_prefix = "img/";
-    main_prefix = "./"
-  } else {
-    href_prefix = "./";
-    img_prefix = "../img/"
-    main_prefix = "../"
-  }
+  // if (location.href.split("/").slice(-1)[0] == "home.html") {
+  //   href_prefix = "nettsider/";
+  //   img_prefix = "img/";
+  //   main_prefix = "./"
+  // } else {
+  //   href_prefix = "./";
+  //   img_prefix = "/img/"
+  //   main_prefix = "/"
+  // }
   let nav_el = document.createElement("nav");
   nav_el.id = "navbar";
   let list_elements = document.createElement("ul");
