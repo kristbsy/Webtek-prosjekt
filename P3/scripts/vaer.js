@@ -52,7 +52,7 @@ function generer_vaer(seed) {
 // Funksjon for å injesere tre værmeldinger i nettsiden
 function load_vaer() {
     let home_vaer = document.getElementById("home_weather");
-    let varsel = ["morra", "nesteuke", "nesteneste"]
+    let varsel = ["I morgen", "Førstkommende uke", "Neste uke"]
     for (let i = 0; i < 3; i++) {
         
         let naa = new Date();
