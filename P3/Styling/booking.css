@@ -204,6 +204,10 @@ canvas {
         display: none;
     }
 
+    img[src*="Logo"]{
+        display: flex;
+    }
+
     h2 {
         font-size: 0.75em;
     }
