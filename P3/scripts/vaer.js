@@ -32,20 +32,22 @@ function generer_vaer(seed) {
         "vekt": 1,
         "temp": [-50, 500]
     }];
+    console.log('vaers',vaers)
     let summen = 0;
     for (let i in vaers) {
         summen += vaers[i].vekt;
     }
 
     for (let i in vaers) {
-
-        if (summen - Math.floor(seed * summen) < vaers[i].vekt) {
+        console.log(`sum:${summen}|   floor(seed*sum): ${Math.floor(seed * summen)}|   vaervekt:${vaers[i].vekt}`)
+        if (summen - Math.floor(seed * summen) <= vaers[i].vekt) {
             vaers[i].temp = Math.floor(seed * (vaers[i].temp[1]) + vaers[i].temp[0])
             return vaers[i];
         }
         summen -= vaers[i].vekt;
     }
 }
+
 
 // Funksjon for å injesere tre værmeldinger i nettsiden
 function load_vaer() {
