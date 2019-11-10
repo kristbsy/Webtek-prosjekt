@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="no" dir="ltr">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <title>IT2805</title>
     <link href="style.css" rel="stylesheet" />
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="wrapper">
       <header>
         <h1>Webtek-prosjekt, P3: Changes</h1>
@@ -167,7 +168,9 @@
           <strong>Hvordan vi løste kravet om modularitet</strong> Kravet om modularitet
           løste vi ved at navigasjonsbaren og footeren på siden ble generert via
           javaskript, og er da lik mellom sidene på nettsiden. I tillegg har vi
-          et eget stylesheet for felles styling av body, navbar og footer.
+          et eget stylesheet for felles styling av body, navbar og footer.Videre så har vi også separert informasjonen om hyttene fra
+          funksjonene som tar dette i bruk. På denne måten kan informasjonen brukes flere steder og man bare trenger kun å endre
+          én fil.
         </p>
       </div>
       <div>
@@ -183,392 +186,397 @@
           <li>
             img/
             <ul>
-              <li>house_icon_black.png</li>
-              <li>house_icon_green_destinasjon.png</li>
-              <li>house_icon_green_start.png</li>
-              <li>house_icon_green.png</li>
-              <li>house_icon_yellow.png</li>
-              <li>oppdalskar.png.png</li>
+                <li>home.html</li>
+                <li>
+                    img/
+                    <ul>
+                        <li>house_icon_black.png</li>
+                        <li>house_icon_green_destinasjon.png</li>
+                        <li>house_icon_green_start.png</li>
+                        <li>house_icon_green.png</li>
+                        <li>house_icon_yellow.png</li>
+                        <li>oppdalskar.png.png</li>
 
-              <li>
-                hyttebilder/
-                <ul>
-                  <li>
-                    absultaket/
-                    <ul>
-                      <li>Absultaket.jpg</li>
-                      <li>Absultaket_ovn.jpg</li>
-                      <li>Absultaket_stue.jpg</li>
-                      <li>Absultaket_ute.jpg</li>
+                        <li>
+                            hyttebilder/
+                            <ul>
+                                <li>
+                                    absultaket/
+                                    <ul>
+                                        <li>Absultaket.jpg</li>
+                                        <li>Absultaket_ovn.jpg</li>
+                                        <li>Absultaket_stue.jpg</li>
+                                        <li>Absultaket_ute.jpg</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    bjørnehiet/
+                                    <ul>
+                                        <li>bjørnhiet.jpg</li>
+                                        <li>bjørnhiet_kjokken.jpg</li>
+                                        <li>bjørnhiet_peis.jpg</li>
+                                        <li>bjørnhiet_stue.jpg</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    einhaugen/
+                                    <ul>
+                                        <li>einhaugen.jpg</li>
+                                        <li>einhaugen_inne.jpg</li>
+                                        <li>einhaugen_sov.jpg</li>
+                                        <li>einhaugen_ute.jpg</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    elvskinnet/
+                                    <ul>
+                                        <li>elvskinnet.jpg</li>
+                                        <li>elvskinnet_kjokken.jpg</li>
+                                        <li>elvskinnet_peis.jpg</li>
+                                        <li>elvskinnet_stue.jpg</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    flåbånnhytta/
+                                    <ul>
+                                        <li>flåbånnhytta.jpg</li>
+                                        <li>flåbånnhytta_kjokken.jpg</li>
+                                        <li>flåbånnhytta_sov.jpg</li>
+                                        <li>flåbånnhytta_stue.jpg</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    gaustadhytta/
+                                    <ul>
+                                        <li>gaustadhytta.jpg</li>
+                                        <li>gaustadhytta_sov.jpg</li>
+                                        <li>gaustadhytta_ute.jpg</li>
+                                        <li>gaustadhytta_ved.jpg</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    høtta/
+                                    <ul>
+                                        <li>høtta.jpg</li>
+                                        <li>høtta_peis.jpg</li>
+                                        <li>høtta_sov.jpg</li>
+                                        <li>høtta_stue.jpg</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    nuddustruddu/
+                                    <ul>
+                                        <li>nuddustruddu.jpg</li>
+                                        <li>nuddustruddu_sov.jpg</li>
+                                        <li>nuddustruddu_stue.jpg</li>
+                                        <li>nuddustruddu_ute.jpg</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    puudklubb/
+                                    <ul>
+                                        <li>puudklubb.jpg</li>
+                                        <li>puudklubb_peis.jpg</li>
+                                        <li>puudklubb_sov.jpg</li>
+                                        <li>puudklubb_stue.jpg</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    sluggmøll/
+                                    <ul>
+                                        <li>sluggmøll.jpg</li>
+                                        <li>sluggmøll_sov.jpg</li>
+                                        <li>sluggmøll_stue.jpg</li>
+                                        <li>sluggmøll_ute.jpg</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    tiulla/
+                                    <ul>
+                                        <li>tiulla.jpg</li>
+                                        <li>tiulla_kjokken.jpg</li>
+                                        <li>tiulla_sov.jpg</li>
+                                        <li>tiulla_stue.jpg</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            arikler/
+                            <ul>
+                                <li>art_blabar.jpg</li>
+                                <li>art_fiske.jpg</li>
+                                <li>art_jul.jpg</li>
+                                <li>art_kajakk.jpg</li>
+                                <li>art_paske.jpg</li>
+                                <li>art_skispor.jpg</li>
+                                <li>art_ved.jpg</li>
+                                <li>art_vei.jpg</li>
+                            </ul>
+                        </li>
+                        <li>
+                            logoer/
+                            <ul>
+                                <li>tio_logo.svg</li>
+                                <li>tio_logo_ExtraLarge.png</li>
+                                <li>tio_logo_Large.png</li>
+                                <li>tio_logo_Medium.png</li>
+                                <li>tio_logo_Small.png</li>
+                            </ul>
+                        </li>
+                        <li>
+                            slideshow/
+                            <ul>
+                                <li>slide1.jpg</li>
+                                <li>...</li>
+                                <li>slide9.jpg</li>
+                            </ul>
+                        </li>
+                        <li>
+                            styremedlem/
+                            <ul>
+                                <li>bjorn_fjell.png</li>
+                                <li>paddy_flekknegg.png</li>
+                                <li>selma_klarbotn.png</li>
+                                <li>tjotolg_oresett.png</li>
+                            </ul>
+                        </li>
                     </ul>
-                  </li>
-                  <li>
-                    bjørnehiet/
+                </li>
+                <li>
+                    nettsider/
                     <ul>
-                      <li>bjørnhiet.jpg</li>
-                      <li>bjørnhiet_kjokken.jpg</li>
-                      <li>bjørnhiet_peis.jpg</li>
-                      <li>bjørnhiet_stue.jpg</li>
+                        <li>artikler.html</li>
+                        <li>booking.html</li>
+                        <li>kontakt_oss.html</li>
+                        <li>kundedetaljer.html</li>
+                        <li>mer_om_hyttene</li>
+                        <li>om_oss.html</li>
                     </ul>
-                  </li>
-                  <li>
-                    einhaugen/
+                </li>
+                <li>
+                    scripts/
                     <ul>
-                      <li>einhaugen.jpg</li>
-                      <li>einhaugen_inne.jpg</li>
-                      <li>einhaugen_sov.jpg</li>
-                      <li>einhaugen_ute.jpg</li>
+                        <li>artikler.js</li>
+                        <li>booking.js</li>
+                        <li>home.js</li>
+                        <li>hytter_info.js</li>
+                        <li>hytter_lister.js</li>
+                        <li>kontakt_oss.js</li>
+                        <li>kundedetaljer.js</li>
+                        <li>main.js</li>
+                        <li>slideshow.js</li>
+                        <li>vaer.js</li>
                     </ul>
-                  </li>
-                  <li>
-                    elvskinnet/
+                </li>
+                <li>
+                    styling/
                     <ul>
-                      <li>elvskinnet.jpg</li>
-                      <li>elvskinnet_kjokken.jpg</li>
-                      <li>elvskinnet_peis.jpg</li>
-                      <li>elvskinnet_stue.jpg</li>
+                        <li>artikler.css</li>
+                        <li>booking.css</li>
+                        <li>home.css</li>
+                        <li>hytter.css</li>
+                        <li>kontakt_oss.css</li>
+                        <li>kundedetaljer.css</li>
+                        <li>main.css</li>
+                        <li>om_oss.css</li>
+                        <li>slideshow.css</li>
                     </ul>
-                  </li>
-                  <li>
-                    flåbånnhytta/
-                    <ul>
-                      <li>flåbånnhytta.jpg</li>
-                      <li>flåbånnhytta_kjokken.jpg</li>
-                      <li>flåbånnhytta_sov.jpg</li>
-                      <li>flåbånnhytta_stue.jpg</li>
-                    </ul>
-                  </li>
-                  <li>
-                    gaustadhytta/
-                    <ul>
-                      <li>gaustadhytta.jpg</li>
-                      <li>gaustadhytta_sov.jpg</li>
-                      <li>gaustadhytta_ute.jpg</li>
-                      <li>gaustadhytta_ved.jpg</li>
-                    </ul>
-                  </li>
-                  <li>
-                    høtta/
-                    <ul>
-                      <li>høtta.jpg</li>
-                      <li>høtta_peis.jpg</li>
-                      <li>høtta_sov.jpg</li>
-                      <li>høtta_stue.jpg</li>
-                    </ul>
-                  </li>
-                  <li>
-                    nuddustruddu/
-                    <ul>
-                      <li>nuddustruddu.jpg</li>
-                      <li>nuddustruddu_sov.jpg</li>
-                      <li>nuddustruddu_stue.jpg</li>
-                      <li>nuddustruddu_ute.jpg</li>
-                    </ul>
-                  </li>
-                  <li>
-                    puudklubb/
-                    <ul>
-                      <li>puudklubb.jpg</li>
-                      <li>puudklubb_peis.jpg</li>
-                      <li>puudklubb_sov.jpg</li>
-                      <li>puudklubb_stue.jpg</li>
-                    </ul>
-                  </li>
-                  <li>
-                    sluggmøll/
-                    <ul>
-                      <li>sluggmøll.jpg</li>
-                      <li>sluggmøll_sov.jpg</li>
-                      <li>sluggmøll_stue.jpg</li>
-                      <li>sluggmøll_ute.jpg</li>
-                    </ul>
-                  </li>
-                  <li>
-                    tiulla/
-                    <ul>
-                      <li>tiulla.jpg</li>
-                      <li>tiulla_kjokken.jpg</li>
-                      <li>tiulla_sov.jpg</li>
-                      <li>tiulla_stue.jpg</li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                arikler/
-                <ul>
-                  <li>art_blabar.jpg</li>
-                  <li>art_fiske.jpg</li>
-                  <li>art_jul.jpg</li>
-                  <li>art_kajakk.jpg</li>
-                  <li>art_paske.jpg</li>
-                  <li>art_skispor.jpg</li>
-                  <li>art_ved.jpg</li>
-                  <li>art_vei.jpg</li>
-                </ul>
-              </li>
-              <li>
-                logoer/
-                <ul>
-                  <li>tio_logo.svg</li>
-                  <li>tio_logo_ExtraLarge.png</li>
-                  <li>tio_logo_Large.png</li>
-                  <li>tio_logo_Medium.png</li>
-                  <li>tio_logo_Small.png</li>
-                </ul>
-              </li>
-              <li>
-                slideshow/
-                <ul>
-                  <li>slide1.jpg</li>
-                  <li>...</li>
-                  <li>slide9.jpg</li>
-                </ul>
-              </li>
-              <li>
-                styremedlem/
-                <ul>
-                  <li>bjorn_fjell.png</li>
-                  <li>paddy_flekknegg.png</li>
-                  <li>selma_klarbotn.png</li>
-                  <li>tjotolg_oresett.png</li>
-                </ul>
-              </li>
+                </li>
             </ul>
-          </li>
-          <li>
-            nettsider/
-            <ul>
-              <li>artikler.html</li>
-              <li>booking.html</li>
-              <li>kontakt_oss.html</li>
-              <li>kundedetaljer.html</li>
-              <li>mer_om_hyttene</li>
-              <li>om_oss.html</li>
-            </ul>
-          </li>
-          <li>
-            scripts/
-            <ul>
-              <li>artikler.js</li>
-              <li>booking.js</li>
-              <li>home.js</li>
-              <li>hytter_info.js</li>
-              <li>hytter_lister.js</li>
-              <li>kontakt_oss.js</li>
-              <li>kundedetaljer.js</li>
-              <li>main.js</li>
-              <li>slideshow.js</li>
-              <li>vaer.js</li>
-            </ul>
-          </li>
-          <li>
-            styling/
-            <ul>
-              <li>artikler.css</li>
-              <li>booking.css</li>
-              <li>home.css</li>
-              <li>hytter.css</li>
-              <li>kontakt_oss.css</li>
-              <li>kundedetaljer.css</li>
-              <li>main.css</li>
-              <li>om_oss.css</li>
-              <li>slideshow.css</li>
-            </ul>
-          </li>
-        </ul>
-        <table>
-          <tr>
-            <th>Filnavn</th>
-            <th>Forklaring</th>
-            <th>Ansvarlig</th>
-          </tr>
-          <tr>
-            <td>main.css</td>
-            <td>Den generelle stylingen som skulle være over alle sidene</td>
-            <td>Leo</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>home.html</td>
-            <td>
-              hovedsiden hvor man alt skal kunne nås og det generelle om siden
-            </td>
-            <td>Daniel</td>
-          </tr>
-          <tr>
-            <td>home.css</td>
-            <td>stylingen spesifikt for hovedsiden</td>
-            <td>Daniel</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>artikler.html</td>
-            <td>
-              Siden hvor alt av artikler blir vist i et arkiv og henter infoen
-              fra en array for å vise på siden.
-            </td>
-            <td>Sivert</td>
-          </tr>
-          <tr>
-            <td>artikler.css</td>
-            <td>stylingen til artiklene</td>
-            <td>Sivert</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>booking.html</td>
-            <td>
-              Siden hvor man kan booke reisen ved å trykke på hytte iconer og
-              dermed få infoen
-            </td>
-            <td>Leo</td>
-          </tr>
-          <tr>
-            <td>booking.css</td>
-            <td>stylingen til bookingsiden</td>
-            <td>Kristian</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>kundedetaljer.html</td>
-            <td>
-              utfyllingsskjemaet hvor man skriver infoen til den som skal booke
-              hytten
-            </td>
-            <td>Marte</td>
-          </tr>
-          <tr>
-            <td>kundedetaljer.css</td>
-            <td>styllingen til kundedetaljer-siden</td>
-            <td>Marte</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>hytter.html</td>
-            <td>siden med et arkiv av alle hytter og tilhørende info</td>
-            <td>Daniel</td>
-          </tr>
-          <tr>
-            <td>hytter.css</td>
-            <td>styling til hyttesiden og dens info</td>
-            <td>Daniel</td>
-          </tr>
-          <tr>
-            <td>Bearbeiding hyttebilder</td>
-            <td>ordne alle bildene for siden</td>
-            <td>Marte</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>om_oss.html</td>
-            <td>infoen om de som driver TiO</td>
-            <td>Sivert</td>
-          </tr>
-          <tr>
-            <td>om_oss.css</td>
-            <td>stylingen til om_oss siden</td>
-            <td>Sivert</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>kontakt_oss.html</td>
-            <td>siden hvor man kan kontakte TiO via form</td>
-            <td>Kristian</td>
-          </tr>
-          <tr>
-            <td>kontakt_oss.css</td>
-            <td>Stylinga til kontakt_oss siden</td>
-            <td>Kristian</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>booking.js</td>
-            <td>lage et node kart hvor man trykker på iconer for å få info</td>
-            <td>Kristian</td>
-          </tr>
-          <tr>
-            <td>kontakt_oss.js</td>
-            <td>
-              lage en form hvor man må fylle ut alt og etter gir en kvittering
-            </td>
-            <td>Sivert</td>
-          </tr>
-          <tr>
-            <td>artikkel.js</td>
-            <td>
-              ordne arkiv og en måte å skrive ut infoen fra en array til siden
-              artikler.html
-            </td>
-            <td>Leo</td>
-          </tr>
-          <tr>
-            <td>hytte.js</td>
-            <td>
-              ordne arkiv og en måte å skrive ut infoen fra en array til siden
-              hytter.html
-            </td>
-            <td>Daniel</td>
-          </tr>
-          <tr>
-            <td>slideshow.js</td>
-            <td>
-              gjøre at ved å ta in en array vil den lage et slideshow til
-              nødevendig side
-            </td>
-            <td>Leo</td>
-          </tr>
-          <tr>
-            <td>vaer.js</td>
-            <td>
-              ordne at det blir pseudo random generert vær basert på dagen
-            </td>
-            <td>Daniel</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Se etter feil og klargjør for testing</td>
-            <td>se etter feil</td>
-            <td>alle</td>
-          </tr>
-        </table>
-      </div>
+            <table>
+                <tr>
+                    <th>Filnavn</th>
+                    <th>Forklaring</th>
+                    <th>Ansvarlig</th>
+                </tr>
+                <tr>
+                    <td>main.css</td>
+                    <td>Den generelle stylingen som skulle være over alle sidene</td>
+                    <td>Leo</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>home.html</td>
+                    <td>
+                        hovedsiden hvor man alt skal kunne nås og det generelle om siden
+                    </td>
+                    <td>Daniel</td>
+                </tr>
+                <tr>
+                    <td>home.css</td>
+                    <td>stylingen spesifikt for hovedsiden</td>
+                    <td>Daniel</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>artikler.html</td>
+                    <td>
+                        Siden hvor alt av artikler blir vist i et arkiv og henter infoen
+                        fra en array for å vise på siden.
+                    </td>
+                    <td>Sivert</td>
+                </tr>
+                <tr>
+                    <td>artikler.css</td>
+                    <td>stylingen til artiklene</td>
+                    <td>Sivert</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>booking.html</td>
+                    <td>
+                        Siden hvor man kan booke reisen ved å trykke på hytte iconer og
+                        dermed få infoen
+                    </td>
+                    <td>Leo</td>
+                </tr>
+                <tr>
+                    <td>booking.css</td>
+                    <td>stylingen til bookingsiden</td>
+                    <td>Kristian</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>kundedetaljer.html</td>
+                    <td>
+                        utfyllingsskjemaet hvor man skriver infoen til den som skal booke
+                        hytten
+                    </td>
+                    <td>Marte</td>
+                </tr>
+                <tr>
+                    <td>kundedetaljer.css</td>
+                    <td>styllingen til kundedetaljer-siden</td>
+                    <td>Marte</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>hytter.html</td>
+                    <td>siden med et arkiv av alle hytter og tilhørende info</td>
+                    <td>Daniel</td>
+                </tr>
+                <tr>
+                    <td>hytter.css</td>
+                    <td>styling til hyttesiden og dens info</td>
+                    <td>Daniel</td>
+                </tr>
+                <tr>
+                    <td>Bearbeiding hyttebilder</td>
+                    <td>ordne alle bildene for siden</td>
+                    <td>Marte</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>om_oss.html</td>
+                    <td>infoen om de som driver TiO</td>
+                    <td>Sivert</td>
+                </tr>
+                <tr>
+                    <td>om_oss.css</td>
+                    <td>stylingen til om_oss siden</td>
+                    <td>Sivert</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>kontakt_oss.html</td>
+                    <td>siden hvor man kan kontakte TiO via form</td>
+                    <td>Kristian</td>
+                </tr>
+                <tr>
+                    <td>kontakt_oss.css</td>
+                    <td>Stylinga til kontakt_oss siden</td>
+                    <td>Kristian</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>booking.js</td>
+                    <td>lage et node kart hvor man trykker på iconer for å få info</td>
+                    <td>Kristian</td>
+                </tr>
+                <tr>
+                    <td>kontakt_oss.js</td>
+                    <td>
+                        lage en form hvor man må fylle ut alt og etter gir en kvittering
+                    </td>
+                    <td>Sivert</td>
+                </tr>
+                <tr>
+                    <td>artikkel.js</td>
+                    <td>
+                        ordne arkiv og en måte å skrive ut infoen fra en array til siden
+                        artikler.html
+                    </td>
+                    <td>Leo</td>
+                </tr>
+                <tr>
+                    <td>hytte.js</td>
+                    <td>
+                        ordne arkiv og en måte å skrive ut infoen fra en array til siden
+                        hytter.html
+                    </td>
+                    <td>Daniel</td>
+                </tr>
+                <tr>
+                    <td>slideshow.js</td>
+                    <td>
+                        gjøre at ved å ta in en array vil den lage et slideshow til
+                        nødevendig side
+                    </td>
+                    <td>Leo</td>
+                </tr>
+                <tr>
+                    <td>vaer.js</td>
+                    <td>
+                        ordne at det blir pseudo random generert vær basert på dagen
+                    </td>
+                    <td>Daniel</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Se etter feil og klargjør for testing</td>
+                    <td>se etter feil</td>
+                    <td>alle</td>
+                </tr>
+            </table>
+        </div>
     </div>
-  </body>
+</body>
+
 </html>
