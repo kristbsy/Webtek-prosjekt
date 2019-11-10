@@ -54,7 +54,7 @@ function slideshow_hytte_generator(slideshowNumber) {
 
     let buttons = document.getElementById("slideshow_buttons");
     buttons.innerHTML = "";
-    for (let i = 1; i < hytter[slideshowNumber].info.img.length + 1; i++) {
+    for (let i = 0; i < hytter[slideshowNumber].info.img.length; i++) {
       let span = document.createElement("span");
       span.className = "dot";
 
