@@ -54,7 +54,7 @@ function inject_footer() {
   <br>
   Telefon: 986 45 123
   <br>
-  Epost: TiO@turiioodal.no
+  Epost: TiO@turioppdal.no
   <br>
   Åpningstider: Man-Fre: 07:00 - 21:00, Lør-Søn: 09:00 - 21:00
   `
