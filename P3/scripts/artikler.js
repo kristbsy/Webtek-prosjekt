@@ -230,7 +230,8 @@ function make_list_home( /*task*/) {
     let news = document.getElementById("home_news");
     if (news != null) {
         for (let i = 0; i < 3; i++) {
-            let tittel = document.getElementById('tittelArtikkel' + i);
+            let tittel = document.getElementById("tittelArtikkel" + i);
+            console.log(tittel)
             let tekst = document.getElementById("tekstArtikkel" + i);
             let bilde = document.getElementById("bildeArtikkel" + i);
             tittel.innerHTML = artikler[i].artikkel_tittel;
