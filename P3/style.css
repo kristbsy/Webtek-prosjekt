@@ -1,0 +1,48 @@
+body {
+    font-family: Georgia, Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right,
+            rgba(255, 255, 255, 1) 45%,
+            rgba(255, 255, 255, 0) 67%),
+        url("./img/mountains.jpg");
+    background-attachment: fixed;
+    line-height: 1.5;
+}
+#struc{
+    width: 550px;
+}
+
+.blokk>img{
+    width: 550px;
+}
+
+h1,
+h2,
+h3 {
+    color: #0884a3;
+}
+
+th{
+    text-align: left;
+}
+
+td{
+    padding: 5px;
+}
+
+.wrapper {
+    margin: 3%;
+    width: 42%;
+
+}
+
+.wrapper>div {
+    padding: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    margin: 25px;
+}
+
+div>h2 {
+    text-decoration: underline;
+}
