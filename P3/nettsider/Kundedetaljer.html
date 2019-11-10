@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Kundedetaljer</title>
   <link rel="stylesheet" href="../Styling/main.css">
   <link rel="stylesheet" href="../styling/kundedetaljer.css">
   <title>Kundedetaljer - Turistlaget i Oppdal</title>
@@ -52,7 +51,7 @@
         <button type="submit" id="bekreftbestilling">Bekreft bestillingen</button>
     </form>
     <br><br>
-    <a href="../home.html"><input type="button" id="avbrytbestilling" value="Avbryt"></a>
+    <button id="avbrytbestilling" onclick="location.href='../home.html'" type="button">Avbryt</button>
   </div>
   <script>
     document.querySelector("#pris").innerText = "Pris: " + localStorage.getItem('totalPrice') + "nok";

@@ -4,7 +4,7 @@ bestilling.onsubmit = function(evt){
     let email = document.getElementById("epost");
     let button = document.getElementById('avbrytbestilling');
 
-    button.value = "Tilbake til hjemmeside"
+    button.innerHTML = "Tilbake til hjemmeside"
     button.id = "returnerHjem"
 
     bestilling.innerHTML = "Takk for din bestilling! Vi sender en faktura til " + email.value + " så snart vi har registrert bestillingen.";
