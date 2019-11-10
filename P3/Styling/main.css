@@ -80,6 +80,7 @@ nav>ul>li {
   /*display: inline;*/
   margin: 0;
   width: calc(100% / 5);
+  padding-bottom: 0 !important;
 }
 
 nav>ul>li>a:hover {
