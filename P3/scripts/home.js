@@ -1,5 +1,4 @@
-//home news creation
-
+//Funksjon som lager elementer som senere kan blli fylt med informasjonen fra artikklene
 function createArtikkel(artObj) {
     let parent = document.createElement("div");
     parent.className = "art_home"
@@ -36,6 +35,7 @@ function createArtikkel(artObj) {
     return parent
 }
 
+
 function artikkelHome() {
     for (let i = 0; i < 3; i++) {
         let art = createArtikkel(artikkel[i]);
@@ -46,20 +46,3 @@ function artikkelHome() {
 
 let news = document.getElementById("home_news");
 news.onload = artikkelHome();
-
-
-/*
-function MakeList(task) { //Function to make the listed elemetns show in the correct order.
-    for (let i = 0; i < artikkel.length; i++) {
-        let list = document.getElementById("home_news")
-        let node = document.createElement("li");
-
-        node.id = 'artikkelNr' + i;
-        node.setAttribute('onclick', 'artikkelBytte(' + i + ')');
-
-        let textnode = document.createTextNode(artikkel[i].artikkelTitel); //Defines what will be writen in one of the other elements.
-        node.appendChild(textnode); //Inserts the text into the li element.
-        list.appendChild(node);
-    }
-}
-*/
