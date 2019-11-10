@@ -39,7 +39,7 @@
             <p>
                 I utgangspunktet hadde vi planlagt i P2 at det skulle være 5 separate HTML-filer + 2 typer ekstra sider. En med alle nettsidene for artiklene og en for alle nettsidene for hyttene, men dette ble det ikke til slutt. Vi kuttet blant annet  “artikkelNr[i].html og merOmHyttenNr[i].html”.
             <br>
-                Det gjorde vi fordi vi innså at det ikke var nødvendig med separate sider for hver enkelt artikkel og hver enkelt hytte, når dette kunne løses med javascript. Vi tilføyde da “artikkelNr[i].html” og “merOmHyttenNr[i].html.” i sidene artikler.html og mer_om_hyttene.html. Vi laget også en ny side, “kundedetaljer.html” som springer ut fra bookingsiden, og inneholder skjema som brukeren skal fylle ut med kontaktinformasjon. Dette ble til en egen side fordi det ble for lite plass på bookingsiden til at kontaktinformasjon også skulle fylles ut. Her ble det også lagt til et script, "kundedetaljer.js", for å gi brukeren en tilbakemelding ved innsending av skjema. 
+                Det gjorde vi fordi vi innså at det ikke var nødvendig med separate sider for hver enkelt artikkel og hver enkelt hytte, når dette kunne løses med javascript. Vi tilføyde da “artikkelNr[i].html” og “merOmHyttenNr[i].html.” i sidene artikler.html og mer_om_hyttene.html. Vi laget også en ny side, “kundedetaljer.html” som springer ut fra bookingsiden, og inneholder skjema som brukeren skal fylle ut med kontaktinformasjon. Dette ble til en egen side fordi det ble for lite plass på bookingsiden til at kontaktinformasjon også skulle fylles ut. Her ble det også lagt til et script, "kundedetaljer.js", for å gi brukeren en tilbakemelding ved innsending av skjema. Da vi ikke hadde noe mock-up av denne siden fra P2, ble designet utarbeidet for å matche resten av siden, og farger valgt fra fargetema fra P2.
             <br>
                 Vi har også forandret på hvordan vi navngir sidene våre, fra å bruke “kamel-case” til å bruke “snake-case”. Det gjorde vi på bakgrunn av personlig preferanse.
             </p>
@@ -121,7 +121,7 @@
                                             <li>Absultaket_ute.jpg</li>
                                         </ul>
                                     </li>
-                                    <li>bjørnhiet/
+                                    <li>bjørnehiet/
                                         <ul>
                                             <li>bjørnhiet.jpg</li>
                                             <li>bjørnhiet_kjokken.jpg</li>
@@ -253,12 +253,13 @@
                     </li>
                     <li>scripts/
                         <ul>
-                          <li>artikel.js</li>
+                          <li>artikler.js</li>
                           <li>booking.js</li>
                           <li>home.js</li>
                           <li>hytter_info.js</li>
                           <li>hytter_lister.js</li>
                           <li>kontakt_oss.js</li>
+                          <li>kundedetaljer.js</li>
                           <li>main.js</li>
                           <li>slideshow.js</li>
                           <li>vaer.js</li>
@@ -273,6 +274,7 @@
                           <li>kontakt_oss.css</li>
                           <li>kundedetaljer.css</li>
                           <li>main.css</li>
+                          <li>om_oss.css</li>
                           <li>slideshow.css</li>
                         </ul>
                     </li>
@@ -300,7 +302,7 @@
                         </tr>
                         <tr>
                             <td>home.css</td>
-                            <td>sytlingen spesifikt for hovedsiden</td>
+                            <td>stylingen spesifikt for hovedsiden</td>
                             <td>Daniel</td>
                         </tr>
                         <tr>
@@ -309,7 +311,7 @@
                             <td></td>
                         </tr>
                         <tr>
-                            <td>atrikler.html</td>
+                            <td>artikler.html</td>
                             <td>Siden hvor alt av artikler blir vist i et arkiv og henter infoen fra en array for å vise på siden.</td>
                             <td>Sivert</td>
                         </tr>
@@ -330,7 +332,7 @@
                         </tr>
                         <tr>
                             <td>booking.css</td>
-                            <td>stylingen til booking siden</td>
+                            <td>stylingen til bookingsiden</td>
                             <td>Kristian</td>
                         </tr>
                         <tr>
@@ -340,12 +342,12 @@
                         </tr>
                         <tr>
                             <td>kundedetaljer.html</td>
-                            <td>utfylingsskjemaet hvor man skriver infoen til den som skal booke hytten</td>
+                            <td>utfyllingsskjemaet hvor man skriver infoen til den som skal booke hytten</td>
                             <td>Marte</td>
                         </tr>
                         <tr>
                             <td>kundedetaljer.css</td>
-                            <td>styllingen til kundedetaljer siden</td>
+                            <td>styllingen til kundedetaljer-siden</td>
                             <td>Marte</td>
                         </tr>
                         <tr>
@@ -355,12 +357,12 @@
                         </tr>
                         <tr>
                             <td>hytter.html</td>
-                            <td>siden med et arkiv av alle hytter og dems info</td>
+                            <td>siden med et arkiv av alle hytter og tilhørende info</td>
                             <td>Daniel</td>
                         </tr>
                         <tr>
                             <td>hytter.css</td>
-                            <td>styling til hytte siden og dens info</td>
+                            <td>styling til hyttesiden og dens info</td>
                             <td>Daniel</td>
                         </tr>
                         <tr>
@@ -389,7 +391,7 @@
                             <td></td>
                         </tr>
                         <tr>
-                            <td>kontak_toss.html</td>
+                            <td>kontakt_oss.html</td>
                             <td>siden hvor man kan kontakte TiO via form</td>
                             <td>Kristian</td>
                         </tr>
@@ -410,7 +412,7 @@
                         </tr>
                         <tr>
                             <td>kontakt_oss.js</td>
-                            <td>lage en form hvor man må fylle ut alt og etter gir en kvitering</td>
+                            <td>lage en form hvor man må fylle ut alt og etter gir en kvittering</td>
                             <td>Sivert</td>
                         </tr>
                         <tr>
