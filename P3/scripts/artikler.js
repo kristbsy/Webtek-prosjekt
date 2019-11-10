@@ -1,8 +1,10 @@
+//Definerer en case som gjør at vi kan linke til samme nettsider fra forskjellige lokasjoner 
 let prefix = ".";
 if (location.href.split("/").slice(-1)[0] !== "home.html") {
     prefix += ".";
 }
 
+//definerer en liste med objekter som inneholder informasjonen til artikkelene
 const artikler = [{
     artikkel_tittel: 'Vinterferie uke 8',
     artikkel_tekst: 'Skiløypene vil bli kjørt opp hver formiddag hele vinterferien! På skisporet.no finner du en oversikt over alle løypene. I skrivende stund er skiføret nydelig, og langtidsvarselet virker lovende for en flott vinterferie i skisporet! <br><br> Husk; det er ingen skam med en kvikk-lunsj i solveggen på ei hytte heller.',
@@ -77,40 +79,53 @@ const artikler = [{
 }
 ];
 
+//Definerer en array med alle månedene i året
 let months = ["Januar", "Februar", "Mars", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Desember"]
 
+//Definerer en tom array til bruk i funksjonen under
 let articleEl = [];
 
+//Funksjon som byter artikkel
 function switch_to_article(article) {
     document.querySelector("#artikkelen").replaceWith(generate_article(article));
 }
 
+//Funksjon som genererer en artikkel
 function generate_article(article) {
+    //Lager en div med en id
     let main_el = document.createElement("div")
     main_el.id = "artikkelen";
 
+    //lager en header med en git tekst fra arrayen artikkler
     let title_el = document.createElement("h2");
     title_el.innerText = article.artikkel_tittel;
 
+    //lager et bilde med en sorce og en alternativ tekst hentet fra arrayen artikkler
     let img_el = document.createElement("img");
     img_el.src = prefix + article.artikkel_bilde;
     img_el.alt = article.artikkel_bilde_alt;
 
+    //Lager et p element som blir fylt med tekst fra arrayen artikkler
     let paragraph_el = document.createElement("p");
     paragraph_el.innerHTML = article.artikkel_tekst;
 
+    //Lager et element med tagen sub som får et tidsmerke basert på arrayen artikkler
     let info_el = document.createElement("sub");
     let tid_objekt = article.artikkel_tid;
     let tid = tid_objekt.getDate() + ". " + months[tid_objekt.getMonth()] + " " + (Number(tid_objekt.getYear()) + 1900);
     info_el.innerText = "Skrevet av " + article.artikkel_forfatter + ", " + tid /*article.artikkel_tid*/;
 
+    //appender masse elementer til et main element
     main_el.appendChild(img_el);
     main_el.appendChild(title_el);
 
     main_el.appendChild(paragraph_el);
     main_el.appendChild(info_el);
+
+    //returnerer main elementet når funksjonen er ferdig kjørt
     return main_el;
 }
+
 
 artikler.forEach(article => articleEl.push(generate_article(article)));
 
@@ -204,16 +219,19 @@ function generate_list(ordered_articles) {
     return main_el;
 }
 
+//lager en if setning som gjør at news ikke vil komme hvis det ikke er hjemmesiden og derfor vil kjøre på artikkler.html
 let news = document.getElementById("home_news");
 if (news == null) {
     document.querySelector("#listeArtikkler").replaceWith(generate_list(get_ordered_object(artikler)));
 }
 
-function make_list_home( /*task*/) { //Function to make the listed elemetns show in the correct order.
+//Funksjon som lager en liste med elementer med de tre nyeste artikklene fra arrayen artikkler
+function make_list_home( /*task*/) {
     let news = document.getElementById("home_news");
     if (news != null) {
         for (let i = 0; i < 3; i++) {
-            let tittel = document.getElementById('tittelArikkel' + i);
+            let tittel = document.getElementById("tittelArtikkel" + i);
+            console.log(tittel)
             let tekst = document.getElementById("tekstArtikkel" + i);
             let bilde = document.getElementById("bildeArtikkel" + i);
             tittel.innerHTML = artikler[i].artikkel_tittel;
@@ -223,4 +241,6 @@ function make_list_home( /*task*/) { //Function to make the listed elemetns show
         }
     }
 }
+
+//kjører funksjonen etter siden har loaded
 make_list_home();
