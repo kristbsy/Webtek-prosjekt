@@ -37,12 +37,14 @@
       <div>
         <h2>Endringer vi har gjort:</h2>
         <p>
+            <strong>HTML-filer og filnavn</strong>
           I utgangspunktet hadde vi planlagt i P2 at det skulle være 5 separate
           HTML-filer + 2 typer ekstra sider. En med alle nettsidene for
           artiklene og en for alle nettsidene for hyttene, men dette ble det
           ikke til slutt. Vi kuttet blant annet “artikkelNr[i].html og
           merOmHyttenNr[i].html”.
-          <br />
+        </p>
+        <p>
           Det gjorde vi fordi vi innså at det ikke var nødvendig med separate
           sider for hver enkelt artikkel og hver enkelt hytte, når dette kunne
           løses med javascript. Vi tilføyde da “artikkelNr[i].html” og
@@ -56,13 +58,14 @@
           av skjema. Da vi ikke hadde noe mock-up av denne siden fra P2, ble
           designet utarbeidet for å matche resten av siden, og farger valgt fra
           fargetema fra P2.
-          <br />
+        </p>
+        <p>
           Vi har også forandret på hvordan vi navngir sidene våre, fra å bruke
           “kamel-case” til å bruke “snake-case”. Det gjorde vi på bakgrunn av
           personlig preferanse.
         </p>
         <p>
-          <b>Forandringer til home.html:</b>
+          <strong>Forandringer til home.html:</strong>
           Her så har vi forandret design på navbaren, fra sorte rammer til ingen
           rammer, og teksten inni er cornsilk. Dette gjorde vi for å gi den et
           lysere preg, som vi tenkte passet siden bedre design-vis. Videre har
@@ -88,7 +91,7 @@
           men er et nødvendig offer for funksjonalitets skyld.
         </p>
         <p>
-          <b>Forandringer til artikler.html:</b>
+          <strong>Forandringer til artikler.html:</strong>
           Har ikke lengre år, måned, dato og dermed artikler. Har istedenfor år,
           måned og dermed artikler, hopper da over dato steget ettersom det
           kommer ikke til å være så mange daglige beskjeder. Bildene på
@@ -101,25 +104,25 @@
           årsaker.
         </p>
         <p>
-          <b>Forandirnger til booking.html:</b>
+          <strong>Forandirnger til booking.html:</strong>
           På bookingen skulle det vært en kalender modell for å vise reisen
           dages vis, men dette syntes vi at ville ta for mye plass og ikke være
           like nødvendig som de andre funksjonene på siden.
         </p>
         <p>
-          <b>Forandirnger til mer_om_hyttene.html</b>
+          <strong>Forandirnger til mer_om_hyttene.html</strong>
           : Designet på sidebaren er forandret i samme stil som den på
           artikkel/nyhetssiden. Dette er gjort av samme årsak som skrevet
           ovenfor.
         </p>
         <p>
-          <b>Forandirnger til om_oss.html</b>
+          <strong>Forandirnger til om_oss.html</strong>
           : Her så er plasseringen av boksene litt forskjellig, avhengig av
           skjermstørrelse, hvor de flyttes under hverandre når skjermen blir
           mindre.
         </p>
         <p>
-          <b>Forandringer til kontakt_oss.html</b>
+          <strong>Forandringer til kontakt_oss.html</strong>
           : Denne siden er relativt lite forandret på siden P2. Ledeteksten i
           det første input-feltet er forandre fra “Tittel” til “Hva gjelder din
           henvedelse”. Dette ble gjort slik at det skulle være tydeligere hva vi
@@ -129,9 +132,9 @@
           nav-bar og footer.
         </p>
         <p>
-          <b
+          <strong
             >Forandringer til første javascript funksjon,hytter_lister.js og
-            hytter_info.js</b
+            hytter_info.js</strong
           >
           Den første funksjonaliteten vi ville implementere var å få fram infoen
           til en hytte ved å trykke på hyttens info knap. Dette ble gjort etter
@@ -141,38 +144,38 @@
           andre sider enn kun der vi laget hytte_listen.
         </p>
         <p>
-          <b>lagt til javascript funksjon main.js</b>
+          <strong>lagt til javascript funksjon main.js</strong>
           Denne javascripten kjører på alle sider og vil injecte en header som
           er navbaren og en footer med kontaktinfo på alle sider. Dette var mer
           modulært og ville være enklere da i fremmtiden å endre på disse to
           elementene i en javascript fil istedenfor å gjøre det på alle sider.
         </p>
         <p>
-          <b>lagt til javascript funksjon booking.js</b>
+          <strong>lagt til javascript funksjon booking.js</strong>
           For en mer interaktiv booking opplevelse la vi til en funksjon hvor
           man kan trykke på et startpunkt av hytte punkter og et sluttpunkt for
           å lage en komplett reise. Funksjonen kalkulerte og valgte da korteste
           vei mellom disse to punktene i et node nettverk.
         </p>
         <p>
-          <b>lagt til javascript funksjon home.js</b>
+          <strong>lagt til javascript funksjon home.js</strong>
           for å få en mer modulær side la vi en javascript funksjon som ville
           hente de 3 nyeste nyhetene og vise på nettsiden istedenfor å hard kode
           de inn og dermed måtte endre helle home.html hver gang.
         </p>
-        <br />
         <p>
-          <b>Hvordan vi løste kravet om modularitet</b>: Kravet om madularitet
+          <strong>Hvordan vi løste kravet om modularitet</strong> Kravet om modularitet
           løste vi ved at navigasjonsbaren og footeren på siden ble generert via
           javaskript, og er da lik mellom sidene på nettsiden. I tillegg har vi
-          en hoved-css som er felles for alle sidene.
+          et eget stylesheet for felles styling av body, navbar og footer.
         </p>
       </div>
       <div>
         <h2>Oppdatert filstruktur:</h2>
         <p>
           Alle disse filene er samlet i en mappe 'P3'
-          <br />
+        </p>
+        <p>
           Liste av filer og mapper:
         </p>
         <ul>
